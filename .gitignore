@@ -1,0 +1,6 @@
+watchlist.json
+__pycache__/
+*.pyc
+*.pyo
+.env
+_backups/

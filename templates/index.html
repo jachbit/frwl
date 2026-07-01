@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F.O.C.U.S.© — Research Watchlist LITE</title>
+<style>
+  :root {
+    --navy:   #002B5C;
+    --orange: #E65C00;
+    --grey:   #444444;
+    --blue:   #3b82f6;
+    --green:  #16a34a;
+    --red:    #dc2626;
+    --bg:     #0d1b2e;
+    --card:   #0f2340;
+    --border: #1e3a5f;
+    --text:   #e2e8f0;
+    --muted:  #94a3b8;
+    --row-alt: rgba(255,255,255,0.03);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; min-height: 100vh; }
+
+  /* ── Header ── */
+  .header { background: var(--navy); border-bottom: 3px solid var(--orange); padding: 12px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; }
+  .header-left { display: flex; flex-direction: column; gap: 2px; }
+  .brand { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: 1px; }
+  .brand span { color: var(--orange); }
+  .hdr-subtitle { font-size: 12px; color: #fbbf24; font-weight: 700; margin: 2px 0; }
+  .hdr-copy { font-size: 10px; color: #ccc; }
+  .hdr-copy a { color: #E65C00; font-weight: 700; text-decoration: none; }
+  .header-center { text-align: center; }
+  .hdr-disclaimer-title { font-size: 13px; font-weight: 800; color: #fbbf24; }
+  .hdr-disclaimer-body  { font-size: 11px; color: #fbbf24; margin-top: 2px; }
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .hdr-clock-wrap { text-align: right; line-height: 1.2; }
+  .hdr-buttons { display: flex; gap: 8px; align-items: center; }
+
+  /* ── Buttons ── */
+  .btn { padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; font-size: 13px; font-weight: 600; transition: all .15s; white-space: nowrap; }
+  .btn-primary   { background: var(--orange); color: #fff; }
+  .btn-primary:hover { background: #c94e00; }
+  .btn-outline   { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.07); }
+  .btn-navy      { background: var(--navy); color: #fff; border: 1.5px solid var(--blue); }
+  .btn-navy:hover { background: #003580; }
+  .btn-legend    { background: rgba(148,163,184,0.1); color: #94a3b8; border: 1.5px solid rgba(148,163,184,0.3); }
+  .btn-legend:hover { background: rgba(148,163,184,0.2); color: #fff; }
+  .legend-row    { display: flex; gap: 16px; padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: flex-start; }
+  .legend-row:last-child { border-bottom: none; }
+  .legend-col    { color: #ffe566; font-weight: 800; font-size: 13px; white-space: nowrap; min-width: 90px; padding-top: 1px; }
+  .legend-def    { color: #e2e8f0; font-size: 13px; line-height: 1.6; flex: 1; min-width: 0; }
+  .legend-tip    { color: #ffe566; font-size: 11px; margin-top: 4px; line-height: 1.5; }
+  .btn-sm        { padding: 4px 10px; font-size: 11px; border-radius: 4px; }
+  .btn-danger    { background: transparent; color: var(--red); border: 1px solid var(--red); }
+  .btn-danger:hover { background: var(--red); color: #fff; }
+  .btn-refresh   { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+  .btn-refresh:hover { background: var(--blue); color: #fff; }
+
+  /* ── Stats bar ── */
+  .statsbar { background: var(--card); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 7px; }
+  .stat-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .stat-val   { font-size: 14px; font-weight: 700; color: #fff; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot-green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .dot-grey  { background: var(--muted); }
+
+  .search-wrap { margin-left: auto; }
+  .search-input { background: var(--bg); border: 1px solid var(--border); color: #fff; padding: 6px 12px; border-radius: 6px; width: 220px; font-size: 13px; }
+  .search-input:focus { outline: none; border-color: var(--blue); }
+  .search-input::placeholder { color: var(--muted); }
+
+  /* ── Table wrapper ── */
+  .table-wrap { overflow-x: auto; overflow-y: auto; padding: 0; height: calc(100vh - 248px); }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 1400px; }
+  thead th { background: var(--navy); color: #fff; font-size: 10px; text-transform: uppercase; letter-spacing: .8px; padding: 10px 8px; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; border-bottom: 2px solid var(--orange); position: sticky; top: 0; z-index: 20; }
+  thead th:hover { background: #003580; }
+  thead th.sorted-asc::after  { content: ' ↑'; color: var(--orange); }
+  thead th.sorted-desc::after { content: ' ↓'; color: var(--orange); }
+  thead th:first-child, thead th:last-child { cursor: default; }
+  thead th:first-child { text-align: center; width: 36px; }
+
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); transition: background .1s; }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tbody tr:hover { background: rgba(59,130,246,0.08); }
+
+  td { padding: 10px 8px; text-align: center; vertical-align: middle; white-space: nowrap; }
+  td.left { text-align: left; }
+
+  /* ── Frozen columns: # | SYMBOL | COMPANY | SECTOR ── */
+  .fr-0 { position: sticky; left: 0;     z-index: 3; background: #0d1b2e !important; }
+  .fr-1 { position: sticky; left: 36px;  z-index: 3; background: #0d1b2e !important; }
+  .fr-2 { position: sticky; left: 106px; z-index: 3; background: #0d1b2e !important; }
+  .fr-3 { position: sticky; left: 286px; z-index: 3; background: #0d1b2e !important; }
+  .fr-4 { position: sticky; left: 416px; z-index: 3; border-right: 2px solid var(--orange); background: #0d1b2e !important; }
+  thead .fr-0, thead .fr-1, thead .fr-2, thead .fr-3, thead .fr-4 { z-index: 21; background: var(--navy) !important; }
+  tbody tr:nth-child(even) .fr-0,
+  tbody tr:nth-child(even) .fr-1,
+  tbody tr:nth-child(even) .fr-2,
+  tbody tr:nth-child(even) .fr-3,
+  tbody tr:nth-child(even) .fr-4 { background: #0e2038 !important; }
+  tbody tr:hover .fr-0,
+  tbody tr:hover .fr-1,
+  tbody tr:hover .fr-2,
+  tbody tr:hover .fr-3,
+  tbody tr:hover .fr-4 { background: #0d2244 !important; }
+
+  /* ── Notes column ── */
+  .td-note { max-width: 200px; overflow: hidden; text-overflow: ellipsis; text-align: left; cursor: pointer; color: var(--text); font-size: 11px; }
+  .td-note.empty { color: #475569; font-style: italic; }
+  .td-note:hover { color: #fbbf24; }
+
+  .td-num { font-size: 11px; color: var(--muted); }
+  .td-sym { color: #ffe566; font-weight: 800; font-size: 14px; letter-spacing: .5px; }
+  .td-company { font-size: 12px; color: var(--text); max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+  .td-price { font-weight: 700; font-size: 13px; color: #fbbf24; }
+  .td-fair  { font-weight: 700; }
+  .range-wrap { display:flex; flex-direction:column; align-items:center; gap:3px; min-width:110px; }
+  .range-bar-track { position:relative; width:100%; height:6px; background:rgba(255,255,255,0.1); border-radius:3px; }
+  .range-bar-fill  { position:absolute; left:0; top:0; height:100%; border-radius:3px; }
+  .range-bar-dot   { position:absolute; top:50%; transform:translate(-50%,-50%); width:9px; height:9px; border-radius:50%; border:2px solid #0d1b2e; }
+  .range-labels    { display:flex; justify-content:space-between; width:100%; font-size:9px; color:#fff; }
+
+  .alarm-bell { display:inline-flex; align-items:center; gap:3px; cursor:pointer; font-size:12px; vertical-align:middle; opacity:0.55; }
+  .alarm-bell.off { opacity:0.35; }
+  .alarm-bell.off:hover { opacity:0.8; }
+  .alarm-bell.armed { opacity:1; color:#ffe566; animation: bellpulse 2s ease-in-out infinite; }
+  .alarm-bell.disarmed { opacity:0.6; color:#64748b; }
+  .alarm-tag { font-size:9px; font-weight:700; color:inherit; }
+  @keyframes bellpulse { 0%,100% { filter: drop-shadow(0 0 0 rgba(255,229,102,0)); } 50% { filter: drop-shadow(0 0 4px rgba(255,229,102,0.9)); } }
+  .alarm-row-flash { animation: alarmflash 1s ease-in-out 4; }
+  @keyframes alarmflash { 0%,100% { background: inherit; } 50% { background: rgba(248,113,113,0.35) !important; } }
+  .group-pill { display: inline-block; background: rgba(168,85,247,0.18); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); border-radius: 12px; padding: 2px 9px; font-size: 10px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .group-pill:hover { background: rgba(168,85,247,0.32); }
+  .group-filter-bar { display:flex; flex-wrap:wrap; gap:6px; padding: 8px 0 4px; }
+  .gf-btn { border: 1.5px solid rgba(168,85,247,0.4); background: rgba(168,85,247,0.1); color: #d8b4fe; border-radius: 20px; padding: 4px 14px; font-size: 11px; font-weight: 600; cursor: pointer; }
+  .gf-btn.active { background: rgba(168,85,247,0.5); color: #fff; border-color: #a855f7; }
+  .gf-btn:hover { background: rgba(168,85,247,0.3); }
+  .gf-rename-btn { border: 1.5px solid rgba(168,85,247,0.4); background: rgba(168,85,247,0.08); color: #d8b4fe; border-radius: 20px; padding: 4px 14px; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .gf-rename-btn:hover { background: rgba(168,85,247,0.25); color: #fff; }
+  .gf-new-btn { border-color: rgba(34,197,94,0.45); background: rgba(34,197,94,0.08); color: #86efac; }
+  .gf-new-btn:hover { background: rgba(34,197,94,0.22); color: #fff; }
+  .ticker-checklist { max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; margin-top: 6px; }
+  .ticker-check-row { display: flex; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 6px; cursor: pointer; transition: background .12s; }
+  .ticker-check-row:hover { background: rgba(255,255,255,0.06); }
+  .ticker-check-row input[type=checkbox] { width: 15px; height: 15px; accent-color: #a855f7; cursor: pointer; flex-shrink: 0; }
+  .ticker-check-sym { color: #ffe566; font-weight: 800; font-size: 13px; min-width: 52px; }
+  .ticker-check-co  { color: #94a3b8; font-size: 11px; }
+  .ticker-check-grp { margin-left: auto; font-size: 10px; color: #d8b4fe; background: rgba(168,85,247,0.15); border-radius: 10px; padding: 1px 8px; white-space: nowrap; }
+  .cat-pill { display: inline-block; background: rgba(59,130,246,0.18); color: #fff; border: 1px solid rgba(59,130,246,0.35); border-radius: 12px; padding: 2px 9px; font-size: 10px; font-weight: 600; max-width: 120px; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+  .cat-pill:hover { background: rgba(59,130,246,0.32); }
+  .theme-pill { display: inline-block; background: rgba(251,191,36,0.12); color: #ffe566; border: 1px solid rgba(251,191,36,0.45); border-radius: 12px; padding: 2px 9px; font-size: 10px; font-weight: 600; max-width: 120px; overflow: hidden; text-overflow: ellipsis; cursor: pointer; white-space: nowrap; }
+  .theme-pill:hover { background: rgba(230,92,0,0.32); }
+  .theme-pill.empty { color: #64748b; border-color: rgba(100,116,139,0.3); background: rgba(100,116,139,0.08); font-style: italic; }
+
+  .chg-pos { color: var(--green); font-weight: 700; }
+  .chg-neg { color: var(--red);   font-weight: 700; }
+  .chg-zero{ color: var(--muted); }
+
+  .metric { color: var(--text); }
+  .metric-na { color: #475569; }
+
+  /* Sparkline */
+  .sparkline { display: block; }
+
+  /* Actions col */
+  .actions { display: flex; gap: 4px; justify-content: center; }
+
+  /* Empty state */
+  .empty-state { text-align: center; padding: 80px 24px; color: var(--muted); }
+  .empty-state h2 { font-size: 22px; color: #fff; margin-bottom: 10px; }
+  .empty-state p  { font-size: 14px; margin-bottom: 24px; }
+  .empty-icon { font-size: 52px; margin-bottom: 16px; }
+
+  /* ── Modal ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 1000; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--card); border: 1px solid var(--border); border-radius: 12px; width: 520px; max-width: 95vw; overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,.6); }
+  .modal-header { background: var(--navy); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--orange); }
+  .modal-title  { font-size: 15px; font-weight: 700; color: #fff; }
+  .modal-close  { background: none; border: none; color: var(--muted); font-size: 22px; cursor: pointer; line-height: 1; }
+  .modal-close:hover { color: #fff; }
+  .modal-body   { padding: 20px; }
+  .modal-footer { padding: 14px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; justify-content: flex-end; }
+
+  .form-row { margin-bottom: 14px; }
+  .form-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; display: block; font-weight: 600; }
+  .form-input { width: 100%; background: var(--bg); border: 1.5px solid var(--border); color: #fff; padding: 9px 12px; border-radius: 6px; font-size: 14px; transition: border .15s; }
+  .form-input:focus { outline: none; border-color: var(--blue); }
+  .form-input::placeholder { color: var(--muted); }
+  .form-input.error { border-color: var(--red); }
+
+  .lookup-btn { background: var(--blue); color: #fff; border: none; padding: 9px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; white-space: nowrap; }
+  .lookup-btn:hover { background: #2563eb; }
+  .sym-row { display: flex; gap: 8px; }
+  .sym-row .form-input { flex: 1; text-transform: uppercase; }
+
+  /* Preview card inside modal */
+  .preview-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-top: 14px; display: none; }
+  .preview-card.show { display: block; }
+  .preview-company { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .preview-sector  { font-size: 11px; color: #93c5fd; margin-bottom: 12px; }
+  .preview-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .preview-metric { background: rgba(255,255,255,0.04); border-radius: 6px; padding: 8px 10px; }
+  .preview-metric-label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 3px; }
+  .preview-metric-val   { font-size: 14px; font-weight: 700; color: #fff; }
+
+  /* Alert banners */
+  .alert { border-radius: 6px; padding: 10px 14px; font-size: 13px; font-weight: 600; margin-bottom: 12px; display: none; }
+  .alert.show { display: block; }
+  .alert-error   { background: rgba(220,38,38,0.15); border: 1px solid var(--red);   color: #fca5a5; }
+  .alert-success { background: rgba(22,163,74,0.15);  border: 1px solid var(--green); color: #86efac; }
+  .alert-warn    { background: rgba(230,92,0,0.15);   border: 1px solid var(--orange); color: #fdba74; }
+
+  /* Spinner */
+  .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.2); border-top-color: #fff; border-radius: 50%; animation: spin .6s linear infinite; vertical-align: middle; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Refresh pulse */
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .refreshing .dot-green { animation: pulse 1s ease-in-out infinite; }
+
+  /* Toast */
+  .toast { position: fixed; bottom: 24px; right: 24px; background: #1e293b; border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; color: #fff; font-size: 13px; font-weight: 600; z-index: 9999; opacity: 0; transform: translateY(12px); transition: all .25s; pointer-events: none; max-width: 320px; }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.toast-ok   { border-left: 4px solid var(--green); }
+  .toast.toast-err  { border-left: 4px solid var(--red); }
+  .toast.toast-warn { border-left: 4px solid var(--orange); }
+
+  /* Cat suggestion list */
+  .cat-suggestion-item { padding: 8px 12px; cursor: pointer; font-size: 12px; color: var(--text); border-bottom: 1px solid var(--border); }
+  .cat-suggestion-item:hover { background: rgba(59,130,246,0.15); color: #fff; }
+  .cat-suggestion-item:last-child { border-bottom: none; }
+  .cat-chip-pick { display: inline-block; background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.35); border-radius: 12px; padding: 4px 12px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .cat-chip-pick:hover { background: rgba(59,130,246,0.4); color: #fff; border-color: #3b82f6; }
+  .cat-chip-pick.selected { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+  /* Edit-cat mini modal */
+  .mini-modal { background: var(--card); border: 1px solid var(--border); border-radius: 10px; width: 380px; max-width: 95vw; box-shadow: 0 16px 60px rgba(0,0,0,.6); overflow: hidden; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 16px; height: 16px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 8px; border: 3px solid var(--bg); }
+  ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+</style>
+</head>
+<body>
+
+<!-- ── Header (3-column FFTP standard) ── -->
+<div class="header">
+  <!-- LEFT: Branding -->
+  <div class="header-left">
+    <div class="brand">F.<span>O</span>.C.U.S.<sup style="font-size:11px;color:#fff">&copy;</sup> <span style="color:#fff">— Research Watchlist</span> <span style="font-size:11px;color:#86efac;font-weight:700;letter-spacing:1px">LITE</span></div>
+    <div class="hdr-subtitle">Personal Stock Research &nbsp;&#183;&nbsp; For Educational Purposes Only</div>
+    <div class="hdr-copy">&copy; 2026 Jachbit. All rights reserved. May not be shared without consent. &nbsp;&#183;&nbsp; <a href="https://linktr.ee/jachbit" target="_blank">linktr.ee/jachbit</a></div>
+  </div>
+  <!-- CENTER: Disclaimer -->
+  <div class="header-center">
+    <div class="hdr-disclaimer-title">&#9888;&nbsp; Disclaimer: TRADING IS RISKY!</div>
+    <div class="hdr-disclaimer-body">This is for personal research only and not financial advice.</div>
+  </div>
+  <!-- RIGHT: Clock + Buttons -->
+  <div class="header-right">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <div style="text-align:center;border-right:1px solid rgba(255,255,255,0.15);padding-right:16px;">
+        <div style="font-size:9px;color:#93c5fd;letter-spacing:.5px;text-transform:uppercase;">&#8635; Next Refresh</div>
+        <div id="refresh-countdown" style="font-size:22px;font-weight:800;color:#fbbf24;">30s</div>
+      </div>
+      <div class="hdr-clock-wrap">
+        <div style="font-size:9px;font-weight:700;color:#E65C00;letter-spacing:1px;text-transform:uppercase;">Jachbit 2026</div>
+        <div id="hdr-clock-time" style="font-size:22px;font-weight:800;color:#fff;"></div>
+        <div id="hdr-clock-date" style="font-size:10px;color:#93c5fd;"></div>
+      </div>
+    </div>
+    <div class="hdr-buttons">
+      <button class="btn btn-outline btn-sm" onclick="exportCSV()">&#8595; CSV</button>
+      <button class="btn btn-outline btn-sm" onclick="document.getElementById('csv-import-input').click()">&#8593; Import CSV</button>
+      <input type="file" id="csv-import-input" accept=".csv" style="display:none" onchange="importCSV(this)">
+      <button class="btn btn-navy btn-sm" onclick="exportPDF()">&#128438; PDF</button>
+      <div style="display:inline-flex;flex-direction:column;align-items:center;gap:2px">
+        <span id="announcer-countdown" style="display:none;font-size:10px;font-weight:700;color:#86efac;letter-spacing:0.5px;line-height:1">next: --:--</span>
+        <button class="btn btn-outline btn-sm" id="btn-announcer" onclick="openAnnouncer()" title="Price Announcer">&#128226; Announcer</button>
+      </div>
+      <button class="btn btn-primary" onclick="openAddModal()">+ Add Ticker</button>
+      <button class="btn btn-legend" onclick="openLegend()" title="Column Definitions">? Legend</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Stats bar ── -->
+<div class="statsbar" id="statsbar">
+  <div class="stat">
+    <div class="dot dot-grey" id="refresh-dot"></div>
+    <span class="stat-label">Tickers</span>
+    <span class="stat-val" id="stat-count">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Last Refresh</span>
+    <span class="stat-val" id="stat-refresh">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Source</span>
+    <span class="stat-val" id="stat-source" style="color:#93c5fd;font-size:12px;">—</span>
+  </div>
+  <div class="stat search-wrap">
+    <input class="search-input" id="search-input" placeholder="&#128269; Search symbol or company…" oninput="renderTable()"/>
+  </div>
+</div>
+
+<!-- ── Group filter bar ── -->
+<div style="padding: 4px 8px 2px; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+  <div class="group-filter-bar" id="group-filter-bar"></div>
+  <button class="gf-rename-btn" onclick="openRenameGroup()" title="Rename a group across all tickers">✎ Rename Group</button>
+  <button class="gf-rename-btn gf-new-btn" onclick="openNewGroup()" title="Create a new group and assign tickers">+ New Group</button>
+</div>
+
+<!-- ── Load error banner ── -->
+<div id="load-error" style="display:none;background:#7f1d1d;color:#fca5a5;padding:10px 18px;font-size:13px;font-family:monospace;white-space:pre-wrap;word-break:break-all;border-bottom:1px solid #991b1b;"></div>
+
+<!-- ── Main table ── -->
+<div class="table-wrap" id="table-wrap">
+  <div class="empty-state" id="empty-state" style="display:none">
+    <div class="empty-icon">&#128202;</div>
+    <h2>Your Watchlist is Empty</h2>
+    <p>Add tickers you discover on YouTube or from your research.<br>We'll fetch all the fundamentals automatically.</p>
+    <button class="btn btn-primary" onclick="openAddModal()">+ Add Your First Ticker</button>
+  </div>
+  <table id="wl-table" style="display:none">
+    <thead>
+      <tr>
+        <th class="fr-0">#</th>
+        <th class="fr-1" onclick="sortBy('symbol')">SYMBOL</th>
+        <th class="fr-2" onclick="sortBy('company')" style="text-align:left">COMPANY</th>
+        <th class="fr-3" onclick="sortBy('cat')" style="text-align:left">SECTOR</th>
+        <th class="fr-4" onclick="sortBy('group')" style="text-align:left">GROUP</th>
+        <th onclick="sortBy('theme')" style="text-align:left">THEME</th>
+        <th onclick="sortBy('mkt_cap_raw')">MKT CAP</th>
+        <th onclick="sortBy('week52_low')">52W LOW</th>
+        <th onclick="sortBy('live_price')">LIVE PRICE</th>
+        <th onclick="sortBy('fair_value')">FAIR VALUE</th>
+        <th onclick="sortBy('week52_high')">52W HIGH</th>
+        <th>TREND</th>
+        <th onclick="sortBy('pe')">P/E</th>
+        <th onclick="sortBy('pb')">P/B</th>
+        <th onclick="sortBy('ps')">P/S</th>
+        <th onclick="sortBy('peg')">PEG</th>
+        <th onclick="sortBy('gross_margin')">GROSS MGN</th>
+        <th onclick="sortBy('chg_pct')">% CHG</th>
+        <th style="text-align:left;min-width:180px">NOTES</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody id="wl-tbody"></tbody>
+  </table>
+</div>
+
+<!-- ── Add Ticker Modal ── -->
+<div class="modal-overlay" id="add-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">+ Add Ticker to Watchlist</span>
+      <button class="modal-close" onclick="closeAddModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="alert alert-error"  id="modal-error"></div>
+      <div class="alert alert-warn"   id="modal-warn"></div>
+      <div class="alert alert-success" id="modal-success"></div>
+
+      <div class="form-row">
+        <label class="form-label">Stock Symbol</label>
+        <div class="sym-row">
+          <input class="form-input" id="input-symbol" placeholder="e.g. NVDA, TSLA, HOOD…"
+                 onkeydown="if(event.key==='Enter')lookupTicker()"
+                 oninput="this.value=this.value.toUpperCase()"/>
+          <button class="lookup-btn" id="lookup-btn" onclick="lookupTicker()">Look Up</button>
+        </div>
+      </div>
+
+      <!-- Preview card (shown after lookup) -->
+      <div class="preview-card" id="preview-card">
+        <div class="preview-company" id="preview-company">—</div>
+        <div class="preview-sector"  id="preview-sector">—</div>
+        <div class="preview-grid" id="preview-grid"></div>
+      </div>
+
+      <!-- Theme (user research tag) -->
+      <div class="form-row" id="theme-row" style="margin-top:14px;display:none">
+        <label class="form-label">Theme <span style="color:var(--muted);font-weight:400;text-transform:none">(your research tag — AI, Space, BTC Mining…)</span></label>
+        <input class="form-input" id="input-theme" placeholder="e.g. AI, Space, BTC Mining, Chip…" autocomplete="off" oninput="filterThemeSuggestions(this.value)" onfocus="showThemeSuggestions()" onblur="hideThemeSuggestions()"/>
+        <div id="theme-suggestions" style="display:none; background:var(--bg); border:1px solid var(--border); border-radius:6px; margin-top:4px; overflow:hidden; max-height:140px; overflow-y:auto;"></div>
+        <div id="theme-chips" style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;"></div>
+      </div>
+
+      <!-- Category override -->
+      <div class="form-row" id="cat-row" style="margin-top:14px;display:none">
+        <label class="form-label">Category <span style="color:var(--muted);font-weight:400;text-transform:none">(auto-filled · type or pick from list)</span></label>
+        <input class="form-input" id="input-cat" placeholder="e.g. AI Cloud, Energy, Mining…" autocomplete="off" oninput="filterCatSuggestions(this.value)" onfocus="showCatSuggestions()" onblur="hideCatSuggestions()"/>
+        <div id="cat-suggestions" style="display:none; background:var(--bg); border:1px solid var(--border); border-radius:6px; margin-top:4px; overflow:hidden; max-height:160px; overflow-y:auto;"></div>
+        <div id="cat-chips" style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeAddModal()">Cancel</button>
+      <button class="btn btn-primary" id="add-btn" onclick="addTicker()" style="display:none">Add to Watchlist</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Notes Modal -->
+<div class="modal-overlay" id="editnote-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="editnote-title">Notes</span>
+      <button class="modal-close" onclick="closeEditNote()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">Research notes — YouTube source, thesis, key points…</label>
+        <textarea class="form-input" id="editnote-input" rows="7"
+          placeholder="e.g. Saw on Tom Nash video 2026-06-28 — T1 Energy supplying solar to AI data centers in TX. CEO mentioned $500M contract pipeline. Watching for Q3 earnings…"
+          style="resize:vertical;font-size:13px;line-height:1.6;"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline btn-sm" onclick="closeEditNote()">Cancel</button>
+      <button class="btn btn-danger btn-sm" onclick="clearEditNote()">Clear</button>
+      <button class="btn btn-primary" onclick="saveEditNote()">Save Note</button>
+    </div>
+  </div>
+</div>
+
+<!-- Price Alarm Modal -->
+<div class="modal-overlay" id="alarm-modal">
+  <div class="mini-modal">
+    <div class="modal-header">
+      <span class="modal-title" id="alarm-title">Price Alarm</span>
+      <button class="modal-close" onclick="closeAlarm()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row" style="margin-bottom:14px">
+        <label class="form-label">Alert me when price is…</label>
+        <select class="form-input" id="alarm-direction" style="cursor:pointer">
+          <option value="below">At or below this price (buy alert)</option>
+          <option value="above">At or above this price (sell/target alert)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label class="form-label">Target price</label>
+        <input class="form-input" id="alarm-price" type="number" step="0.01" placeholder="e.g. 9.00"/>
+      </div>
+      <div class="form-row" style="margin-top:10px;display:flex;align-items:center;gap:8px;">
+        <input type="checkbox" id="alarm-enabled" style="width:16px;height:16px;accent-color:#a855f7;cursor:pointer;" checked/>
+        <label class="form-label" style="margin:0;cursor:pointer" onclick="document.getElementById('alarm-enabled').click()">Armed (alarm is active)</label>
+      </div>
+      <div style="margin-top:10px;font-size:11px;color:#94a3b8">When triggered, the voice announcer will speak the alert aloud using the voice set in the Announcer panel.</div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline btn-sm" onclick="closeAlarm()">Cancel</button>
+      <button class="btn btn-danger btn-sm" onclick="clearAlarm()">Remove</button>
+      <button class="btn btn-primary" onclick="saveAlarm()">Save Alarm</button>
+    </div>
+  </div>
+</div>
+
+<!-- Price Announcer Modal -->
+<div class="modal-overlay" id="announcer-modal">
+  <div class="mini-modal" style="max-width:480px">
+    <div class="modal-header">
+      <span class="modal-title">&#128226; Price Announcer</span>
+      <button class="modal-close" onclick="closeAnnouncer()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row" style="margin-bottom:12px">
+        <label class="form-label">Mode</label>
+        <div style="display:flex;gap:8px">
+          <button id="announcer-mode-ticker" class="btn btn-primary btn-sm" onclick="setAnnouncerMode('ticker')" style="flex:1">By Ticker</button>
+          <button id="announcer-mode-group"  class="btn btn-outline btn-sm" onclick="setAnnouncerMode('group')"  style="flex:1">By Group</button>
+        </div>
+      </div>
+
+      <!-- Ticker mode -->
+      <div id="announcer-ticker-section">
+        <div class="form-row" style="margin-bottom:8px">
+          <label class="form-label">Type to search, click to add</label>
+          <input class="form-input" id="announcer-search" type="text" placeholder="Search symbol or company…" oninput="renderAnnouncerSearch()"/>
+          <div id="announcer-search-results" style="max-height:120px;overflow-y:auto;margin-top:4px;border:1px solid #1e3a5f;border-radius:6px;display:none"></div>
+        </div>
+        <div class="form-row" style="margin-bottom:12px">
+          <label class="form-label">Selected tickers</label>
+          <div id="announcer-selected" style="display:flex;flex-wrap:wrap;gap:6px;min-height:32px;padding:6px;background:#0a1628;border:1px solid #1e3a5f;border-radius:6px"></div>
+        </div>
+      </div>
+
+      <!-- Group mode -->
+      <div id="announcer-group-section" style="display:none">
+        <div class="form-row" style="margin-bottom:12px">
+          <label class="form-label">Select a group to announce</label>
+          <select class="form-input" id="announcer-group-select" style="cursor:pointer"></select>
+          <div style="font-size:11px;color:#94a3b8;margin-top:4px" id="announcer-group-count"></div>
+        </div>
+      </div>
+      <div class="form-row" style="display:flex;align-items:center;gap:10px">
+        <label class="form-label" style="margin:0;white-space:nowrap">Announce every</label>
+        <input class="form-input" id="announcer-interval" type="number" min="1" value="5" style="width:70px;text-align:center"/>
+        <span class="form-label" style="margin:0">minutes</span>
+      </div>
+      <div class="form-row" style="display:flex;align-items:center;gap:10px;margin-top:10px">
+        <label class="form-label" style="margin:0;white-space:nowrap">Volume</label>
+        <input type="range" id="announcer-volume" min="0" max="1" step="0.05" value="1" style="flex:1;accent-color:#3b82f6;cursor:pointer" oninput="document.getElementById('announcer-vol-label').textContent=Math.round(this.value*100)+'%'"/>
+        <span class="form-label" style="margin:0;min-width:36px;text-align:right" id="announcer-vol-label">100%</span>
+      </div>
+      <div class="form-row" style="margin-top:10px">
+        <label class="form-label">Voice</label>
+        <select class="form-input" id="announcer-voice" style="cursor:pointer" onchange="_announcerVoice=this.value;localStorage.setItem('fspw_announcer_voice',this.value)"></select>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#94a3b8">Voice uses your browser's built-in Text-to-Speech. Test it with the button below.</div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline btn-sm" onclick="closeAnnouncer()">Close</button>
+      <button class="btn btn-outline btn-sm" onclick="testAnnounce()">&#9658; Test</button>
+      <button class="btn btn-danger btn-sm" id="btn-announcer-stop" onclick="stopAnnouncer()" style="display:none">&#9632; Stop</button>
+      <button class="btn btn-primary" id="btn-announcer-start" onclick="startAnnouncer()">&#9654; Start</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Theme Modal -->
+<div class="modal-overlay" id="edittheme-modal">
+  <div class="mini-modal">
+    <div class="modal-header">
+      <span class="modal-title" id="edittheme-title">Edit Theme</span>
+      <button class="modal-close" onclick="closeEditTheme()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">Pick existing or type new <span style="color:var(--muted);font-weight:400;text-transform:none">(AI, Space, BTC Mining, Chip…)</span></label>
+        <div id="edittheme-chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+        <input class="form-input" id="edittheme-input" placeholder="Or type a new theme…" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeEditTheme()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveEditTheme()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Category Modal -->
+<div class="modal-overlay" id="editcat-modal">
+  <div class="mini-modal">
+    <div class="modal-header">
+      <span class="modal-title" id="editcat-title">Edit Category</span>
+      <button class="modal-close" onclick="closeEditCat()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">Pick existing or type new</label>
+        <div id="editcat-chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+        <input class="form-input" id="editcat-input" placeholder="Or type a new category…" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeEditCat()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveEditCat()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Group Modal -->
+<div class="modal-overlay" id="editgroup-modal">
+  <div class="mini-modal">
+    <div class="modal-header">
+      <span class="modal-title" id="editgroup-title">Edit Group</span>
+      <button class="modal-close" onclick="closeEditGroup()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label class="form-label">Pick existing or type new group name</label>
+        <div id="editgroup-chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+        <input class="form-input" id="editgroup-input" placeholder="e.g. AI Leaders, Long Term, Swing…" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeEditGroup()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveEditGroup()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Legend Modal -->
+<div class="modal-overlay" id="legend-modal">
+  <div class="mini-modal" style="width:680px;max-width:96vw;max-height:90vh;overflow-y:auto">
+    <div class="modal-header">
+      <span class="modal-title">Column Definitions</span>
+      <button class="modal-close" onclick="closeLegend()">&times;</button>
+    </div>
+    <div style="padding: 8px 0;">
+      <div class="legend-row">
+        <div class="legend-col">MKT CAP</div>
+        <div class="legend-def">Market Capitalization — total market value of all shares outstanding (Price × Shares).
+          <div class="legend-tip">Mega &gt;$200B · Large $10–200B · Mid $2–10B · Small &lt;$2B</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">FAIR VALUE</div>
+        <div class="legend-def">Estimated intrinsic value per share based on analyst DCF models (via yFinance).
+          <div class="legend-tip">Green = price below fair value (potential upside) · Red = price above (potentially overvalued)</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">P/E</div>
+        <div class="legend-def">Price-to-Earnings — how much you pay for $1 of profit. (Price ÷ EPS)
+          <div class="legend-tip">Lower is cheaper, but compare within the same sector. Tech avg ~25x, Utilities ~15x.</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">P/B</div>
+        <div class="legend-def">Price-to-Book — price vs. net asset value. (Price ÷ Book Value per Share)
+          <div class="legend-tip">Under 1.0 = trading below asset value. High P/B is common in asset-light tech companies.</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">P/S</div>
+        <div class="legend-def">Price-to-Sales — price vs. revenue. (Price ÷ Revenue per Share)
+          <div class="legend-tip">Useful when P/E is unavailable (no earnings yet). Lower = potentially cheaper vs. revenue.</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">PEG</div>
+        <div class="legend-def">Price/Earnings-to-Growth — P/E adjusted for earnings growth rate. (P/E ÷ EPS Growth %)
+          <div class="legend-tip">Under 1.0 = potentially undervalued relative to growth. Best for growth stock screening.</div>
+        </div>
+      </div>
+      <div class="legend-row">
+        <div class="legend-col">GROSS MGN</div>
+        <div class="legend-def">Gross Margin — what % of revenue is left after cost of goods. ((Revenue − COGS) ÷ Revenue)
+          <div class="legend-tip">Higher is better. Software 70–90% · Retail 20–40% · Manufacturing 10–30%.</div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" onclick="closeLegend()">Got it</button>
+    </div>
+  </div>
+</div>
+
+<!-- New Group Modal -->
+<div class="modal-overlay" id="newgroup-modal">
+  <div class="mini-modal" style="width:460px">
+    <div class="modal-header">
+      <span class="modal-title">+ New Group</span>
+      <button class="modal-close" onclick="closeNewGroup()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row" style="margin-bottom:14px">
+        <label class="form-label">Group name</label>
+        <input class="form-input" id="newgroup-name" placeholder="e.g. Long Term, Watchlist, Swing…" autocomplete="off"/>
+      </div>
+      <div class="form-row">
+        <label class="form-label" style="margin-bottom:4px">Select tickers to add <span id="newgroup-count" style="color:#a855f7;margin-left:6px"></span></label>
+        <div style="display:flex;gap:8px;margin-bottom:6px">
+          <button class="btn btn-outline btn-sm" onclick="newGroupSelectAll(true)"  style="font-size:10px;padding:3px 10px">Select All</button>
+          <button class="btn btn-outline btn-sm" onclick="newGroupSelectAll(false)" style="font-size:10px;padding:3px 10px">Clear All</button>
+        </div>
+        <div class="ticker-checklist" id="newgroup-checklist"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeNewGroup()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewGroup()">Create Group</button>
+    </div>
+  </div>
+</div>
+
+<!-- Rename Group Modal -->
+<div class="modal-overlay" id="renamegroup-modal">
+  <div class="mini-modal">
+    <div class="modal-header">
+      <span class="modal-title">Rename Group</span>
+      <button class="modal-close" onclick="closeRenameGroup()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row" style="margin-bottom:14px">
+        <label class="form-label">Rename this group…</label>
+        <select class="form-input" id="renamegroup-from" style="cursor:pointer"></select>
+      </div>
+      <div class="form-row">
+        <label class="form-label">…to this new name</label>
+        <input class="form-input" id="renamegroup-input" placeholder="Type new group name…" autocomplete="off"/>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeRenameGroup()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveRenameGroup()">Rename All</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let watchlist    = [];
+let sortKey      = '';
+let sortDir      = 1;
+let activeGroup  = '';   // '' = All
+let lookupData   = null;
+let refreshTimer = null;
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  loadWatchlist();
+  refreshTimer = setInterval(loadWatchlist, 65000);
+  if (_alarmSoundB64) {
+    const btn = document.getElementById('btn-alarm-sound');
+    if (btn) { btn.textContent = '🎵 Custom'; btn.style.borderColor = '#86efac'; btn.style.color = '#86efac'; }
+  }
+  // Click-outside to close modals
+  document.getElementById('alarm-modal').addEventListener('click', e => { if (e.target.id === 'alarm-modal') closeAlarm(); });
+  document.getElementById('announcer-modal').addEventListener('click', e => { if (e.target.id === 'announcer-modal') closeAnnouncer(); });
+});
+
+// ── Load watchlist from server ─────────────────────────────────────────────────
+async function loadWatchlist() {
+  document.getElementById('statsbar').classList.add('refreshing');
+  try {
+    const res  = await fetch('/api/watchlist?_=' + Date.now());
+    if (!res.ok) throw new Error(`Server error ${res.status}: ${res.statusText}`);
+    const text = await res.text();
+    let data;
+    try { data = JSON.parse(text); }
+    catch(je) { throw new Error(`JSON parse failed: ${je.message}. First 200 chars: ${text.substring(0,200)}`); }
+    watchlist  = data.watchlist || [];
+    document.getElementById('stat-count').textContent   = watchlist.length;
+    document.getElementById('stat-refresh').textContent = data.last_refresh ? fmtTime(data.last_refresh) : 'loading…';
+    document.getElementById('stat-source').textContent  = data.source || 'yFinance';
+    document.getElementById('stat-source').style.color  = data.schwab ? '#86efac' : '#93c5fd';
+    const dot = document.getElementById('refresh-dot');
+    dot.className = watchlist.length ? 'dot dot-green' : 'dot dot-grey';
+    document.getElementById('load-error').style.display = 'none';
+    renderGroupFilter();
+    renderTable();
+    checkAlarms();
+  } catch(e) {
+    console.error('[FSPW loadWatchlist ERROR]', e);
+    document.getElementById('stat-count').textContent = 'ERR';
+    const errEl = document.getElementById('load-error');
+    if (errEl) { errEl.textContent = 'Load error: ' + e.message; errEl.style.display = 'block'; }
+  }
+  document.getElementById('statsbar').classList.remove('refreshing');
+}
+
+function fmtTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+
+// ── Render table ───────────────────────────────────────────────────────────────
+function renderTable() {
+  const q    = (document.getElementById('search-input').value || '').toLowerCase();
+  let rows   = watchlist.filter(r =>
+    (!q || r.symbol.toLowerCase().includes(q) ||
+    (r.company||'').toLowerCase().includes(q) ||
+    (r.cat||'').toLowerCase().includes(q)) &&
+    (!activeGroup || (r.group||'General') === activeGroup)
+  );
+
+  // Sort
+  if (sortKey) {
+    rows = rows.slice().sort((a,b) => {
+      let av = a[sortKey], bv = b[sortKey];
+      if (sortKey === 'mkt_cap_raw') { av = a.mkt_cap_raw||0; bv = b.mkt_cap_raw||0; }
+      if (av === null || av === undefined) return 1;
+      if (bv === null || bv === undefined) return -1;
+      return (av > bv ? 1 : av < bv ? -1 : 0) * sortDir;
+    });
+  }
+
+  const empty = document.getElementById('empty-state');
+  const tbl   = document.getElementById('wl-table');
+  const tbody = document.getElementById('wl-tbody');
+
+  if (watchlist.length === 0) {
+    empty.style.display = 'block';
+    tbl.style.display   = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  tbl.style.display   = 'table';
+
+  tbody.innerHTML = rows.map((r, i) => rowHtml(r, i+1)).join('');
+  requestAnimationFrame(fixFrozenOffsets);
+}
+
+// ── Price Alarms ─────────────────────────────────────────────────────────────────
+let _alarmSym   = null;
+const _alarmSetAt = {}; // sym → timestamp when alarm was last saved (grace period)
+
+function openAlarm(sym) {
+  const r = watchlist.find(x => x.symbol === sym);
+  if (!r) return;
+  _alarmSym = sym;
+  document.getElementById('alarm-title').textContent = `Price Alarm — ${sym}`;
+  const a = r.alarm;
+  document.getElementById('alarm-direction').value = a ? a.direction : 'below';
+  document.getElementById('alarm-price').value      = a && a.price != null ? a.price : (r.live_price || '');
+  document.getElementById('alarm-enabled').checked  = a ? !!a.enabled : true;
+  document.getElementById('alarm-modal').classList.add('open');
+  setTimeout(() => document.getElementById('alarm-price').focus(), 100);
+}
+function closeAlarm() {
+  document.getElementById('alarm-modal').classList.remove('open');
+  _alarmSym = null;
+}
+async function saveAlarm() {
+  if (!_alarmSym) return;
+  const price = parseFloat(document.getElementById('alarm-price').value);
+  if (isNaN(price) || price <= 0) { showToast('Enter a valid target price.', 'warn'); return; }
+  const direction = document.getElementById('alarm-direction').value;
+  const enabled   = document.getElementById('alarm-enabled').checked;
+  await fetch('/api/set_alarm', { method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ symbol: _alarmSym, price, direction, enabled }) });
+  const r = watchlist.find(x => x.symbol === _alarmSym);
+  if (r) r.alarm = { price, direction, enabled };
+  _alarmSetAt[_alarmSym] = Date.now(); // grace period — don't fire immediately
+  showToast(`Alarm set for ${_alarmSym}: alert ${direction} $${price.toFixed(2)}`, 'ok');
+  closeAlarm();
+  renderTable();
+}
+async function clearAlarm() {
+  if (!_alarmSym) return;
+  await fetch('/api/set_alarm', { method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ symbol: _alarmSym, price: null }) });
+  const r = watchlist.find(x => x.symbol === _alarmSym);
+  if (r) r.alarm = null;
+  showToast(`Alarm removed for ${_alarmSym}`, 'ok');
+  closeAlarm();
+  renderTable();
+}
+
+// ── Alarm sound engine (same pattern as FOCUS Scanner) ───────────────────────────
+let _alarmSoundB64 = localStorage.getItem('fspw_alarm_sound') || null;
+let _alarmAudio    = null;
+
+function _defaultBeep() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    [0, 0.18, 0.36].forEach(delay => {
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.frequency.value = 880; o.type = 'sine';
+      g.gain.value = 0.45;
+      o.connect(g); g.connect(ctx.destination);
+      o.start(ctx.currentTime + delay);
+      o.stop(ctx.currentTime + delay + 0.16);
+    });
+  } catch(e) {}
+}
+function playAlarmSound(sym) {
+  const tickerSound = sym ? localStorage.getItem('fspw_alarm_sound_' + sym) : null;
+  const sound = tickerSound || _alarmSoundB64;
+  if (sound) {
+    try {
+      if (_alarmAudio) { _alarmAudio.pause(); _alarmAudio.currentTime = 0; }
+      _alarmAudio = new Audio(sound);
+      _alarmAudio.volume = 0.85;
+      _alarmAudio.play();
+      setTimeout(() => { if (_alarmAudio) { _alarmAudio.pause(); _alarmAudio.currentTime = 0; } }, 6000);
+      return;
+    } catch(e) { console.warn('Custom alarm sound failed, using beep:', e); }
+  }
+  _defaultBeep();
+}
+function pickAlarmSound() {
+  document.getElementById('alarm-sound-file-input').click();
+}
+function loadAlarmSound(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    _alarmSoundB64 = e.target.result;
+    localStorage.setItem('fspw_alarm_sound', e.target.result);
+    const btn = document.getElementById('btn-alarm-sound');
+    if (btn) { btn.textContent = '🎵 ' + file.name.slice(0, 14); btn.style.borderColor = '#86efac'; btn.style.color = '#86efac'; }
+    showToast('Custom alarm sound saved.', 'ok');
+  };
+  reader.readAsDataURL(file);
+}
+function clearAlarmSound() {
+  _alarmSoundB64 = null;
+  localStorage.removeItem('fspw_alarm_sound');
+  if (_alarmAudio) { _alarmAudio.pause(); _alarmAudio = null; }
+  const btn = document.getElementById('btn-alarm-sound');
+  if (btn) { btn.textContent = '🎵 Sound'; btn.style.borderColor = ''; btn.style.color = ''; }
+  showToast('Reverted to default beep.', 'ok');
+}
+
+// ── Per-ticker custom alarm sound (overrides global sound for one symbol) ───────
+function pickTickerAlarmSound() {
+  if (!_alarmSym) return;
+  document.getElementById('alarm-sound-file-input-ticker').click();
+}
+function loadTickerAlarmSound(input) {
+  const file = input.files[0];
+  if (!file || !_alarmSym) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    localStorage.setItem('fspw_alarm_sound_' + _alarmSym, e.target.result);
+    const btn = document.getElementById('btn-alarm-sound-ticker');
+    if (btn) { btn.textContent = '🎵 ' + file.name.slice(0, 14); btn.style.borderColor = '#86efac'; btn.style.color = '#86efac'; }
+    showToast(`Custom sound saved for ${_alarmSym}.`, 'ok');
+  };
+  reader.readAsDataURL(file);
+}
+function clearTickerAlarmSound() {
+  if (!_alarmSym) return;
+  localStorage.removeItem('fspw_alarm_sound_' + _alarmSym);
+  const btn = document.getElementById('btn-alarm-sound-ticker');
+  if (btn) { btn.textContent = '🎵 Sound'; btn.style.borderColor = ''; btn.style.color = ''; }
+  showToast(`${_alarmSym} will use the global sound now.`, 'ok');
+}
+function playTickerAlarmSound() {
+  if (!_alarmSym) return;
+  playAlarmSound(_alarmSym);
+}
+
+// ── Check alarms against live prices (called after every loadWatchlist) ─────────
+function checkAlarms() {
+  const now = Date.now();
+  watchlist.forEach(r => {
+    const a = r.alarm;
+    if (!a || !a.enabled || a.price == null || r.live_price == null) return;
+    // Grace period: skip for 90s after the alarm was just set to avoid instant-fire
+    if (_alarmSetAt[r.symbol] && (now - _alarmSetAt[r.symbol]) < 90000) return;
+    const hit = a.direction === 'below' ? r.live_price <= a.price : r.live_price >= a.price;
+    if (!hit) return;
+    // Fire once, then auto-disarm so it doesn't repeat every refresh
+    const symSpoken   = r.symbol.split('').join(' ');
+    const priceSpoken = r.live_price.toFixed(2).replace('.', ' point ');
+    const targSpoken  = a.price.toFixed(2).replace('.', ' point ');
+    const dirWord     = a.direction === 'below' ? 'below' : 'above';
+    _speak(`Alert. ${symSpoken} has reached ${priceSpoken}. ${dirWord} your target of ${targSpoken}.`);
+    showToast(`🔔 ALARM — ${r.symbol} hit $${r.live_price.toFixed(2)} (target ${a.direction} $${a.price.toFixed(2)})`, 'warn');
+    const row = document.getElementById(`row-${r.symbol}`);
+    if (row) row.classList.add('alarm-row-flash');
+    a.enabled = false;
+    fetch('/api/set_alarm', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ symbol: r.symbol, price: a.price, direction: a.direction, enabled: false }) });
+  });
+}
+
+// ── Price Announcer ────────────────────────────────────────────────────────────
+let _announcerTickers  = JSON.parse(localStorage.getItem('fspw_announcer_tickers') || '[]');
+let _announcerInterval = parseInt(localStorage.getItem('fspw_announcer_interval') || '5', 10);
+let _announcerVolume   = parseFloat(localStorage.getItem('fspw_announcer_volume') || '1');
+let _announcerVoice    = localStorage.getItem('fspw_announcer_voice') || '';
+let _announcerMode     = localStorage.getItem('fspw_announcer_mode') || 'ticker'; // 'ticker' | 'group'
+let _announcerGroup    = localStorage.getItem('fspw_announcer_group') || '';
+let _announcerTimer    = null;
+let _announcerCountdownTimer = null;
+let _announcerNextAt   = null;
+
+function _populateVoices() {
+  const sel = document.getElementById('announcer-voice');
+  if (!sel || !window.speechSynthesis) return;
+  const all    = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  if (!all.length) return;
+  // Offline voices first — they are reliable; online voices are network-dependent
+  const offline = all.filter(v =>  v.localService);
+  const online  = all.filter(v => !v.localService);
+  const sorted  = [...offline, ...online];
+  sel.innerHTML = [
+    offline.length ? `<optgroup label="── Offline (Recommended) ──">` + offline.map(v =>
+      `<option value="${v.name}" ${v.name === _announcerVoice ? 'selected' : ''}>${v.name}</option>`).join('') + `</optgroup>` : '',
+    online.length  ? `<optgroup label="── Online (may be slow) ──">` + online.map(v =>
+      `<option value="${v.name}" ${v.name === _announcerVoice ? 'selected' : ''}>${v.name}</option>`).join('') + `</optgroup>` : '',
+  ].join('');
+  if (!_announcerVoice && sorted.length) _announcerVoice = sorted[0].name;
+}
+if (window.speechSynthesis) {
+  window.speechSynthesis.onvoiceschanged = _populateVoices;
+}
+
+function openAnnouncer() {
+  document.getElementById('announcer-interval').value = _announcerInterval;
+  const vol = document.getElementById('announcer-volume');
+  if (vol) { vol.value = _announcerVolume; document.getElementById('announcer-vol-label').textContent = Math.round(_announcerVolume * 100) + '%'; }
+  _populateVoices();
+  setAnnouncerMode(_announcerMode, true);
+  renderAnnouncerSelected();
+  renderAnnouncerSearch();
+  _syncAnnouncerButtons();
+  document.getElementById('announcer-modal').classList.add('open');
+}
+function setAnnouncerMode(mode, silent) {
+  _announcerMode = mode;
+  if (!silent) localStorage.setItem('fspw_announcer_mode', mode);
+  document.getElementById('announcer-ticker-section').style.display = mode === 'ticker' ? '' : 'none';
+  document.getElementById('announcer-group-section').style.display  = mode === 'group'  ? '' : 'none';
+  document.getElementById('announcer-mode-ticker').className = 'btn btn-sm ' + (mode === 'ticker' ? 'btn-primary' : 'btn-outline');
+  document.getElementById('announcer-mode-group').className  = 'btn btn-sm ' + (mode === 'group'  ? 'btn-primary' : 'btn-outline');
+  if (mode === 'group') _populateAnnouncerGroups();
+}
+function _populateAnnouncerGroups() {
+  const sel = document.getElementById('announcer-group-select');
+  if (!sel) return;
+  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  sel.innerHTML = groups.map(g => `<option value="${g}" ${g === _announcerGroup ? 'selected' : ''}>${g}</option>`).join('');
+  if (!_announcerGroup && groups.length) _announcerGroup = groups[0];
+  sel.onchange = () => {
+    _announcerGroup = sel.value;
+    localStorage.setItem('fspw_announcer_group', _announcerGroup);
+    _updateGroupCount();
+  };
+  _updateGroupCount();
+}
+function _updateGroupCount() {
+  const count = watchlist.filter(r => (r.group || 'General') === _announcerGroup).length;
+  const el = document.getElementById('announcer-group-count');
+  if (el) el.textContent = `${count} ticker${count !== 1 ? 's' : ''} in this group`;
+}
+function closeAnnouncer() {
+  document.getElementById('announcer-modal').classList.remove('open');
+  document.getElementById('announcer-search').value = '';
+  document.getElementById('announcer-search-results').style.display = 'none';
+}
+function renderAnnouncerSelected() {
+  const el = document.getElementById('announcer-selected');
+  if (!el) return;
+  if (!_announcerTickers.length) { el.innerHTML = '<span style="color:#64748b;font-size:12px">No tickers selected</span>'; return; }
+  el.innerHTML = _announcerTickers.map(sym =>
+    `<span style="display:inline-flex;align-items:center;gap:4px;background:#1e3a5f;border:1px solid #3b82f6;border-radius:4px;padding:3px 8px;font-size:12px;font-weight:700;color:#fff">
+      ${sym} <span onclick="removeAnnouncerTicker('${sym}')" style="cursor:pointer;color:#94a3b8;font-size:14px;line-height:1">&times;</span>
+    </span>`
+  ).join('');
+}
+function renderAnnouncerSearch() {
+  const q   = (document.getElementById('announcer-search').value || '').toUpperCase().trim();
+  const res = document.getElementById('announcer-search-results');
+  if (!q) { res.style.display = 'none'; return; }
+  const matches = watchlist.filter(r =>
+    (r.symbol.includes(q) || (r.company || '').toUpperCase().includes(q)) &&
+    !_announcerTickers.includes(r.symbol)
+  ).slice(0, 20);
+  if (!matches.length) { res.style.display = 'none'; return; }
+  res.style.display = 'block';
+  res.innerHTML = matches.map(r =>
+    `<div onclick="addAnnouncerTicker('${r.symbol}')" style="padding:6px 10px;cursor:pointer;font-size:13px;border-bottom:1px solid #1e3a5f;color:#e2e8f0" onmouseover="this.style.background='#1e3a5f'" onmouseout="this.style.background=''">
+      <span style="font-weight:700;color:#3b82f6">${r.symbol}</span> <span style="color:#94a3b8">${r.company || ''}</span>
+    </div>`
+  ).join('');
+}
+function addAnnouncerTicker(sym) {
+  if (!_announcerTickers.includes(sym)) {
+    _announcerTickers.push(sym);
+    localStorage.setItem('fspw_announcer_tickers', JSON.stringify(_announcerTickers));
+  }
+  document.getElementById('announcer-search').value = '';
+  document.getElementById('announcer-search-results').style.display = 'none';
+  renderAnnouncerSelected();
+}
+function removeAnnouncerTicker(sym) {
+  _announcerTickers = _announcerTickers.filter(s => s !== sym);
+  localStorage.setItem('fspw_announcer_tickers', JSON.stringify(_announcerTickers));
+  renderAnnouncerSelected();
+}
+function _buildAnnounceText() {
+  const lines = [];
+  let tickers;
+  if (_announcerMode === 'group' && _announcerGroup) {
+    tickers = watchlist.filter(r => (r.group || 'General') === _announcerGroup).map(r => r.symbol);
+  } else {
+    tickers = _announcerTickers;
+  }
+  tickers.forEach(sym => {
+    const r = watchlist.find(x => x.symbol === sym);
+    if (!r || r.live_price == null) return;
+    const price     = r.live_price.toFixed(2);
+    const chg       = r.chg_pct != null ? (r.chg_pct >= 0 ? 'up ' : 'down ') + Math.abs(r.chg_pct).toFixed(2) + ' percent' : '';
+    const symSpoken = sym.split('').join(' ');
+    lines.push(`${symSpoken}, ${price}${chg ? ', ' + chg : ''}`);
+  });
+  if (!lines.length) return null;
+  const prefix = _announcerMode === 'group' ? `${_announcerGroup}. ` : '';
+  return prefix + lines.join('. ') + '.';
+}
+function _speak(text) {
+  if (!window.speechSynthesis) { showToast('Browser TTS not supported.', 'warn'); return; }
+  window.speechSynthesis.cancel();
+  const volEl     = document.getElementById('announcer-volume');
+  const voiceSel  = document.getElementById('announcer-voice');
+  const voiceName = (voiceSel ? voiceSel.value : null) || _announcerVoice;
+  const vol       = volEl ? parseFloat(volEl.value) : _announcerVolume;
+  function _doSpeak(voices) {
+    const utt  = new SpeechSynthesisUtterance(text);
+    utt.rate   = 0.95;
+    utt.pitch  = 1;
+    utt.volume = vol;
+    if (voiceName) {
+      const v = voices.find(x => x.name === voiceName);
+      if (v) utt.voice = v;
+    }
+    // Chrome bug: cancel() + immediate speak() gets dropped — small delay required
+    setTimeout(() => window.speechSynthesis.speak(utt), 120);
+  }
+  window.speechSynthesis.cancel();
+  const voices = window.speechSynthesis.getVoices();
+  if (voices.length) {
+    _doSpeak(voices);
+  } else {
+    window.speechSynthesis.onvoiceschanged = () => {
+      window.speechSynthesis.onvoiceschanged = _populateVoices;
+      _doSpeak(window.speechSynthesis.getVoices());
+    };
+  }
+}
+function testAnnounce() {
+  const text = _buildAnnounceText();
+  if (!text) { showToast('Add at least one ticker first.', 'warn'); return; }
+  _speak(text);
+}
+function startAnnouncer() {
+  const mins = parseFloat(document.getElementById('announcer-interval').value);
+  if (!mins || mins < 0.1) { showToast('Enter a valid interval (min 0.1).', 'warn'); return; }
+  if (_announcerMode === 'ticker' && !_announcerTickers.length) { showToast('Add at least one ticker first.', 'warn'); return; }
+  if (_announcerMode === 'group' && !_announcerGroup) { showToast('Select a group first.', 'warn'); return; }
+  const groupSel = document.getElementById('announcer-group-select');
+  if (groupSel) { _announcerGroup = groupSel.value; localStorage.setItem('fspw_announcer_group', _announcerGroup); }
+  localStorage.setItem('fspw_announcer_mode', _announcerMode);
+  _announcerInterval = mins;
+  localStorage.setItem('fspw_announcer_interval', mins);
+  const vol = document.getElementById('announcer-volume');
+  if (vol) { _announcerVolume = parseFloat(vol.value); localStorage.setItem('fspw_announcer_volume', _announcerVolume); }
+  const voiceSel = document.getElementById('announcer-voice');
+  if (voiceSel) { _announcerVoice = voiceSel.value; localStorage.setItem('fspw_announcer_voice', _announcerVoice); }
+  localStorage.setItem('fspw_announcer_tickers', JSON.stringify(_announcerTickers));
+  stopAnnouncer();
+  const ms = Math.round(mins * 60 * 1000);
+  _announcerNextAt = Date.now() + ms;
+  _announcerTimer = setInterval(() => {
+    const text = _buildAnnounceText();
+    if (text) _speak(text);
+    _announcerNextAt = Date.now() + ms;
+  }, ms);
+  // Countdown ticker — updates every second
+  _announcerCountdownTimer = setInterval(_updateAnnouncerCountdown, 1000);
+  _updateAnnouncerCountdown();
+  _syncAnnouncerButtons();
+  showToast(`Announcer started — every ${mins} min`, 'ok');
+  const btn = document.getElementById('btn-announcer');
+  if (btn) { btn.style.borderColor = '#86efac'; btn.style.color = '#86efac'; }
+}
+function stopAnnouncer() {
+  if (_announcerTimer) { clearInterval(_announcerTimer); _announcerTimer = null; }
+  if (_announcerCountdownTimer) { clearInterval(_announcerCountdownTimer); _announcerCountdownTimer = null; }
+  _announcerNextAt = null;
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  const cd = document.getElementById('announcer-countdown');
+  if (cd) cd.style.display = 'none';
+  _syncAnnouncerButtons();
+  const btn = document.getElementById('btn-announcer');
+  if (btn) { btn.style.borderColor = ''; btn.style.color = ''; }
+}
+function _updateAnnouncerCountdown() {
+  const cd = document.getElementById('announcer-countdown');
+  if (!cd || !_announcerNextAt) return;
+  const rem = Math.max(0, Math.round((_announcerNextAt - Date.now()) / 1000));
+  const m = String(Math.floor(rem / 60)).padStart(2, '0');
+  const s = String(rem % 60).padStart(2, '0');
+  cd.textContent = `next: ${m}:${s}`;
+  cd.style.display = 'block';
+}
+function _syncAnnouncerButtons() {
+  const running = !!_announcerTimer;
+  const startBtn = document.getElementById('btn-announcer-start');
+  const stopBtn  = document.getElementById('btn-announcer-stop');
+  if (startBtn) startBtn.style.display = running ? 'none' : '';
+  if (stopBtn)  stopBtn.style.display  = running ? '' : 'none';
+}
+
+// ── Group filter bar ───────────────────────────────────────────────────────────
+function renderGroupFilter() {
+  const bar = document.getElementById('group-filter-bar');
+  if (!bar) return;
+  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  bar.innerHTML = `<button class="gf-btn ${activeGroup===''?'active':''}" onclick="setGroup('')">All</button>` +
+    groups.map(g => `<button class="gf-btn ${activeGroup===g?'active':''}" onclick="setGroup('${g.replace(/'/g,"\\'")}') ">${g}</button>`).join('');
+}
+function setGroup(g) {
+  activeGroup = g;
+  renderGroupFilter();
+  renderTable();
+}
+
+// ── Edit Group ─────────────────────────────────────────────────────────────────
+let _editGroupSym = null;
+function editGroup(sym, current) {
+  _editGroupSym = sym;
+  document.getElementById('editgroup-title').textContent = `Edit Group — ${sym}`;
+  document.getElementById('editgroup-input').value = current || 'General';
+  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  document.getElementById('editgroup-chips').innerHTML = groups.map(g =>
+    `<span class="cat-chip-pick${g===current?' selected':''}" onclick="pickEditGroup('${g.replace(/'/g,"\\'")}',this)">${g}</span>`
+  ).join('');
+  document.getElementById('editgroup-modal').classList.add('open');
+  setTimeout(() => document.getElementById('editgroup-input').focus(), 100);
+}
+function pickEditGroup(g, el) {
+  document.getElementById('editgroup-input').value = g;
+  document.querySelectorAll('#editgroup-chips .cat-chip-pick').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function closeEditGroup() {
+  document.getElementById('editgroup-modal').classList.remove('open');
+  _editGroupSym = null;
+}
+
+// ── Rename Group (bulk) ────────────────────────────────────────────────────────
+// ── New Group ──────────────────────────────────────────────────────────────────
+function openNewGroup() {
+  document.getElementById('newgroup-name').value = '';
+  const list = document.getElementById('newgroup-checklist');
+  list.innerHTML = watchlist.map(r =>
+    `<label class="ticker-check-row">
+      <input type="checkbox" class="ng-chk" value="${r.symbol}" onchange="updateNewGroupCount()">
+      <span class="ticker-check-sym">${r.symbol}</span>
+      <span class="ticker-check-co">${(r.company||'').substring(0,30)}</span>
+      <span class="ticker-check-grp">${r.group||'General'}</span>
+    </label>`
+  ).join('');
+  updateNewGroupCount();
+  document.getElementById('newgroup-modal').classList.add('open');
+  setTimeout(() => document.getElementById('newgroup-name').focus(), 100);
+}
+function updateNewGroupCount() {
+  const n = document.querySelectorAll('.ng-chk:checked').length;
+  document.getElementById('newgroup-count').textContent = n ? `(${n} selected)` : '';
+}
+function newGroupSelectAll(state) {
+  document.querySelectorAll('.ng-chk').forEach(c => c.checked = state);
+  updateNewGroupCount();
+}
+function closeNewGroup() {
+  document.getElementById('newgroup-modal').classList.remove('open');
+}
+async function saveNewGroup() {
+  const name = document.getElementById('newgroup-name').value.trim();
+  if (!name) { showToast('Enter a group name.', 'err'); return; }
+  const symbols = [...document.querySelectorAll('.ng-chk:checked')].map(c => c.value);
+  if (!symbols.length) { showToast('Select at least one ticker.', 'err'); return; }
+  closeNewGroup();
+  try {
+    const res = await fetch('/api/batch_update_group', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({group: name, symbols}) });
+    const data = await res.json();
+    if (data.error) { showToast(data.error, 'err'); return; }
+    symbols.forEach(sym => { const r = watchlist.find(x => x.symbol === sym); if (r) r.group = name; });
+    renderGroupFilter();
+    renderTable();
+    showToast(`Group "${name}" created with ${symbols.length} ticker${symbols.length>1?'s':''}.`, 'ok');
+  } catch(e) { showToast('Error creating group.', 'err'); }
+}
+
+function openLegend() { document.getElementById('legend-modal').classList.add('open'); }
+function closeLegend() { document.getElementById('legend-modal').classList.remove('open'); }
+
+function openRenameGroup() {
+  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  const sel = document.getElementById('renamegroup-from');
+  sel.innerHTML = groups.map(g => `<option value="${g.replace(/"/g,'&quot;')}">${g}</option>`).join('');
+  document.getElementById('renamegroup-input').value = '';
+  document.getElementById('renamegroup-modal').classList.add('open');
+  setTimeout(() => document.getElementById('renamegroup-input').focus(), 100);
+}
+function closeRenameGroup() {
+  document.getElementById('renamegroup-modal').classList.remove('open');
+}
+async function saveRenameGroup() {
+  const from = document.getElementById('renamegroup-from').value.trim();
+  const to   = document.getElementById('renamegroup-input').value.trim();
+  if (!from) { showToast('Select a group to rename.', 'err'); return; }
+  if (!to)   { showToast('Enter a new name.', 'err'); return; }
+  if (from === to) { closeRenameGroup(); return; }
+  closeRenameGroup();
+  try {
+    const res = await fetch('/api/rename_group', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({from, to}) });
+    const data = await res.json();
+    if (data.error) { showToast(data.error, 'err'); return; }
+    watchlist.forEach(r => { if ((r.group||'General') === from) r.group = to; });
+    if (activeGroup === from) activeGroup = to;
+    renderGroupFilter();
+    renderTable();
+    showToast(`Renamed "${from}" → "${to}" (${data.updated} tickers).`, 'ok');
+  } catch(e) { showToast('Error renaming group.', 'err'); }
+}
+async function saveEditGroup() {
+  const sym   = _editGroupSym;
+  const group = document.getElementById('editgroup-input').value.trim() || 'General';
+  closeEditGroup();
+  try {
+    await fetch('/api/update_group', { method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({symbol: sym, group}) });
+    const r = watchlist.find(x => x.symbol === sym);
+    if (r) r.group = group;
+    renderGroupFilter();
+    renderTable();
+    showToast(`Group updated for ${sym}.`, 'ok');
+  } catch(e) { showToast('Error saving group.', 'err'); }
+}
+
+// Measure actual column positions after render and apply to all sticky cells
+function fixFrozenOffsets() {
+  const thead = document.querySelector('#wl-table thead tr');
+  if (!thead) return;
+  const ths = thead.querySelectorAll('th');
+  const frozenCount = 5; // #, SYMBOL, COMPANY, SECTOR, GROUP
+  const offsets = [];
+  let left = 0;
+  for (let i = 0; i < frozenCount; i++) {
+    offsets.push(left);
+    left += ths[i].offsetWidth;
+  }
+  // Apply to thead
+  for (let i = 0; i < frozenCount; i++) {
+    ths[i].style.left = offsets[i] + 'px';
+  }
+  // Apply to all tbody rows
+  document.querySelectorAll('#wl-tbody tr').forEach(tr => {
+    const tds = tr.querySelectorAll('td');
+    for (let i = 0; i < frozenCount && i < tds.length; i++) {
+      tds[i].style.left = offsets[i] + 'px';
+    }
+  });
+}
+
+function rowHtml(r, i) {
+  const p   = r.live_price;
+  const fv  = r.fair_value;
+  const chg = r.chg_pct || 0;
+  const chgClass = chg > 0 ? 'chg-pos' : chg < 0 ? 'chg-neg' : 'chg-zero';
+  const chgStr   = chg > 0 ? `+${chg.toFixed(2)}%` : `${chg.toFixed(2)}%`;
+
+  // Fair value color hint
+  let fvColor = '';
+  if (p && fv) {
+    fvColor = fv > p ? 'color:#86efac' : fv < p ? 'color:#fca5a5' : '';
+  }
+
+  const notePreview = (r.notes||'').trim();
+  return `<tr id="row-${r.symbol}">
+    <td class="td-num fr-0">${i}</td>
+    <td class="td-sym fr-1">${r.symbol}</td>
+    <td class="td-company left fr-2" title="${r.company||''}">${r.company||'—'}</td>
+    <td class="left fr-3"><span class="cat-pill" onclick="editCat('${r.symbol}','${(r.cat||'').replace(/'/g,"\\'")}')">
+      ${r.cat||'—'}
+    </span></td>
+    <td class="left fr-4"><span class="group-pill" onclick="editGroup('${r.symbol}','${(r.group||'General').replace(/'/g,"\\'")}') ">${r.group||'General'}</span></td>
+    <td class="left">${_themePills(r)}</td>
+    <td>${r.mkt_cap||'—'}</td>
+    <td>${r.week52_low ? '$'+r.week52_low.toFixed(2) : '—'}</td>
+    <td class="td-price" style="padding-bottom:6px">
+      <div>${p ? '$'+p.toFixed(2) : '—'} ${_alarmBell(r)}</div>
+      ${rangeBar(r.week52_low, p, r.week52_high)}
+    </td>
+    <td class="td-fair" style="${fvColor}">${fv ? '$'+fv.toFixed(2) : '—'}</td>
+    <td>${r.week52_high ? '$'+r.week52_high.toFixed(2) : '—'}</td>
+    <td>${sparklineSvg(r.trend, chg)}</td>
+    <td class="${r.pe ? 'metric' : 'metric-na'}">${r.pe ? r.pe.toFixed(1)+'x' : '—'}</td>
+    <td class="${r.pb ? 'metric' : 'metric-na'}">${r.pb ? r.pb.toFixed(2)+'x' : '—'}</td>
+    <td class="${r.ps ? 'metric' : 'metric-na'}">${r.ps ? r.ps.toFixed(2)+'x' : '—'}</td>
+    <td class="${r.peg ? 'metric' : 'metric-na'}">${r.peg ? r.peg.toFixed(2)+'x' : '—'}</td>
+    <td>${r.gross_margin != null ? r.gross_margin.toFixed(1)+'%' : '—'}</td>
+    <td class="${chgClass}">${chgStr}</td>
+    <td class="td-note${notePreview?'':' empty'}" onclick="editNote('${r.symbol}')" title="${notePreview.replace(/'/g,"&apos;")}">
+      ${notePreview ? notePreview.substring(0,45)+(notePreview.length>45?'…':'') : '+ add note'}
+    </td>
+    <td>
+      <div class="actions">
+        <button class="btn btn-refresh btn-sm" onclick="refreshOne('${r.symbol}')" title="Refresh">&#8635;</button>
+        <button class="btn btn-danger btn-sm"  onclick="removeTicker('${r.symbol}')" title="Remove">&#10005;</button>
+      </div>
+    </td>
+  </tr>`;
+}
+
+// ── Price alarm bell icon ───────────────────────────────────────────────────────
+function _alarmBell(r) {
+  const a = r.alarm;
+  if (!a || a.price == null) {
+    return `<span class="alarm-bell off" onclick="event.stopPropagation();openAlarm('${r.symbol}')" title="Set price alarm">&#128276;</span>`;
+  }
+  const armed = a.enabled;
+  const dirArrow = a.direction === 'above' ? '&#8593;' : '&#8595;';
+  return `<span class="alarm-bell ${armed ? 'armed' : 'disarmed'}" onclick="event.stopPropagation();openAlarm('${r.symbol}')" title="${armed ? 'Armed' : 'Disarmed'}: alert ${a.direction} $${a.price.toFixed(2)}">&#128276;<span class="alarm-tag">${dirArrow}$${a.price.toFixed(2)}</span></span>`;
+}
+
+// ── 52W Range gauge ────────────────────────────────────────────────────────────
+function rangeBar(low, price, high) {
+  if (!low || !price || !high || high <= low) return '';
+  const pct = Math.min(1, Math.max(0, (price - low) / (high - low)));
+  const color = pct >= 0.65 ? '#22c55e' : pct >= 0.35 ? '#fbbf24' : '#ef4444';
+  return `<div class="range-wrap">
+    <div class="range-bar-track">
+      <div class="range-bar-fill" style="width:${(pct*100).toFixed(1)}%;background:${color}"></div>
+      <div class="range-bar-dot"  style="left:${(pct*100).toFixed(1)}%;background:${color}"></div>
+    </div>
+    <div class="range-labels"><span>$${low.toFixed(2)}</span><span>$${high.toFixed(2)}</span></div>
+  </div>`;
+}
+
+// ── Sparkline SVG ──────────────────────────────────────────────────────────────
+function sparklineSvg(prices, chg) {
+  if (!prices || prices.length < 2) return '<span style="color:#475569;font-size:10px">—</span>';
+  const W = 72, H = 28, pad = 2;
+  const mn = Math.min(...prices), mx = Math.max(...prices);
+  const range = mx - mn || 1;
+  const xs = prices.map((_,i) => pad + i * (W - 2*pad) / (prices.length - 1));
+  const ys = prices.map(v  => H - pad - (v - mn) / range * (H - 2*pad));
+  const pts = xs.map((x,i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(' ');
+  const color = chg >= 0 ? '#16a34a' : '#dc2626';
+  const fill  = chg >= 0 ? 'rgba(22,163,74,0.12)' : 'rgba(220,38,38,0.12)';
+  // Close path for fill
+  const fillPts = `${xs[0].toFixed(1)},${H} ` + pts + ` ${xs[xs.length-1].toFixed(1)},${H}`;
+  return `<svg class="sparkline" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <polygon points="${fillPts}" fill="${fill}"/>
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${xs[xs.length-1].toFixed(1)}" cy="${ys[ys.length-1].toFixed(1)}" r="2" fill="${color}"/>
+  </svg>`;
+}
+
+// ── Sort ───────────────────────────────────────────────────────────────────────
+function sortBy(key) {
+  if (sortKey === key) sortDir = -sortDir;
+  else { sortKey = key; sortDir = -1; }
+  document.querySelectorAll('thead th').forEach(th => {
+    th.classList.remove('sorted-asc','sorted-desc');
+  });
+  const ths = document.querySelectorAll('thead th');
+  const headers = ['','symbol','company','cat','group','theme','mkt_cap_raw','week52_low',
+                   'live_price','fair_value','week52_high','trend','pe','pb','ps','peg','gross_margin','chg_pct','notes',''];
+  const idx = headers.indexOf(key);
+  if (idx >= 0 && ths[idx]) ths[idx].classList.add(sortDir === -1 ? 'sorted-desc' : 'sorted-asc');
+  renderTable();
+}
+
+// ── Add modal ──────────────────────────────────────────────────────────────────
+function openAddModal() {
+  lookupData = null;
+  document.getElementById('input-symbol').value = '';
+  document.getElementById('input-cat').value    = '';
+  document.getElementById('preview-card').classList.remove('show');
+  document.getElementById('cat-row').style.display   = 'none';
+  document.getElementById('theme-row').style.display  = 'none';
+  document.getElementById('add-btn').style.display    = 'none';
+  clearModalAlerts();
+  _populateCatDatalist();
+  document.getElementById('add-modal').classList.add('open');
+  setTimeout(() => document.getElementById('input-symbol').focus(), 100);
+}
+
+function _themeArr(r) {
+  if (Array.isArray(r.theme)) return r.theme.filter(Boolean);
+  if (r.theme && r.theme !== '—') return r.theme.split(',').map(t=>t.trim()).filter(Boolean);
+  return [];
+}
+function _themePills(r) {
+  const themes = _themeArr(r);
+  if (!themes.length) return `<span class="theme-pill empty" onclick="editTheme('${r.symbol}')">+ theme</span>`;
+  return themes.map(t =>
+    `<span class="theme-pill" onclick="editTheme('${r.symbol}')">${t}</span>`
+  ).join(' ');
+}
+function _existingThemes() {
+  const all = [];
+  watchlist.forEach(r => _themeArr(r).forEach(t => { if (!all.includes(t)) all.push(t); }));
+  return all.sort();
+}
+
+// ── Theme suggestions (Add modal) ──────────────────────────────────────────────
+function showThemeSuggestions() {
+  const themes = _existingThemes();
+  if (!themes.length) return;
+  _buildThemeSuggestions(themes);
+  document.getElementById('theme-suggestions').style.display = 'block';
+}
+function hideThemeSuggestions() {
+  setTimeout(() => { document.getElementById('theme-suggestions').style.display = 'none'; }, 150);
+}
+function filterThemeSuggestions(val) {
+  const themes = _existingThemes().filter(t => t.toLowerCase().includes(val.toLowerCase()));
+  const box = document.getElementById('theme-suggestions');
+  if (!themes.length) { box.style.display = 'none'; return; }
+  _buildThemeSuggestions(themes);
+  box.style.display = 'block';
+  document.querySelectorAll('#theme-chips .cat-chip-pick').forEach(el => {
+    el.classList.toggle('selected', el.textContent === val);
+  });
+}
+function _buildThemeSuggestions(themes) {
+  const box = document.getElementById('theme-suggestions');
+  box.innerHTML = themes.map(t =>
+    `<div class="cat-suggestion-item" onmousedown="pickTheme('${t.replace(/'/g,"\\'")}', null)">${t}</div>`
+  ).join('');
+}
+let _addThemeSelected = [];
+function pickTheme(theme, chipEl) {
+  if (_addThemeSelected.includes(theme)) {
+    _addThemeSelected = _addThemeSelected.filter(t => t !== theme);
+    if (chipEl) chipEl.classList.remove('selected');
+  } else {
+    _addThemeSelected.push(theme);
+    if (chipEl) chipEl.classList.add('selected');
+  }
+  document.getElementById('input-theme').value = _addThemeSelected.join(', ');
+}
+
+// ── Edit theme modal ───────────────────────────────────────────────────────────
+let _editThemeSym = null;
+
+let _editThemeCurrent = [];
+function editTheme(sym) {
+  _editThemeSym = sym;
+  const r = watchlist.find(x => x.symbol === sym);
+  _editThemeCurrent = r ? _themeArr(r) : [];
+  document.getElementById('edittheme-title').textContent = `Edit Theme — ${sym}`;
+  document.getElementById('edittheme-input').value = '';
+  const allThemes = [...new Set([..._existingThemes(),
+    'AI','Chip','AI Cloud','BTC Mining','Space','Clean Energy','Energy',
+    'Biotech','Pharma','Fintech','Cyber','Robotics','EV'])].sort();
+  const chips = document.getElementById('edittheme-chips');
+  chips.innerHTML = allThemes.map(t =>
+    `<span class="cat-chip-pick${_editThemeCurrent.includes(t) ? ' selected' : ''}"
+      onclick="toggleEditTheme('${t.replace(/'/g,"\\'")}', this)">${t}</span>`
+  ).join('') || `<span style="color:var(--muted);font-size:11px">Type a theme below</span>`;
+  document.getElementById('edittheme-modal').classList.add('open');
+  setTimeout(() => document.getElementById('edittheme-input').focus(), 100);
+}
+function toggleEditTheme(theme, chipEl) {
+  if (_editThemeCurrent.includes(theme)) {
+    _editThemeCurrent = _editThemeCurrent.filter(t => t !== theme);
+    chipEl.classList.remove('selected');
+  } else {
+    _editThemeCurrent.push(theme);
+    chipEl.classList.add('selected');
+  }
+}
+function addCustomTheme() {
+  const val = document.getElementById('edittheme-input').value.trim();
+  if (!val || _editThemeCurrent.includes(val)) return;
+  _editThemeCurrent.push(val);
+  document.getElementById('edittheme-input').value = '';
+  // re-render chips
+  editTheme(_editThemeSym);
+}
+function closeEditTheme() {
+  document.getElementById('edittheme-modal').classList.remove('open');
+  _editThemeSym = null;
+  _editThemeCurrent = [];
+}
+async function saveEditTheme() {
+  const sym    = _editThemeSym;
+  const themes = [..._editThemeCurrent];
+  // also pick up anything typed but not added
+  const typed = document.getElementById('edittheme-input').value.trim();
+  if (typed && !themes.includes(typed)) themes.push(typed);
+  if (!sym) return;
+  closeEditTheme();
+  try {
+    await fetch('/api/update_theme', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ symbol: sym, theme: themes }),
+    });
+    const r = watchlist.find(x => x.symbol === sym);
+    if (r) r.theme = themes;
+    renderTable();
+    showToast(`Theme updated.`, 'ok');
+  } catch(e) {}
+}
+
+function _existingCats() {
+  return [...new Set(watchlist.map(r => r.cat).filter(c => c && c !== '—'))].sort();
+}
+
+function _populateCatDatalist() {
+  const cats = _existingCats();
+  // chips row below input
+  const chips = document.getElementById('cat-chips');
+  chips.innerHTML = cats.map(c =>
+    `<span class="cat-chip-pick" onclick="pickCat('${c.replace(/'/g,"\\'")}', this)">${c}</span>`
+  ).join('');
+  // also reset suggestions list
+  _buildSuggestions(cats);
+}
+
+function _buildSuggestions(cats) {
+  const box = document.getElementById('cat-suggestions');
+  box.innerHTML = cats.map(c =>
+    `<div class="cat-suggestion-item" onmousedown="pickCat('${c.replace(/'/g,"\\'")}', null)">${c}</div>`
+  ).join('') || `<div class="cat-suggestion-item" style="color:var(--muted);cursor:default">No existing categories yet</div>`;
+}
+
+function showCatSuggestions() {
+  const box = document.getElementById('cat-suggestions');
+  const cats = _existingCats();
+  if (!cats.length) return;
+  _buildSuggestions(cats);
+  box.style.display = 'block';
+}
+
+function hideCatSuggestions() {
+  setTimeout(() => { document.getElementById('cat-suggestions').style.display = 'none'; }, 150);
+}
+
+function filterCatSuggestions(val) {
+  const cats = _existingCats().filter(c => c.toLowerCase().includes(val.toLowerCase()));
+  const box = document.getElementById('cat-suggestions');
+  if (!cats.length) { box.style.display = 'none'; return; }
+  _buildSuggestions(cats);
+  box.style.display = 'block';
+  // sync chips selection
+  document.querySelectorAll('#cat-chips .cat-chip-pick').forEach(el => {
+    el.classList.toggle('selected', el.textContent === val);
+  });
+}
+
+function pickCat(cat, chipEl) {
+  document.getElementById('input-cat').value = cat;
+  document.getElementById('cat-suggestions').style.display = 'none';
+  // highlight selected chip
+  document.querySelectorAll('#cat-chips .cat-chip-pick').forEach(el => el.classList.remove('selected'));
+  if (chipEl) chipEl.classList.add('selected');
+}
+
+function closeAddModal() {
+  document.getElementById('add-modal').classList.remove('open');
+  _addThemeSelected = [];
+}
+
+function clearModalAlerts() {
+  ['modal-error','modal-warn','modal-success'].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.remove('show');
+    el.textContent = '';
+  });
+}
+
+function showModalAlert(type, msg) {
+  clearModalAlerts();
+  const id = type === 'error' ? 'modal-error' : type === 'warn' ? 'modal-warn' : 'modal-success';
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.classList.add('show');
+}
+
+// ── Lookup ticker ──────────────────────────────────────────────────────────────
+async function lookupTicker() {
+  const sym = document.getElementById('input-symbol').value.trim().toUpperCase();
+  if (!sym) { showModalAlert('error','Enter a stock symbol first.'); return; }
+
+  clearModalAlerts();
+  const btn = document.getElementById('lookup-btn');
+  btn.innerHTML = '<span class="spinner"></span> Looking up…';
+  btn.disabled  = true;
+  document.getElementById('preview-card').classList.remove('show');
+  document.getElementById('add-btn').style.display = 'none';
+
+  try {
+    const res  = await fetch(`/api/lookup/${sym}`);
+    const data = await res.json();
+
+    if (!res.ok) {
+      showModalAlert('error', data.error || `Could not find ${sym}.`);
+      btn.innerHTML = 'Look Up'; btn.disabled = false;
+      return;
+    }
+
+    lookupData = data;
+    renderPreview(data);
+    document.getElementById('input-cat').value          = data.cat   || '';
+    document.getElementById('cat-row').style.display    = 'block';
+    document.getElementById('theme-row').style.display  = 'block';
+    document.getElementById('add-btn').style.display    = 'inline-flex';
+    // pre-select auto-detected theme(s)
+    _addThemeSelected = Array.isArray(data.theme) ? [...data.theme] : (data.theme ? [data.theme] : []);
+    document.getElementById('input-theme').value = _addThemeSelected.join(', ');
+    // populate theme chips — all known + standard list, pre-mark auto-detected
+    const allThemes = [...new Set([..._existingThemes(),
+      'AI','Chip','AI Cloud','BTC Mining','Space','Clean Energy','Energy',
+      'Biotech','Pharma','Fintech','Cyber','Robotics','EV'])].sort();
+    document.getElementById('theme-chips').innerHTML = allThemes.map(t =>
+      `<span class="cat-chip-pick${_addThemeSelected.includes(t)?' selected':''}" onclick="pickTheme('${t.replace(/'/g,"\\'")}', this)">${t}</span>`
+    ).join('');
+  } catch(e) {
+    showModalAlert('error','Network error — is the server running?');
+  }
+  btn.innerHTML = 'Look Up'; btn.disabled = false;
+}
+
+function renderPreview(d) {
+  document.getElementById('preview-company').textContent = d.company || d.symbol;
+  document.getElementById('preview-sector').textContent  = d.cat || '—';
+
+  const chg    = d.chg_pct || 0;
+  const chgStr = (chg >= 0 ? '+' : '') + chg.toFixed(2) + '%';
+  const chgColor = chg >= 0 ? '#86efac' : '#fca5a5';
+
+  const metrics = [
+    { label:'Live Price',   val: d.live_price  ? '$'+d.live_price.toFixed(2)  : '—' },
+    { label:'Fair Value',   val: d.fair_value  ? '$'+d.fair_value.toFixed(2)  : '—' },
+    { label:'Mkt Cap',      val: d.mkt_cap     || '—' },
+    { label:'52W Low',      val: d.week52_low  ? '$'+d.week52_low.toFixed(2)  : '—' },
+    { label:'52W High',     val: d.week52_high ? '$'+d.week52_high.toFixed(2) : '—' },
+    { label:'% Chg',        val: chgStr,  color: chgColor },
+    { label:'P/E',          val: d.pe   ? d.pe.toFixed(1)+'x'  : '—' },
+    { label:'P/B',          val: d.pb   ? d.pb.toFixed(2)+'x'  : '—' },
+    { label:'P/S',          val: d.ps   ? d.ps.toFixed(2)+'x'  : '—' },
+    { label:'PEG',          val: d.peg  ? d.peg.toFixed(2)+'x' : '—' },
+    { label:'Gross Margin', val: d.gross_margin != null ? d.gross_margin.toFixed(1)+'%' : '—' },
+    { label:'Fair vs Live', val: (d.live_price && d.fair_value)
+        ? ((d.fair_value - d.live_price)/d.live_price*100).toFixed(1)+'% upside'
+        : '—',
+      color: (d.fair_value > d.live_price) ? '#86efac' : '#fca5a5' },
+  ];
+
+  document.getElementById('preview-grid').innerHTML = metrics.map(m =>
+    `<div class="preview-metric">
+      <div class="preview-metric-label">${m.label}</div>
+      <div class="preview-metric-val" style="${m.color?'color:'+m.color:''}">${m.val}</div>
+    </div>`
+  ).join('');
+
+  document.getElementById('preview-card').classList.add('show');
+}
+
+// ── Add ticker ─────────────────────────────────────────────────────────────────
+async function addTicker() {
+  if (!lookupData) { showModalAlert('error','Look up a ticker first.'); return; }
+  const sym   = lookupData.symbol;
+  const cat   = document.getElementById('input-cat').value.trim();
+  const typed = document.getElementById('input-theme').value.trim();
+  const theme = [..._addThemeSelected, ...typed.split(',').map(t=>t.trim()).filter(t=>t && !_addThemeSelected.includes(t))];
+  clearModalAlerts();
+
+  const btn = document.getElementById('add-btn');
+  btn.innerHTML = '<span class="spinner"></span> Adding…';
+  btn.disabled  = true;
+
+  try {
+    const res  = await fetch('/api/add', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ symbol: sym, cat, theme }),
+    });
+    const data = await res.json();
+
+    if (res.status === 409) {
+      showModalAlert('warn', data.error || `${sym} is already in your watchlist!`);
+      btn.innerHTML = 'Add to Watchlist'; btn.disabled = false;
+      return;
+    }
+    if (!res.ok) {
+      showModalAlert('error', data.error || 'Failed to add ticker.');
+      btn.innerHTML = 'Add to Watchlist'; btn.disabled = false;
+      return;
+    }
+
+    // Success
+    showToast(`${sym} added to watchlist!`, 'ok');
+    closeAddModal();
+    await loadWatchlist();
+    // Briefly highlight new row
+    setTimeout(() => {
+      const row = document.getElementById(`row-${sym}`);
+      if (row) { row.style.background='rgba(22,163,74,0.15)'; setTimeout(()=>row.style.background='',2000); }
+    }, 200);
+  } catch(e) {
+    showModalAlert('error','Network error.');
+  }
+  btn.innerHTML = 'Add to Watchlist'; btn.disabled = false;
+}
+
+// ── Remove ticker ──────────────────────────────────────────────────────────────
+async function removeTicker(sym) {
+  if (!confirm(`Remove ${sym} from your watchlist?`)) return;
+  const row = document.getElementById(`row-${sym}`);
+  if (row) row.style.opacity = '0.4';
+  try {
+    const res = await fetch(`/api/remove/${sym}`, { method: 'DELETE' });
+    if (res.ok) {
+      showToast(`${sym} removed.`, 'warn');
+      await loadWatchlist();
+    } else {
+      if (row) row.style.opacity = '1';
+      showToast(`Could not remove ${sym}.`, 'err');
+    }
+  } catch(e) {
+    if (row) row.style.opacity = '1';
+    showToast('Network error.', 'err');
+  }
+}
+
+// ── Refresh one row ────────────────────────────────────────────────────────────
+async function refreshOne(sym) {
+  const row = document.getElementById(`row-${sym}`);
+  if (row) row.style.opacity = '0.5';
+  try {
+    const res = await fetch(`/api/refresh/${sym}`, { method: 'POST' });
+    if (res.ok) {
+      await loadWatchlist();
+      showToast(`${sym} refreshed.`, 'ok');
+    }
+  } catch(e) {}
+  if (row) row.style.opacity = '1';
+}
+
+// ── Edit category modal ────────────────────────────────────────────────────────
+let _editCatSym = null;
+
+function editCat(sym, current) {
+  _editCatSym = sym;
+  document.getElementById('editcat-title').textContent = `Edit Category — ${sym}`;
+  document.getElementById('editcat-input').value = current || '';
+
+  const cats = _existingCats();
+  const chips = document.getElementById('editcat-chips');
+  chips.innerHTML = cats.map(c =>
+    `<span class="cat-chip-pick${c === current ? ' selected' : ''}"
+      onclick="pickEditCat('${c.replace(/'/g,"\\'")}', this)">${c}</span>`
+  ).join('');
+
+  document.getElementById('editcat-modal').classList.add('open');
+  setTimeout(() => document.getElementById('editcat-input').focus(), 100);
+}
+
+function pickEditCat(cat, chipEl) {
+  document.getElementById('editcat-input').value = cat;
+  document.querySelectorAll('#editcat-chips .cat-chip-pick').forEach(el => el.classList.remove('selected'));
+  if (chipEl) chipEl.classList.add('selected');
+}
+
+function closeEditCat() {
+  document.getElementById('editcat-modal').classList.remove('open');
+  _editCatSym = null;
+}
+
+async function saveEditCat() {
+  const sym    = _editCatSym;
+  const newCat = document.getElementById('editcat-input').value.trim();
+  if (!sym) return;
+  closeEditCat();
+  try {
+    await fetch('/api/update_cat', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ symbol: sym, cat: newCat }),
+    });
+    const r = watchlist.find(x => x.symbol === sym);
+    if (r) r.cat = newCat;
+    renderTable();
+    showToast(`Category updated.`, 'ok');
+  } catch(e) {}
+}
+
+// ── Exports ────────────────────────────────────────────────────────────────────
+function exportCSV() {
+  if (watchlist.length === 0) { showToast('Watchlist is empty.','warn'); return; }
+  window.location.href = '/api/export/csv';
+}
+
+async function importCSV(input) {
+  const file = input.files[0];
+  if (!file) return;
+  input.value = '';  // reset so same file can be re-selected
+  showToast('Importing CSV…', 'ok');
+  const fd = new FormData();
+  fd.append('file', file);
+  try {
+    const res  = await fetch('/api/import/csv', { method: 'POST', body: fd });
+    const data = await res.json();
+    if (!res.ok || data.error) { showToast('Import failed: ' + (data.error || res.status), 'warn'); return; }
+    const msg = `Imported ${data.added} ticker${data.added !== 1 ? 's' : ''}` +
+                (data.skipped ? ` · ${data.skipped} already existed (skipped)` : '') + '.';
+    showToast(msg, 'ok');
+    await loadWatchlist();
+  } catch(e) {
+    showToast('Import error: ' + e.message, 'warn');
+  }
+}
+
+function exportPDF() {
+  if (watchlist.length === 0) { showToast('Watchlist is empty.','warn'); return; }
+  showToast('Generating PDF…','ok');
+  const p = new URLSearchParams();
+  if (sortKey) { p.set('sort', sortKey); p.set('dir', sortDir); }
+  if (activeGroup) p.set('group', activeGroup);
+  window.location.href = '/api/export/pdf' + (p.toString() ? '?' + p.toString() : '');
+}
+
+// ── Toast ──────────────────────────────────────────────────────────────────────
+let toastTimer = null;
+function showToast(msg, type='ok') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className   = `toast toast-${type} show`;
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 3200);
+}
+
+// ── Close modals on overlay click ─────────────────────────────────────────────
+document.getElementById('add-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeAddModal();
+});
+document.getElementById('editcat-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeEditCat();
+});
+document.getElementById('edittheme-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeEditTheme();
+});
+document.getElementById('alarm-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeAlarm();
+});
+document.getElementById('editnote-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeEditNote();
+});
+document.getElementById('editgroup-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeEditGroup();
+});
+document.getElementById('renamegroup-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeRenameGroup();
+});
+document.getElementById('newgroup-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeNewGroup();
+});
+document.getElementById('legend-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeLegend();
+});
+
+// ── ESC to close any open modal ────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeAddModal(); closeEditCat(); closeEditTheme(); closeEditNote(); closeEditGroup(); closeRenameGroup(); closeNewGroup(); closeLegend(); closeAlarm(); closeAnnouncer(); }
+});
+
+// ── Notes modal ────────────────────────────────────────────────────────────────
+let _editNoteSym = null;
+function editNote(sym) {
+  _editNoteSym = sym;
+  const r = watchlist.find(x => x.symbol === sym);
+  document.getElementById('editnote-title').textContent = `Notes — ${sym}`;
+  document.getElementById('editnote-input').value = (r && r.notes) ? r.notes : '';
+  document.getElementById('editnote-modal').classList.add('open');
+  setTimeout(() => document.getElementById('editnote-input').focus(), 100);
+}
+function closeEditNote() {
+  document.getElementById('editnote-modal').classList.remove('open');
+  _editNoteSym = null;
+}
+function clearEditNote() {
+  document.getElementById('editnote-input').value = '';
+}
+async function saveEditNote() {
+  const sym  = _editNoteSym;
+  const note = document.getElementById('editnote-input').value.trim();
+  if (!sym) return;
+  closeEditNote();
+  try {
+    await fetch('/api/update_note', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ symbol: sym, notes: note }),
+    });
+    const r = watchlist.find(x => x.symbol === sym);
+    if (r) r.notes = note;
+    renderTable();
+    showToast(`Note saved for ${sym}.`, 'ok');
+  } catch(e) {}
+}
+(function(){
+  function updateClock(){
+    var now=new Date();
+    var et=new Date(now.toLocaleString('en-US',{timeZone:'America/New_York'}));
+    var h=et.getHours(),m=et.getMinutes(),s=et.getSeconds();
+    h=h%12||12;
+    document.getElementById('hdr-clock-time').textContent=
+      String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    document.getElementById('hdr-clock-date').textContent=
+      days[et.getDay()]+', '+months[et.getMonth()]+' '+et.getDate()+' | ET';
+  }
+  updateClock();
+  setInterval(updateClock,1000);
+})();
+
+// ── Refresh countdown ───────────────────────────────────────────────────────────
+(function() {
+  const PRICE_SEC = 30;
+  let remaining = PRICE_SEC;
+  const el = document.getElementById('refresh-countdown');
+  setInterval(() => {
+    remaining--;
+    if (remaining <= 0) remaining = PRICE_SEC;
+    el.textContent = remaining + 's';
+    el.style.color = remaining <= 5 ? '#ef4444' : '#fbbf24';
+  }, 1000);
+})();
+</script>
+
+<!-- ── Page Footer ── -->
+<div style="background:#0a1628;border-top:1px solid #1e3a5f;text-align:center;padding:10px 24px;margin-top:24px;font-size:11px;color:#fff;">
+  &copy; 2026 Jachbit. All rights reserved. May not be copied or shared without express written consent of the publisher.
+  &nbsp;&nbsp;&#183;&nbsp;&nbsp;
+  <a href="https://linktr.ee/jachbit" target="_blank" style="color:#E65C00;font-weight:700;text-decoration:none;">linktr.ee/jachbit</a>
+</div>
+</body>
+</html>
