@@ -275,6 +275,11 @@ def index():
     html = tmpl.read_text(encoding="utf-8") if tmpl.exists() else "<h1>templates/index.html missing</h1>"
     return Response(html, mimetype="text/html")
 
+@app.route("/ping")
+def ping():
+    """Health check endpoint — used by UptimeRobot to keep the free instance awake."""
+    return jsonify({"status": "ok", "time": datetime.now().isoformat()})
+
 @app.route("/api/watchlist")
 def api_watchlist():
     with _lock:
