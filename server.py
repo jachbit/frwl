@@ -66,8 +66,11 @@ _lock          = threading.Lock()
 _watchlist     = {}
 _last_refresh  = None
 _source        = "yFinance"
-PRICE_SEC      = 60    # yFinance price refresh (every 60s — kinder to rate limits)
-FUND_SEC       = 300   # fundamentals every 5 min
+PRICE_SEC      = 60    # yFinance price refresh (every 60s)
+FUND_SEC       = 600   # fundamentals every 10 min (kinder to shared-IP rate limits)
+TICKER_DELAY   = 1.2   # seconds between individual ticker fetches in fundamentals loop
+BATCH_DELAY    = 3.0   # seconds between 50-symbol price batches
+RL_SLEEP       = 45    # seconds to pause when a rate-limit error is hit
 
 class RateLimitError(Exception):
     pass
@@ -164,9 +167,15 @@ def _yf_prices(symbols):
     import yfinance as yf
     result = {}
     try:
-        for i in range(0, len(symbols), 50):
-            batch   = symbols[i:i+50]
-            tickers = yf.Tickers(" ".join(batch))
+        batches = [symbols[i:i+50] for i in range(0, len(symbols), 50)]
+        for idx, batch in enumerate(batches):
+            if idx > 0:
+                time.sleep(BATCH_DELAY)
+            try:
+                tickers = yf.Tickers(" ".join(batch))
+            except Exception as e:
+                print(f"  [yFinance price] batch error: {e}")
+                continue
             for sym in batch:
                 try:
                     fi    = tickers.tickers.get(sym, yf.Ticker(sym)).fast_info
@@ -214,9 +223,13 @@ def _refresh_fundamentals():
         try:
             data = _fetch_ticker_data(sym, preserve_cat=cat)
         except RateLimitError:
-            print(f"  [yFinance] Rate limited on {sym} — skipping")
-            time.sleep(10)
-            continue
+            print(f"  [yFinance] Rate limited on {sym} — waiting {RL_SLEEP}s …")
+            time.sleep(RL_SLEEP)
+            try:
+                data = _fetch_ticker_data(sym, preserve_cat=cat)
+            except RateLimitError:
+                print(f"  [yFinance] Still rate limited on {sym} — skipping this cycle")
+                continue
         if data:
             existing = _theme_list(theme)
             auto     = _theme_list(data.get("theme"))
@@ -227,7 +240,7 @@ def _refresh_fundamentals():
             data["group"] = group
             data["alarm"] = alarm
             updated[sym]  = data
-        time.sleep(0.5)
+        time.sleep(TICKER_DELAY)
     with _lock:
         for sym, data in updated.items():
             if sym in _watchlist:
@@ -298,7 +311,11 @@ def api_lookup(symbol):
     try:
         data = _fetch_ticker_data(sym)
     except RateLimitError:
-        return jsonify({"error": "Yahoo Finance rate limit — wait 30 seconds and try again."}), 429
+        time.sleep(8)
+        try:
+            data = _fetch_ticker_data(sym)
+        except RateLimitError:
+            return jsonify({"error": "Yahoo Finance rate limit — please wait 30 seconds and try again."}), 429
     if not data:
         return jsonify({"error": f"Could not find ticker: {sym} — check the symbol and try again."}), 404
     return jsonify(data)
@@ -315,7 +332,11 @@ def api_add():
     try:
         data = _fetch_ticker_data(sym)
     except RateLimitError:
-        return jsonify({"error": "Yahoo Finance rate limit — wait 30 seconds and try again."}), 429
+        time.sleep(8)
+        try:
+            data = _fetch_ticker_data(sym)
+        except RateLimitError:
+            return jsonify({"error": "Yahoo Finance rate limit — please wait 30 seconds and try again."}), 429
     if not data:
         return jsonify({"error": f"Could not find ticker: {sym} — check the symbol and try again."}), 404
     if body.get("cat"): data["cat"] = body["cat"].strip()
@@ -543,7 +564,7 @@ if __name__ == "__main__":
     _save_watchlist()
     threading.Thread(target=_price_loop,        daemon=True).start()
     threading.Thread(target=_fundamentals_loop, daemon=True).start()
-    print(f"  Prices every {PRICE_SEC}s  |  Fundamentals every {FUND_SEC}s")
+    print(f"  Prices every {PRICE_SEC}s  |  Fundamentals every {FUND_SEC}s  |  {TICKER_DELAY}s/ticker delay")
     print(f"  Open: http://localhost:{PORT}")
     print()
     import webbrowser, threading as _th
