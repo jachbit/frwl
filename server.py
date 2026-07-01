@@ -60,6 +60,14 @@ def _theme_list(val):
         return [t.strip() for t in val.split(",") if t.strip()]
     return []
 
+def _group_list(val):
+    """Normalize group to a list. Supports legacy string values."""
+    if isinstance(val, list):
+        return [g.strip() for g in val if g and g.strip()]
+    if isinstance(val, str) and val.strip():
+        return [g.strip() for g in val.split(",") if g.strip()]
+    return ["General"]
+
 # ── State ──────────────────────────────────────────────────────────────────────
 WATCHLIST_FILE = HERE / "watchlist.json"
 _lock          = threading.Lock()
@@ -302,7 +310,7 @@ def _refresh_fundamentals():
             cat   = _watchlist.get(sym, {}).get("cat")
             theme = _watchlist.get(sym, {}).get("theme", "")
             notes = _watchlist.get(sym, {}).get("notes", "")
-            group = _watchlist.get(sym, {}).get("group", "General")
+            group = _group_list(_watchlist.get(sym, {}).get("group", ["General"]))
             alarm = _watchlist.get(sym, {}).get("alarm")
         try:
             data = _fetch_ticker_data(sym, preserve_cat=cat)
@@ -321,14 +329,14 @@ def _refresh_fundamentals():
                 merged = existing + [t for t in auto if t not in existing]
                 data["theme"] = merged
             data["notes"] = notes
-            data["group"] = group
+            data["group"] = _group_list(group)
             data["alarm"] = alarm
             updated[sym]  = data
         time.sleep(TICKER_DELAY)
     with _lock:
         for sym, data in updated.items():
             if sym in _watchlist:
-                data["group"] = _watchlist[sym].get("group", data.get("group", "General"))
+                data["group"] = _group_list(_watchlist[sym].get("group", data.get("group", ["General"])))
                 data["notes"] = _watchlist[sym].get("notes", data.get("notes", ""))
                 data["alarm"] = _watchlist[sym].get("alarm", data.get("alarm"))
                 _watchlist[sym] = data
@@ -432,7 +440,8 @@ def api_add():
         data["theme"] = t if isinstance(t, list) else [x.strip() for x in t.split(",") if x.strip()]
     data["notes"] = (body.get("notes") or "").strip()
     themes = data.get("theme") or []
-    data["group"] = (body.get("group") or (themes[0] if themes else "General")).strip()
+    grp_raw = body.get("group") or (themes[0] if themes else "General")
+    data["group"] = _group_list(grp_raw)
     with _lock:
         _watchlist[sym] = data
         _save_watchlist(backup=True)
@@ -504,17 +513,19 @@ def api_set_alarm():
 @app.route("/api/update_group", methods=["POST", "OPTIONS"])
 def api_update_group():
     if request.method == "OPTIONS": return jsonify({}), 200
-    body  = request.get_json(force=True) or {}
-    sym   = (body.get("symbol") or "").upper().strip()
-    group = (body.get("group")  or "General").strip()
+    body   = request.get_json(force=True) or {}
+    sym    = (body.get("symbol") or "").upper().strip()
+    groups = _group_list(body.get("group", ["General"]))
+    if not groups: groups = ["General"]
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
-        _watchlist[sym]["group"] = group
+        _watchlist[sym]["group"] = groups
         _save_watchlist(backup=True)
     return jsonify({"success": True})
 
 @app.route("/api/batch_update_group", methods=["POST", "OPTIONS"])
 def api_batch_update_group():
+    """Add a group to each symbol's group list (does not remove existing groups)."""
     if request.method == "OPTIONS": return jsonify({}), 200
     body    = request.get_json(force=True) or {}
     group   = (body.get("group") or "General").strip()
@@ -524,7 +535,10 @@ def api_batch_update_group():
     with _lock:
         for sym in symbols:
             if sym in _watchlist:
-                _watchlist[sym]["group"] = group
+                current = _group_list(_watchlist[sym].get("group", ["General"]))
+                if group not in current:
+                    current.append(group)
+                _watchlist[sym]["group"] = current
                 updated += 1
         if updated: _save_watchlist(backup=True)
     return jsonify({"success": True, "updated": updated})
@@ -539,8 +553,10 @@ def api_rename_group():
     updated = 0
     with _lock:
         for sym, data in _watchlist.items():
-            if (data.get("group") or "General") == from_grp:
-                data["group"] = to_grp
+            grps = _group_list(data.get("group", ["General"]))
+            if from_grp in grps:
+                grps = [to_grp if g == from_grp else g for g in grps]
+                data["group"] = grps
                 updated += 1
         if updated: _save_watchlist(backup=True)
     return jsonify({"success": True, "updated": updated})
@@ -575,7 +591,7 @@ def api_export_csv(group=None):
     with _lock:
         rows = list(_watchlist.values())
     if group and group != "ALL":
-        rows = [r for r in rows if (r.get("group") or "General") == group]
+        rows = [r for r in rows if group in _group_list(r.get("group", ["General"]))]
     out = io.StringIO()
     w   = csv.writer(out)
     w.writerow(["#","Group","Symbol","Company","Sector","Theme","Mkt Cap","52W Low",
@@ -585,7 +601,7 @@ def api_export_csv(group=None):
         gm  = f"{r['gross_margin']}%" if r.get("gross_margin") is not None else ""
         chg = r.get("chg_pct", 0) or 0
         w.writerow([
-            i, r.get("group","General"), r.get("symbol",""), r.get("company",""), r.get("cat",""),
+            i, ", ".join(_group_list(r.get("group",["General"]))), r.get("symbol",""), r.get("company",""), r.get("cat",""),
             ", ".join(r.get("theme") or []) if isinstance(r.get("theme"), list) else (r.get("theme","") or ""),
             r.get("mkt_cap",""), r.get("week52_low",""),
             r.get("live_price",""), r.get("fair_value",""), r.get("week52_high",""),
@@ -621,7 +637,7 @@ def api_import_csv():
                 _watchlist[sym] = {
                     "symbol": sym, "company": (row.get("Company") or "").strip() or sym,
                     "cat": (row.get("Sector") or "").strip() or "—",
-                    "group": (row.get("Group") or "General").strip() or "General",
+                    "group": _group_list((row.get("Group") or "General").strip()) or ["General"],
                     "theme": theme, "notes": (row.get("Notes") or "").strip(),
                     "live_price": None, "fair_value": None,
                     "mkt_cap": (row.get("Mkt Cap") or "").strip() or None,
@@ -652,8 +668,7 @@ if __name__ == "__main__":
         if not existing:
             existing = _auto_theme(d.get("company",""), "", d.get("cat",""))
         d["theme"] = existing
-        if not d.get("group"):
-            d["group"] = existing[0] if existing else "General"
+        d["group"] = _group_list(d.get("group")) or (existing[:1] if existing else ["General"])
     _save_watchlist()
     threading.Thread(target=_price_loop,        daemon=True).start()
     threading.Thread(target=_fundamentals_loop, daemon=True).start()

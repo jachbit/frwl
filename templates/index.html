@@ -861,7 +861,7 @@ function renderTable() {
     (!q || r.symbol.toLowerCase().includes(q) ||
     (r.company||'').toLowerCase().includes(q) ||
     (r.cat||'').toLowerCase().includes(q)) &&
-    (!activeGroup || (r.group||'General') === activeGroup)
+    (!activeGroup || _getGroups(r).includes(activeGroup))
   );
 
   // Sort
@@ -1103,7 +1103,7 @@ function setAnnouncerMode(mode, silent) {
 function _populateAnnouncerGroups() {
   const sel = document.getElementById('announcer-group-select');
   if (!sel) return;
-  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  const groups = [...new Set(watchlist.flatMap(r => _getGroups(r)))].sort();
   sel.innerHTML = groups.map(g => `<option value="${g}" ${g === _announcerGroup ? 'selected' : ''}>${g}</option>`).join('');
   if (!_announcerGroup && groups.length) _announcerGroup = groups[0];
   sel.onchange = () => {
@@ -1114,7 +1114,7 @@ function _populateAnnouncerGroups() {
   _updateGroupCount();
 }
 function _updateGroupCount() {
-  const count = watchlist.filter(r => (r.group || 'General') === _announcerGroup).length;
+  const count = watchlist.filter(r => _getGroups(r).includes(_announcerGroup)).length;
   const el = document.getElementById('announcer-group-count');
   if (el) el.textContent = `${count} ticker${count !== 1 ? 's' : ''} in this group`;
 }
@@ -1167,7 +1167,7 @@ function _buildAnnounceText() {
   const lines = [];
   let tickers;
   if (_announcerMode === 'group' && _announcerGroup) {
-    tickers = watchlist.filter(r => (r.group || 'General') === _announcerGroup).map(r => r.symbol);
+    tickers = watchlist.filter(r => _getGroups(r).includes(_announcerGroup)).map(r => r.symbol);
   } else {
     tickers = _announcerTickers;
   }
@@ -1278,10 +1278,16 @@ function _syncAnnouncerButtons() {
 }
 
 // ── Group filter bar ───────────────────────────────────────────────────────────
+function _getGroups(r) {
+  const g = r.group;
+  if (Array.isArray(g)) return g.filter(x=>x);
+  if (typeof g === 'string' && g.trim()) return g.split(',').map(x=>x.trim()).filter(x=>x);
+  return ['General'];
+}
 function renderGroupFilter() {
   const bar = document.getElementById('group-filter-bar');
   if (!bar) return;
-  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  const groups = [...new Set(watchlist.flatMap(r => _getGroups(r)))].sort();
   bar.innerHTML = `<button class="gf-btn ${activeGroup===''?'active':''}" onclick="setGroup('')">All</button>` +
     groups.map(g => `<button class="gf-btn ${activeGroup===g?'active':''}" onclick="setGroup('${g.replace(/'/g,"\\'")}') ">${g}</button>`).join('');
 }
@@ -1295,18 +1301,22 @@ function setGroup(g) {
 let _editGroupSym = null;
 function editGroup(sym, current) {
   _editGroupSym = sym;
-  document.getElementById('editgroup-title').textContent = `Edit Group — ${sym}`;
-  document.getElementById('editgroup-input').value = current || 'General';
-  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
-  document.getElementById('editgroup-chips').innerHTML = groups.map(g =>
-    `<span class="cat-chip-pick${g===current?' selected':''}" onclick="pickEditGroup('${g.replace(/'/g,"\\'")}',this)">${g}</span>`
+  const ticker = watchlist.find(r => r.symbol === sym);
+  const currentGroups = ticker ? _getGroups(ticker) : ['General'];
+  document.getElementById('editgroup-title').textContent = `Edit Groups — ${sym}`;
+  document.getElementById('editgroup-input').value = '';
+  const allGroups = [...new Set(watchlist.flatMap(r => _getGroups(r)))].sort();
+  document.getElementById('editgroup-chips').innerHTML = allGroups.map(g =>
+    `<span class="cat-chip-pick${currentGroups.includes(g)?' selected':''}" onclick="pickEditGroup('${g.replace(/'/g,"\\'")}',this)">${g}</span>`
   ).join('');
   document.getElementById('editgroup-modal').classList.add('open');
   setTimeout(() => document.getElementById('editgroup-input').focus(), 100);
 }
 function pickEditGroup(g, el) {
-  document.getElementById('editgroup-input').value = g;
-  document.querySelectorAll('#editgroup-chips .cat-chip-pick').forEach(c => c.classList.remove('selected'));
+  el.classList.toggle('selected');
+  // Update input field to show all selected groups
+  const selected = [...document.querySelectorAll('#editgroup-chips .cat-chip-pick.selected')].map(c => c.textContent);
+  document.getElementById('editgroup-input').value = selected.join(', ');
   el.classList.add('selected');
 }
 function closeEditGroup() {
@@ -1324,7 +1334,7 @@ function openNewGroup() {
       <input type="checkbox" class="ng-chk" value="${r.symbol}" onchange="updateNewGroupCount()">
       <span class="ticker-check-sym">${r.symbol}</span>
       <span class="ticker-check-co">${(r.company||'').substring(0,30)}</span>
-      <span class="ticker-check-grp">${r.group||'General'}</span>
+      <span class="ticker-check-grp">${_getGroups(r).join(', ')}</span>
     </label>`
   ).join('');
   updateNewGroupCount();
@@ -1353,7 +1363,7 @@ async function saveNewGroup() {
       body: JSON.stringify({group: name, symbols}) });
     const data = await res.json();
     if (data.error) { showToast(data.error, 'err'); return; }
-    symbols.forEach(sym => { const r = watchlist.find(x => x.symbol === sym); if (r) r.group = name; });
+    symbols.forEach(sym => { const r = watchlist.find(x => x.symbol === sym); if (r) { const g = _getGroups(r); if (!g.includes(name)) g.push(name); r.group = g; } });
     renderGroupFilter();
     renderTable();
     showToast(`Group "${name}" created with ${symbols.length} ticker${symbols.length>1?'s':''}.`, 'ok');
@@ -1366,7 +1376,7 @@ function openDataInfo() { document.getElementById('datainfo-modal').classList.ad
 function closeDataInfo() { document.getElementById('datainfo-modal').classList.remove('open'); }
 
 function openRenameGroup() {
-  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  const groups = [...new Set(watchlist.flatMap(r => _getGroups(r)))].sort();
   const sel = document.getElementById('renamegroup-from');
   sel.innerHTML = groups.map(g => `<option value="${g.replace(/"/g,'&quot;')}">${g}</option>`).join('');
   document.getElementById('renamegroup-input').value = '';
@@ -1388,7 +1398,7 @@ async function saveRenameGroup() {
       body: JSON.stringify({from, to}) });
     const data = await res.json();
     if (data.error) { showToast(data.error, 'err'); return; }
-    watchlist.forEach(r => { if ((r.group||'General') === from) r.group = to; });
+    watchlist.forEach(r => { const g = _getGroups(r); if (g.includes(from)) { r.group = g.map(x => x===from ? to : x); } });
     if (activeGroup === from) activeGroup = to;
     renderGroupFilter();
     renderTable();
@@ -1396,17 +1406,21 @@ async function saveRenameGroup() {
   } catch(e) { showToast('Error renaming group.', 'err'); }
 }
 async function saveEditGroup() {
-  const sym   = _editGroupSym;
-  const group = document.getElementById('editgroup-input').value.trim() || 'General';
+  const sym = _editGroupSym;
+  // Collect selected chips + any typed value
+  const selected = [...document.querySelectorAll('#editgroup-chips .cat-chip-pick.selected')].map(c => c.textContent.trim());
+  const typed = document.getElementById('editgroup-input').value.trim();
+  if (typed && !selected.includes(typed)) selected.push(typed);
+  const groups = selected.length ? selected : ['General'];
   closeEditGroup();
   try {
     await fetch('/api/update_group', { method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({symbol: sym, group}) });
+      body: JSON.stringify({symbol: sym, group: groups}) });
     const r = watchlist.find(x => x.symbol === sym);
-    if (r) r.group = group;
+    if (r) r.group = groups;
     renderGroupFilter();
     renderTable();
-    showToast(`Group updated for ${sym}.`, 'ok');
+    showToast(`Groups updated for ${sym}: ${groups.join(', ')}.`, 'ok');
   } catch(e) { showToast('Error saving group.', 'err'); }
 }
 
@@ -1456,7 +1470,7 @@ function rowHtml(r, i) {
     <td class="left fr-3"><span class="cat-pill" onclick="editCat('${r.symbol}','${(r.cat||'').replace(/'/g,"\\'")}')">
       ${r.cat||'—'}
     </span></td>
-    <td class="left fr-4"><span class="group-pill" onclick="editGroup('${r.symbol}','${(r.group||'General').replace(/'/g,"\\'")}') ">${r.group||'General'}</span></td>
+    <td class="left fr-4">${_getGroups(r).map(g=>`<span class="group-pill" onclick="editGroup('${r.symbol}')">${g}</span>`).join(' ')}</td>
     <td class="left">${_themePills(r)}</td>
     <td>${r.mkt_cap||'—'}</td>
     <td>${r.week52_low ? '$'+r.week52_low.toFixed(2) : '—'}</td>
@@ -1969,7 +1983,7 @@ function toggleCSVMenu(e) {
   e.stopPropagation();
   if (watchlist.length === 0) { showToast('Watchlist is empty.','warn'); return; }
   const menu = document.getElementById('csv-export-menu');
-  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  const groups = [...new Set(watchlist.flatMap(r => _getGroups(r)))].sort();
   document.getElementById('csv-group-list').innerHTML = groups.map(g =>
     `<div onclick="exportCSV('${g.replace(/'/g,"\\'")}');document.getElementById('csv-export-menu').style.display='none'"
       style="padding:7px 14px;cursor:pointer;color:#93c5fd;font-size:12px"
