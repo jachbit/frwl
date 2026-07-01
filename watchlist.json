@@ -3,57 +3,74 @@
     "symbol": "TE",
     "company": "T1 Energy Inc.",
     "cat": "Industrials",
-    "group": "Energy",
     "theme": [
       "Energy",
       "Clean Energy",
       "EV"
     ],
-    "notes": "",
     "live_price": 9.48,
-    "fair_value": null,
+    "fair_value": 10.07,
     "mkt_cap": "$2.65B",
-    "mkt_cap_raw": 0,
-    "week52_low": null,
-    "week52_high": null,
+    "mkt_cap_raw": 2647492608,
+    "week52_low": 1.15,
+    "week52_high": 12.49,
     "pe": null,
-    "pb": null,
-    "ps": null,
+    "pb": 11.18,
+    "ps": 3.01,
     "peg": null,
-    "gross_margin": null,
+    "gross_margin": 7.6,
     "chg_pct": 6.64,
-    "trend": [],
-    "last_updated": "2026-07-01T05:31:09.545093"
+    "trend": [
+      10.4,
+      9.24,
+      8.53,
+      8.5,
+      8.21,
+      8.88,
+      9.48
+    ],
+    "last_updated": "2026-07-01T05:57:53.912861",
+    "notes": "",
+    "group": "Energy",
+    "alarm": null
   },
   "PL": {
     "symbol": "PL",
     "company": "Planet Labs PBC",
     "cat": "Industrials",
-    "group": "Space",
     "theme": [
       "Space"
     ],
-    "notes": "",
     "live_price": 33.13,
-    "fair_value": null,
+    "fair_value": 39.8,
     "mkt_cap": "$11.81B",
-    "mkt_cap_raw": 0,
-    "week52_low": null,
-    "week52_high": null,
+    "mkt_cap_raw": 11807616000,
+    "week52_low": 5.87,
+    "week52_high": 51.76,
     "pe": null,
-    "pb": null,
-    "ps": null,
+    "pb": 26.61,
+    "ps": 35.18,
     "peg": null,
-    "gross_margin": null,
+    "gross_margin": 55.6,
     "chg_pct": 4.91,
-    "trend": [],
-    "last_updated": "2026-07-01T05:31:09.545112"
+    "trend": [
+      28.77,
+      28.53,
+      26.3,
+      26.51,
+      27.07,
+      31.28,
+      33.13
+    ],
+    "last_updated": "2026-07-01T05:57:55.612910",
+    "notes": "",
+    "group": "Space",
+    "alarm": null
   },
   "TSLA": {
     "symbol": "TSLA",
     "company": "Tesla, Inc.",
     "cat": "Consumer Cyclical",
-    "group": "MAG7",
     "theme": [
       "EV",
       "AI",
@@ -62,48 +79,67 @@
       "Energy",
       "Robotics"
     ],
-    "notes": "",
     "live_price": 420.6,
-    "fair_value": null,
+    "fair_value": 421.16,
     "mkt_cap": "$1.58T",
-    "mkt_cap_raw": 0,
-    "week52_low": null,
-    "week52_high": null,
-    "pe": null,
-    "pb": null,
-    "ps": null,
-    "peg": null,
-    "gross_margin": null,
+    "mkt_cap_raw": 1579657461760,
+    "week52_low": 288.77,
+    "week52_high": 498.83,
+    "pe": 385.87,
+    "pb": 19.21,
+    "ps": 16.14,
+    "peg": 5.56,
+    "gross_margin": 19.1,
     "chg_pct": 2.84,
-    "trend": [],
-    "last_updated": "2026-07-01T05:31:09.545124"
+    "trend": [
+      405.05,
+      381.61,
+      375.53,
+      375.12,
+      379.71,
+      411.84,
+      420.6
+    ],
+    "last_updated": "2026-07-01T05:57:57.311611",
+    "notes": "",
+    "group": "MAG7",
+    "alarm": null
   },
   "INTC": {
     "symbol": "INTC",
     "company": "Intel Corporation",
     "cat": "Technology",
-    "group": "AI",
     "theme": [
       "AI",
       "Chip",
       "AI Cloud",
       "Robotics"
     ],
-    "notes": "",
     "live_price": 139.63,
-    "fair_value": null,
+    "fair_value": 98.5,
     "mkt_cap": "$701.78B",
-    "mkt_cap_raw": 0,
-    "week52_low": null,
-    "week52_high": null,
+    "mkt_cap_raw": 701780393984,
+    "week52_low": 18.97,
+    "week52_high": 142.34,
     "pe": null,
-    "pb": null,
-    "ps": null,
-    "peg": null,
-    "gross_margin": null,
+    "pb": 6.3,
+    "ps": 13.05,
+    "peg": 1.36,
+    "gross_margin": 37.2,
     "chg_pct": 6.04,
-    "trend": [],
-    "last_updated": "2026-07-01T05:31:09.545132"
+    "trend": [
+      140.94,
+      132.28,
+      131.65,
+      132.87,
+      128.32,
+      131.72,
+      139.63
+    ],
+    "last_updated": "2026-07-01T05:57:58.914050",
+    "notes": "",
+    "group": "AI",
+    "alarm": null
   },
   "SPCX": {
     "symbol": "SPCX",
@@ -134,7 +170,7 @@
       164.19,
       170.86
     ],
-    "last_updated": "2026-07-01T05:36:15.940951",
+    "last_updated": "2026-07-01T05:58:01.416324",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -147,7 +183,7 @@
       "Pharma"
     ],
     "live_price": 47.94,
-    "fair_value": 47.46,
+    "fair_value": 47.45,
     "mkt_cap": "$212.22B",
     "mkt_cap_raw": 212223442944,
     "week52_low": 35.12,
@@ -167,7 +203,7 @@
       48.34,
       47.94
     ],
-    "last_updated": "2026-07-01T05:36:17.315342",
+    "last_updated": "2026-07-01T05:58:03.209091",
     "notes": "",
     "group": "Pharma",
     "alarm": null
@@ -202,7 +238,7 @@
       368.57,
       373.02
     ],
-    "last_updated": "2026-07-01T05:36:18.663000",
+    "last_updated": "2026-07-01T05:58:04.917350",
     "notes": "",
     "group": "MAG7",
     "alarm": null
@@ -238,7 +274,7 @@
       115.7,
       116.67
     ],
-    "last_updated": "2026-07-01T05:36:20.014609",
+    "last_updated": "2026-07-01T05:58:06.718983",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -269,7 +305,7 @@
       89.89,
       90.6
     ],
-    "last_updated": "2026-07-01T05:36:21.360640",
+    "last_updated": "2026-07-01T05:58:08.506985",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -303,7 +339,7 @@
       99.97,
       99.28
     ],
-    "last_updated": "2026-07-01T05:36:22.718122",
+    "last_updated": "2026-07-01T05:58:10.213009",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -340,7 +376,7 @@
       194.97,
       200.09
     ],
-    "last_updated": "2026-07-01T05:36:24.414776",
+    "last_updated": "2026-07-01T05:58:11.597882",
     "notes": "",
     "group": "MAG7",
     "alarm": null
@@ -378,7 +414,7 @@
       372.45,
       377.75
     ],
-    "last_updated": "2026-07-01T05:36:25.817805",
+    "last_updated": "2026-07-01T05:58:13.003581",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -409,7 +445,7 @@
       75.5,
       72.16
     ],
-    "last_updated": "2026-07-01T05:36:27.154459",
+    "last_updated": "2026-07-01T05:58:14.712975",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -442,7 +478,7 @@
       3.12,
       3.1
     ],
-    "last_updated": "2026-07-01T05:36:28.524124",
+    "last_updated": "2026-07-01T05:58:16.210209",
     "notes": "WSZ:WallStreetZen_260629",
     "group": "AI",
     "alarm": null
@@ -473,7 +509,7 @@
       4.21,
       4.0
     ],
-    "last_updated": "2026-07-01T05:36:29.914500",
+    "last_updated": "2026-07-01T05:58:17.908181",
     "notes": "WSZ:WallStreetZen_260629",
     "group": "General",
     "alarm": null
@@ -504,7 +540,7 @@
       4.02,
       3.87
     ],
-    "last_updated": "2026-07-01T05:36:31.235388",
+    "last_updated": "2026-07-01T05:58:19.607833",
     "notes": "WSZ:WallStreetZen_260629",
     "group": "General",
     "alarm": null
@@ -538,7 +574,7 @@
       4.98,
       5.0
     ],
-    "last_updated": "2026-07-01T05:36:32.557301",
+    "last_updated": "2026-07-01T05:58:21.413638",
     "notes": "WSZ:WallStreetZen_260629",
     "group": "AI",
     "alarm": null
@@ -571,7 +607,7 @@
       14.23,
       14.45
     ],
-    "last_updated": "2026-07-01T05:36:33.898823",
+    "last_updated": "2026-07-01T05:58:23.103118",
     "notes": "RG: Ross Givens",
     "group": "BTC Mining",
     "alarm": null
@@ -604,7 +640,7 @@
       53.88,
       53.26
     ],
-    "last_updated": "2026-07-01T05:36:35.246651",
+    "last_updated": "2026-07-01T05:58:24.711194",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -638,7 +674,7 @@
       23.83,
       23.99
     ],
-    "last_updated": "2026-07-01T05:36:36.717282",
+    "last_updated": "2026-07-01T05:58:26.216222",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -673,7 +709,7 @@
       19.44,
       19.32
     ],
-    "last_updated": "2026-07-01T05:36:38.046031",
+    "last_updated": "2026-07-01T05:58:27.604039",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -708,7 +744,7 @@
       261.15,
       276.17
     ],
-    "last_updated": "2026-07-01T05:36:39.391447",
+    "last_updated": "2026-07-01T05:58:28.956501",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -743,7 +779,7 @@
       45.91,
       45.73
     ],
-    "last_updated": "2026-07-01T05:36:40.815698",
+    "last_updated": "2026-07-01T05:58:30.304082",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -781,7 +817,7 @@
       95.51,
       99.54
     ],
-    "last_updated": "2026-07-01T05:36:42.235258",
+    "last_updated": "2026-07-01T05:58:31.652560",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -818,7 +854,7 @@
       37.77,
       37.3
     ],
-    "last_updated": "2026-07-01T05:36:43.613672",
+    "last_updated": "2026-07-01T05:58:32.991137",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -853,7 +889,7 @@
       43.03,
       47.16
     ],
-    "last_updated": "2026-07-01T05:36:44.941998",
+    "last_updated": "2026-07-01T05:58:34.359430",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -886,7 +922,7 @@
       29.19,
       30.38
     ],
-    "last_updated": "2026-07-01T05:36:46.316085",
+    "last_updated": "2026-07-01T05:58:35.710755",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -919,7 +955,7 @@
       88.5,
       89.85
     ],
-    "last_updated": "2026-07-01T05:36:47.719740",
+    "last_updated": "2026-07-01T05:58:37.106534",
     "notes": "",
     "group": "Cyber",
     "alarm": null
@@ -955,7 +991,7 @@
       332.0,
       341.02
     ],
-    "last_updated": "2026-07-01T05:36:49.122804",
+    "last_updated": "2026-07-01T05:58:38.440859",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -990,7 +1026,7 @@
       678.65,
       701.09
     ],
-    "last_updated": "2026-07-01T05:36:50.515674",
+    "last_updated": "2026-07-01T05:58:39.791570",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1026,7 +1062,7 @@
       248.57,
       260.36
     ],
-    "last_updated": "2026-07-01T05:36:51.915395",
+    "last_updated": "2026-07-01T05:58:41.135434",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1064,7 +1100,7 @@
       501.13,
       500.4
     ],
-    "last_updated": "2026-07-01T05:36:53.232626",
+    "last_updated": "2026-07-01T05:58:42.501702",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1097,7 +1133,7 @@
       28.49,
       29.93
     ],
-    "last_updated": "2026-07-01T05:36:54.555403",
+    "last_updated": "2026-07-01T05:58:43.843139",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -1128,7 +1164,7 @@
       93.17,
       93.66
     ],
-    "last_updated": "2026-07-01T05:36:55.895782",
+    "last_updated": "2026-07-01T05:58:45.221093",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -1162,7 +1198,7 @@
       147.76,
       146.55
     ],
-    "last_updated": "2026-07-01T05:36:57.247044",
+    "last_updated": "2026-07-01T05:58:46.604467",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1197,7 +1233,7 @@
       353.65,
       357.37
     ],
-    "last_updated": "2026-07-01T05:36:58.581486",
+    "last_updated": "2026-07-01T05:58:47.956338",
     "notes": "",
     "group": "MAG7",
     "alarm": null
@@ -1231,7 +1267,7 @@
       137.6,
       141.15
     ],
-    "last_updated": "2026-07-01T05:36:59.913111",
+    "last_updated": "2026-07-01T05:58:49.307388",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1264,7 +1300,7 @@
       614.35,
       640.76
     ],
-    "last_updated": "2026-07-01T05:37:01.262368",
+    "last_updated": "2026-07-01T05:58:50.714051",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1298,7 +1334,7 @@
       13.13,
       13.36
     ],
-    "last_updated": "2026-07-01T05:37:02.620449",
+    "last_updated": "2026-07-01T05:58:52.065558",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -1331,7 +1367,7 @@
       791.56,
       798.55
     ],
-    "last_updated": "2026-07-01T05:37:03.957661",
+    "last_updated": "2026-07-01T05:58:53.446315",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -1365,7 +1401,7 @@
       429.09,
       416.06
     ],
-    "last_updated": "2026-07-01T05:37:05.315468",
+    "last_updated": "2026-07-01T05:58:54.794666",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -1399,7 +1435,7 @@
       714.45,
       720.04
     ],
-    "last_updated": "2026-07-01T05:37:06.653538",
+    "last_updated": "2026-07-01T05:58:56.157258",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -1432,7 +1468,7 @@
       144.17,
       159.93
     ],
-    "last_updated": "2026-07-01T05:37:08.323316",
+    "last_updated": "2026-07-01T05:58:57.508083",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1467,7 +1503,7 @@
       340.13,
       350.07
     ],
-    "last_updated": "2026-07-01T05:37:09.918655",
+    "last_updated": "2026-07-01T05:58:58.858751",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1501,7 +1537,7 @@
       9.92,
       9.7
     ],
-    "last_updated": "2026-07-01T05:37:11.813088",
+    "last_updated": "2026-07-01T05:59:00.213718",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1538,7 +1574,7 @@
       20.22,
       19.87
     ],
-    "last_updated": "2026-07-01T05:37:13.525303",
+    "last_updated": "2026-07-01T05:59:01.666752",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1571,7 +1607,7 @@
       7.03,
       6.96
     ],
-    "last_updated": "2026-07-01T05:37:15.325490",
+    "last_updated": "2026-07-01T05:59:03.010462",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -1604,7 +1640,7 @@
       72.84,
       81.74
     ],
-    "last_updated": "2026-07-01T05:37:17.114653",
+    "last_updated": "2026-07-01T05:59:04.371653",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1639,7 +1675,7 @@
       227.8,
       223.9
     ],
-    "last_updated": "2026-07-01T05:37:18.917048",
+    "last_updated": "2026-07-01T05:59:05.907699",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -1674,7 +1710,7 @@
       65.04,
       69.62
     ],
-    "last_updated": "2026-07-01T05:37:20.522227",
+    "last_updated": "2026-07-01T05:59:07.253872",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1707,7 +1743,7 @@
       39.49,
       39.49
     ],
-    "last_updated": "2026-07-01T05:37:22.140591",
+    "last_updated": "2026-07-01T05:59:08.605796",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1740,7 +1776,7 @@
       9.61,
       9.29
     ],
-    "last_updated": "2026-07-01T05:37:24.028734",
+    "last_updated": "2026-07-01T05:59:09.954912",
     "notes": "",
     "group": "EV",
     "alarm": null
@@ -1775,7 +1811,7 @@
       12.18,
       10.91
     ],
-    "last_updated": "2026-07-01T05:37:25.524679",
+    "last_updated": "2026-07-01T05:59:11.302619",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1809,7 +1845,7 @@
       6.15,
       7.43
     ],
-    "last_updated": "2026-07-01T05:37:26.863280",
+    "last_updated": "2026-07-01T05:59:12.647203",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -1840,7 +1876,7 @@
       2.66,
       2.68
     ],
-    "last_updated": "2026-07-01T05:37:28.215584",
+    "last_updated": "2026-07-01T05:59:14.045165",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -1873,7 +1909,7 @@
       150.1,
       148.16
     ],
-    "last_updated": "2026-07-01T05:37:29.621159",
+    "last_updated": "2026-07-01T05:59:15.444395",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -1910,7 +1946,7 @@
       851.4,
       858.06
     ],
-    "last_updated": "2026-07-01T05:37:31.323245",
+    "last_updated": "2026-07-01T05:59:16.804859",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1943,7 +1979,7 @@
       391.22,
       394.47
     ],
-    "last_updated": "2026-07-01T05:37:32.916176",
+    "last_updated": "2026-07-01T05:59:18.205358",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -1979,7 +2015,7 @@
       528.23,
       562.08
     ],
-    "last_updated": "2026-07-01T05:37:34.525450",
+    "last_updated": "2026-07-01T05:59:19.605709",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2013,7 +2049,7 @@
       813.77,
       839.36
     ],
-    "last_updated": "2026-07-01T05:37:36.132626",
+    "last_updated": "2026-07-01T05:59:20.957746",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2048,7 +2084,7 @@
       281.09,
       286.36
     ],
-    "last_updated": "2026-07-01T05:37:37.719756",
+    "last_updated": "2026-07-01T05:59:22.340384",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -2081,7 +2117,7 @@
       61.62,
       62.89
     ],
-    "last_updated": "2026-07-01T05:37:39.225489",
+    "last_updated": "2026-07-01T05:59:23.771661",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -2114,7 +2150,7 @@
       35.44,
       34.79
     ],
-    "last_updated": "2026-07-01T05:37:41.018573",
+    "last_updated": "2026-07-01T05:59:25.207365",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -2145,7 +2181,7 @@
       38.36,
       37.91
     ],
-    "last_updated": "2026-07-01T05:37:42.726072",
+    "last_updated": "2026-07-01T05:59:26.902920",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2181,7 +2217,7 @@
       5.81,
       6.08
     ],
-    "last_updated": "2026-07-01T05:37:44.522416",
+    "last_updated": "2026-07-01T05:59:28.322338",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -2216,7 +2252,7 @@
       110.22,
       122.33
     ],
-    "last_updated": "2026-07-01T05:37:45.923849",
+    "last_updated": "2026-07-01T05:59:29.913490",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2249,7 +2285,7 @@
       29.86,
       29.61
     ],
-    "last_updated": "2026-07-01T05:37:47.618016",
+    "last_updated": "2026-07-01T05:59:31.602613",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2285,7 +2321,7 @@
       11.69,
       12.23
     ],
-    "last_updated": "2026-07-01T05:37:49.315502",
+    "last_updated": "2026-07-01T05:59:33.111545",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2323,7 +2359,7 @@
       6.575,
       6.53
     ],
-    "last_updated": "2026-07-01T05:37:50.635118",
+    "last_updated": "2026-07-01T05:59:34.812144",
     "notes": "MB: MarketBeat 20260629",
     "group": "AI",
     "alarm": null
@@ -2356,7 +2392,7 @@
       72.33,
       76.88
     ],
-    "last_updated": "2026-07-01T05:37:51.960235",
+    "last_updated": "2026-07-01T05:59:36.307854",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -2387,7 +2423,7 @@
       151.23,
       151.5
     ],
-    "last_updated": "2026-07-01T05:37:53.717423",
+    "last_updated": "2026-07-01T05:59:38.115587",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2420,7 +2456,7 @@
       1.24,
       1.25
     ],
-    "last_updated": "2026-07-01T05:37:55.316364",
+    "last_updated": "2026-07-01T05:59:39.903576",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2451,7 +2487,7 @@
       2.45,
       2.55
     ],
-    "last_updated": "2026-07-01T05:37:57.317790",
+    "last_updated": "2026-07-01T05:59:41.607404",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2486,7 +2522,7 @@
       275.01,
       302.7
     ],
-    "last_updated": "2026-07-01T05:37:58.822385",
+    "last_updated": "2026-07-01T05:59:43.509924",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -2520,7 +2556,7 @@
       1145.28,
       1154.29
     ],
-    "last_updated": "2026-07-01T05:38:00.518747",
+    "last_updated": "2026-07-01T05:59:45.216014",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2555,7 +2591,7 @@
       6.09,
       5.88
     ],
-    "last_updated": "2026-07-01T05:38:02.123868",
+    "last_updated": "2026-07-01T05:59:46.703131",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -2589,7 +2625,7 @@
       28.53,
       27.34
     ],
-    "last_updated": "2026-07-01T05:38:03.832738",
+    "last_updated": "2026-07-01T05:59:48.051590",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -2625,7 +2661,7 @@
       24.83,
       24.5
     ],
-    "last_updated": "2026-07-01T05:38:05.617851",
+    "last_updated": "2026-07-01T05:59:49.603064",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -2656,7 +2692,7 @@
       298.05,
       302.97
     ],
-    "last_updated": "2026-07-01T05:38:07.017296",
+    "last_updated": "2026-07-01T05:59:51.313928",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2689,7 +2725,7 @@
       128.39,
       132.22
     ],
-    "last_updated": "2026-07-01T05:38:08.616306",
+    "last_updated": "2026-07-01T05:59:52.913592",
     "notes": "",
     "group": "Robotics",
     "alarm": null
@@ -2722,7 +2758,7 @@
       631.98,
       655.89
     ],
-    "last_updated": "2026-07-01T05:38:10.518134",
+    "last_updated": "2026-07-01T05:59:54.808003",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2753,7 +2789,7 @@
       158.53,
       161.54
     ],
-    "last_updated": "2026-07-01T05:38:11.850380",
+    "last_updated": "2026-07-01T05:59:56.504436",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2784,7 +2820,7 @@
       238.25,
       238.21
     ],
-    "last_updated": "2026-07-01T05:38:13.190490",
+    "last_updated": "2026-07-01T05:59:58.405868",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2815,7 +2851,7 @@
       75.53,
       75.51
     ],
-    "last_updated": "2026-07-01T05:38:14.922126",
+    "last_updated": "2026-07-01T06:00:00.105790",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2846,7 +2882,7 @@
       52.68,
       53.47
     ],
-    "last_updated": "2026-07-01T05:38:16.420769",
+    "last_updated": "2026-07-01T06:00:01.910143",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2877,7 +2913,7 @@
       71.94,
       73.85
     ],
-    "last_updated": "2026-07-01T05:38:18.116631",
+    "last_updated": "2026-07-01T06:00:03.512440",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -2910,7 +2946,7 @@
       30.3,
       31.98
     ],
-    "last_updated": "2026-07-01T05:38:19.919596",
+    "last_updated": "2026-07-01T06:00:05.210983",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -2943,7 +2979,7 @@
       160.81,
       165.38
     ],
-    "last_updated": "2026-07-01T05:38:21.424400",
+    "last_updated": "2026-07-01T06:00:07.012218",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -2976,7 +3012,7 @@
       239.13,
       242.42
     ],
-    "last_updated": "2026-07-01T05:38:23.222308",
+    "last_updated": "2026-07-01T06:00:08.608470",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -3009,7 +3045,7 @@
       53.58,
       53.11
     ],
-    "last_updated": "2026-07-01T05:38:25.013607",
+    "last_updated": "2026-07-01T06:00:10.014958",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -3043,7 +3079,7 @@
       259.32,
       248.37
     ],
-    "last_updated": "2026-07-01T05:38:26.516193",
+    "last_updated": "2026-07-01T06:00:11.341536",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -3078,7 +3114,7 @@
       88.66,
       87.77
     ],
-    "last_updated": "2026-07-01T05:38:27.902553",
+    "last_updated": "2026-07-01T06:00:12.814536",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -3113,7 +3149,7 @@
       103.47,
       101.86
     ],
-    "last_updated": "2026-07-01T05:38:29.256776",
+    "last_updated": "2026-07-01T06:00:14.506532",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -3146,7 +3182,7 @@
       10.83,
       10.66
     ],
-    "last_updated": "2026-07-01T05:38:30.573828",
+    "last_updated": "2026-07-01T06:00:16.107909",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -3179,7 +3215,7 @@
       14.59,
       14.5
     ],
-    "last_updated": "2026-07-01T05:38:31.907492",
+    "last_updated": "2026-07-01T06:00:17.808917",
     "notes": "MB: MarketBeat 20260629",
     "group": "Energy",
     "alarm": null
@@ -3213,7 +3249,7 @@
       52.76,
       52.33
     ],
-    "last_updated": "2026-07-01T05:38:33.229064",
+    "last_updated": "2026-07-01T06:00:19.405812",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -3247,7 +3283,7 @@
       10.26,
       10.03
     ],
-    "last_updated": "2026-07-01T05:38:34.562071",
+    "last_updated": "2026-07-01T06:00:21.107171",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -3282,7 +3318,7 @@
       21.32,
       21.14
     ],
-    "last_updated": "2026-07-01T05:38:35.916016",
+    "last_updated": "2026-07-01T06:00:22.835951",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -3318,7 +3354,7 @@
       189.25,
       194.65
     ],
-    "last_updated": "2026-07-01T05:38:37.257504",
+    "last_updated": "2026-07-01T06:00:24.323135",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -3354,7 +3390,7 @@
       29.8,
       36.01
     ],
-    "last_updated": "2026-07-01T05:38:38.624679",
+    "last_updated": "2026-07-01T06:00:26.103530",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -3387,7 +3423,7 @@
       33.39,
       34.67
     ],
-    "last_updated": "2026-07-01T05:38:39.969646",
+    "last_updated": "2026-07-01T06:00:27.708307",
     "notes": "",
     "group": "Pharma",
     "alarm": null
@@ -3418,7 +3454,7 @@
       25.71,
       24.89
     ],
-    "last_updated": "2026-07-01T05:38:41.316282",
+    "last_updated": "2026-07-01T06:00:29.106830",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -3451,7 +3487,7 @@
       19.59,
       20.13
     ],
-    "last_updated": "2026-07-01T05:38:42.651598",
+    "last_updated": "2026-07-01T06:00:30.615016",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -3482,7 +3518,7 @@
       197.5,
       201.9
     ],
-    "last_updated": "2026-07-01T05:38:43.992469",
+    "last_updated": "2026-07-01T06:00:32.310822",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -3513,7 +3549,7 @@
       81.72,
       82.84
     ],
-    "last_updated": "2026-07-01T05:38:45.373038",
+    "last_updated": "2026-07-01T06:00:34.011615",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -3546,7 +3582,7 @@
       107.82,
       112.1
     ],
-    "last_updated": "2026-07-01T05:38:46.729120",
+    "last_updated": "2026-07-01T06:00:35.403339",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -3579,7 +3615,7 @@
       592.64,
       623.7
     ],
-    "last_updated": "2026-07-01T05:38:48.122159",
+    "last_updated": "2026-07-01T06:00:36.806406",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -3610,7 +3646,7 @@
       116.5,
       119.52
     ],
-    "last_updated": "2026-07-01T05:38:49.487838",
+    "last_updated": "2026-07-01T06:00:38.613937",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -3646,7 +3682,7 @@
       22.09,
       22.15
     ],
-    "last_updated": "2026-07-01T05:38:50.836644",
+    "last_updated": "2026-07-01T06:00:40.310366",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -3680,7 +3716,7 @@
       73.23,
       74.95
     ],
-    "last_updated": "2026-07-01T05:38:52.156208",
+    "last_updated": "2026-07-01T06:00:41.915784",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -3715,7 +3751,7 @@
       5.02,
       5.04
     ],
-    "last_updated": "2026-07-01T05:38:53.476950",
+    "last_updated": "2026-07-01T06:00:43.612514",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -3748,7 +3784,7 @@
       44.41,
       45.11
     ],
-    "last_updated": "2026-07-01T05:38:54.813905",
+    "last_updated": "2026-07-01T06:00:45.311386",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -3782,7 +3818,7 @@
       9.38,
       9.39
     ],
-    "last_updated": "2026-07-01T05:38:56.174299",
+    "last_updated": "2026-07-01T06:00:47.308998",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -3819,7 +3855,7 @@
       463.21,
       483.84
     ],
-    "last_updated": "2026-07-01T05:38:57.502642",
+    "last_updated": "2026-07-01T06:00:48.714504",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -3854,7 +3890,7 @@
       58.31,
       57.93
     ],
-    "last_updated": "2026-07-01T05:38:58.848637",
+    "last_updated": "2026-07-01T06:00:50.506662",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -3885,7 +3921,7 @@
       174.39,
       173.58
     ],
-    "last_updated": "2026-07-01T05:39:00.173561",
+    "last_updated": "2026-07-01T06:00:51.872884",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -3918,7 +3954,7 @@
       34.18,
       33.29
     ],
-    "last_updated": "2026-07-01T05:39:01.515410",
+    "last_updated": "2026-07-01T06:00:53.227822",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -3952,7 +3988,7 @@
       18.19,
       17.93
     ],
-    "last_updated": "2026-07-01T05:39:02.846771",
+    "last_updated": "2026-07-01T06:00:54.568128",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -3985,7 +4021,7 @@
       101.83,
       100.28
     ],
-    "last_updated": "2026-07-01T05:39:04.173410",
+    "last_updated": "2026-07-01T06:00:55.926184",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4016,7 +4052,7 @@
       6.75,
       6.52
     ],
-    "last_updated": "2026-07-01T05:39:05.492243",
+    "last_updated": "2026-07-01T06:00:57.306207",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -4050,7 +4086,7 @@
       54.74,
       56.01
     ],
-    "last_updated": "2026-07-01T05:39:06.817000",
+    "last_updated": "2026-07-01T06:00:58.645334",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4086,7 +4122,7 @@
       3.6,
       3.67
     ],
-    "last_updated": "2026-07-01T05:39:08.139719",
+    "last_updated": "2026-07-01T06:01:00.002609",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4120,7 +4156,7 @@
       562.6,
       563.29
     ],
-    "last_updated": "2026-07-01T05:39:09.465312",
+    "last_updated": "2026-07-01T06:01:01.404452",
     "notes": "",
     "group": "MAG7",
     "alarm": null
@@ -4155,7 +4191,7 @@
       9.62,
       9.61
     ],
-    "last_updated": "2026-07-01T05:39:10.783144",
+    "last_updated": "2026-07-01T06:01:02.757456",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4190,7 +4226,7 @@
       10.24,
       10.92
     ],
-    "last_updated": "2026-07-01T05:39:12.121132",
+    "last_updated": "2026-07-01T06:01:04.123017",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4221,7 +4257,7 @@
       33.95,
       32.78
     ],
-    "last_updated": "2026-07-01T05:39:13.441194",
+    "last_updated": "2026-07-01T06:01:05.466727",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -4255,7 +4291,7 @@
       39.09,
       38.98
     ],
-    "last_updated": "2026-07-01T05:39:14.757307",
+    "last_updated": "2026-07-01T06:01:06.816529",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4289,7 +4325,7 @@
       331.94,
       333.33
     ],
-    "last_updated": "2026-07-01T05:39:16.114625",
+    "last_updated": "2026-07-01T06:01:08.200434",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -4324,7 +4360,7 @@
       22.23,
       22.08
     ],
-    "last_updated": "2026-07-01T05:39:17.443946",
+    "last_updated": "2026-07-01T06:01:09.603790",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -4359,7 +4395,7 @@
       4.6,
       5.54
     ],
-    "last_updated": "2026-07-01T05:39:18.762789",
+    "last_updated": "2026-07-01T06:01:10.956706",
     "notes": "",
     "group": "AI Cloud",
     "alarm": null
@@ -4394,7 +4430,7 @@
       13.52,
       13.86
     ],
-    "last_updated": "2026-07-01T05:39:20.080343",
+    "last_updated": "2026-07-01T06:01:12.313926",
     "notes": "MB: MarketBeat 20260629",
     "group": "Space",
     "alarm": null
@@ -4429,7 +4465,7 @@
       22.53,
       24.18
     ],
-    "last_updated": "2026-07-01T05:39:21.413208",
+    "last_updated": "2026-07-01T06:01:13.705939",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -4462,7 +4498,7 @@
       168.45,
       174.26
     ],
-    "last_updated": "2026-07-01T05:39:22.777905",
+    "last_updated": "2026-07-01T06:01:15.156417",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4495,7 +4531,7 @@
       23.68,
       23.61
     ],
-    "last_updated": "2026-07-01T05:39:24.128052",
+    "last_updated": "2026-07-01T06:01:16.545292",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4526,7 +4562,7 @@
       48.01,
       47.53
     ],
-    "last_updated": "2026-07-01T05:39:25.617594",
+    "last_updated": "2026-07-01T06:01:18.012395",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -4560,7 +4596,7 @@
       89.06,
       91.2
     ],
-    "last_updated": "2026-07-01T05:39:27.323670",
+    "last_updated": "2026-07-01T06:01:19.414446",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -4594,7 +4630,7 @@
       1.32,
       1.36
     ],
-    "last_updated": "2026-07-01T05:39:29.233179",
+    "last_updated": "2026-07-01T06:01:20.757433",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4627,7 +4663,7 @@
       32.96,
       32.57
     ],
-    "last_updated": "2026-07-01T05:39:30.724617",
+    "last_updated": "2026-07-01T06:01:22.236521",
     "notes": "",
     "group": "Energy",
     "alarm": null
@@ -4662,7 +4698,7 @@
       34.09,
       33.95
     ],
-    "last_updated": "2026-07-01T05:39:32.515933",
+    "last_updated": "2026-07-01T06:01:23.757888",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4696,7 +4732,7 @@
       36.66,
       36.76
     ],
-    "last_updated": "2026-07-01T05:39:34.225302",
+    "last_updated": "2026-07-01T06:01:25.214027",
     "notes": "",
     "group": "Clean Energy",
     "alarm": null
@@ -4730,7 +4766,7 @@
       19.08,
       18.09
     ],
-    "last_updated": "2026-07-01T05:39:35.824988",
+    "last_updated": "2026-07-01T06:01:26.608984",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4763,7 +4799,7 @@
       4.87,
       4.74
     ],
-    "last_updated": "2026-07-01T05:39:37.528381",
+    "last_updated": "2026-07-01T06:01:28.104747",
     "notes": "",
     "group": "HPC",
     "alarm": null
@@ -4799,7 +4835,7 @@
       21.04,
       21.58
     ],
-    "last_updated": "2026-07-01T05:39:39.213617",
+    "last_updated": "2026-07-01T06:01:29.446444",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -4833,7 +4869,7 @@
       13.8,
       13.31
     ],
-    "last_updated": "2026-07-01T05:39:40.717906",
+    "last_updated": "2026-07-01T06:01:30.807582",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -4866,7 +4902,7 @@
       73.6,
       72.39
     ],
-    "last_updated": "2026-07-01T05:39:42.321156",
+    "last_updated": "2026-07-01T06:01:32.170938",
     "notes": "",
     "group": "EV",
     "alarm": null
@@ -4901,7 +4937,7 @@
       20.97,
       21.69
     ],
-    "last_updated": "2026-07-01T05:39:43.919587",
+    "last_updated": "2026-07-01T06:01:33.516367",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -4936,7 +4972,7 @@
       59.65,
       57.84
     ],
-    "last_updated": "2026-07-01T05:39:45.820810",
+    "last_updated": "2026-07-01T06:01:34.905494",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -4974,7 +5010,7 @@
       28.35,
       27.92
     ],
-    "last_updated": "2026-07-01T05:39:47.333954",
+    "last_updated": "2026-07-01T06:01:36.264769",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5009,7 +5045,7 @@
       2.87,
       2.81
     ],
-    "last_updated": "2026-07-01T05:39:48.656205",
+    "last_updated": "2026-07-01T06:01:37.612042",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5042,7 +5078,7 @@
       5.61,
       5.8
     ],
-    "last_updated": "2026-07-01T05:39:49.971387",
+    "last_updated": "2026-07-01T06:01:38.953565",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -5078,7 +5114,7 @@
       306.97,
       334.82
     ],
-    "last_updated": "2026-07-01T05:39:51.519791",
+    "last_updated": "2026-07-01T06:01:40.306944",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5112,7 +5148,7 @@
       54.07,
       62.52
     ],
-    "last_updated": "2026-07-01T05:39:53.225294",
+    "last_updated": "2026-07-01T06:01:41.669973",
     "notes": "MB: MarketBeat 20260629",
     "group": "AI",
     "alarm": null
@@ -5147,7 +5183,7 @@
       216.16,
       221.0
     ],
-    "last_updated": "2026-07-01T05:39:54.726312",
+    "last_updated": "2026-07-01T06:01:43.022634",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5178,7 +5214,7 @@
       54.34,
       54.38
     ],
-    "last_updated": "2026-07-01T05:39:56.323031",
+    "last_updated": "2026-07-01T06:01:44.405082",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -5211,7 +5247,7 @@
       245.68,
       271.95
     ],
-    "last_updated": "2026-07-01T05:39:57.819813",
+    "last_updated": "2026-07-01T06:01:45.744440",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -5245,7 +5281,7 @@
       2.98,
       3.08
     ],
-    "last_updated": "2026-07-01T05:39:59.420718",
+    "last_updated": "2026-07-01T06:01:47.105053",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -5279,7 +5315,7 @@
       41.15,
       42.47
     ],
-    "last_updated": "2026-07-01T05:40:01.013433",
+    "last_updated": "2026-07-01T06:01:48.504855",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -5314,7 +5350,7 @@
       4.62,
       4.3
     ],
-    "last_updated": "2026-07-01T05:40:02.720027",
+    "last_updated": "2026-07-01T06:01:49.941490",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5345,7 +5381,7 @@
       37.43,
       37.64
     ],
-    "last_updated": "2026-07-01T05:40:04.323810",
+    "last_updated": "2026-07-01T06:01:51.307371",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -5380,7 +5416,7 @@
       3.99,
       3.81
     ],
-    "last_updated": "2026-07-01T05:40:05.917792",
+    "last_updated": "2026-07-01T06:01:52.762689",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -5414,7 +5450,7 @@
       255.59,
       260.64
     ],
-    "last_updated": "2026-07-01T05:40:07.323173",
+    "last_updated": "2026-07-01T06:01:54.411504",
     "notes": "",
     "group": "Chip",
     "alarm": null
@@ -5447,7 +5483,7 @@
       114.21,
       114.18
     ],
-    "last_updated": "2026-07-01T05:40:09.021152",
+    "last_updated": "2026-07-01T06:01:56.107990",
     "notes": "",
     "group": "Fintech",
     "alarm": null
@@ -5481,7 +5517,7 @@
       13.61,
       13.4
     ],
-    "last_updated": "2026-07-01T05:40:10.616758",
+    "last_updated": "2026-07-01T06:01:57.709754",
     "notes": "",
     "group": "BTC Mining",
     "alarm": null
@@ -5514,7 +5550,7 @@
       4.68,
       4.73
     ],
-    "last_updated": "2026-07-01T05:40:11.937077",
+    "last_updated": "2026-07-01T06:01:59.140875",
     "notes": "",
     "group": "Space",
     "alarm": null
@@ -5547,7 +5583,7 @@
       54.59,
       54.85
     ],
-    "last_updated": "2026-07-01T05:40:13.312944",
+    "last_updated": "2026-07-01T06:02:00.714628",
     "notes": "MB: MarketBeat 20260629",
     "group": "Space",
     "alarm": null
@@ -5580,7 +5616,7 @@
       98.01,
       101.65
     ],
-    "last_updated": "2026-07-01T05:40:15.024116",
+    "last_updated": "2026-07-01T06:02:02.412725",
     "notes": "MB: MarketBeat 20260629",
     "group": "Space",
     "alarm": null
@@ -5613,7 +5649,7 @@
       86.77,
       88.86
     ],
-    "last_updated": "2026-07-01T05:40:16.620878",
+    "last_updated": "2026-07-01T06:02:03.915394",
     "notes": "MB: MarketBeat 20260629",
     "group": "Space",
     "alarm": null
@@ -5646,7 +5682,7 @@
       49.19,
       50.67
     ],
-    "last_updated": "2026-07-01T05:40:18.718069",
+    "last_updated": "2026-07-01T06:02:05.607768",
     "notes": "MB: MarketBeat 20260629",
     "group": "Space",
     "alarm": null
@@ -5677,7 +5713,7 @@
       16.6,
       15.81
     ],
-    "last_updated": "2026-07-01T05:40:20.524142",
+    "last_updated": "2026-07-01T06:02:07.408443",
     "notes": "RG: Ross Givens 20260629",
     "group": "General",
     "alarm": null
@@ -5711,7 +5747,7 @@
       15.45,
       14.76
     ],
-    "last_updated": "2026-07-01T05:40:22.215620",
+    "last_updated": "2026-07-01T06:02:08.912574",
     "notes": "MB: MarketBeat 20260629",
     "group": "Biotech",
     "alarm": null
@@ -5745,7 +5781,7 @@
       14.32,
       14.57
     ],
-    "last_updated": "2026-07-01T05:40:23.816041",
+    "last_updated": "2026-07-01T06:02:10.511217",
     "notes": "MB: MarketBeat 20260629",
     "group": "Biotech",
     "alarm": null
@@ -5778,7 +5814,7 @@
       12.18,
       6.1
     ],
-    "last_updated": "2026-07-01T05:40:25.420719",
+    "last_updated": "2026-07-01T06:02:11.860976",
     "notes": "MB: MarketBeat 20260629",
     "group": "Pharma",
     "alarm": null
@@ -5814,7 +5850,7 @@
       28.15,
       29.33
     ],
-    "last_updated": "2026-07-01T05:40:27.121880",
+    "last_updated": "2026-07-01T06:02:13.210753",
     "notes": "MB: MarketBeat 20260629",
     "group": "AI",
     "alarm": null
@@ -5850,7 +5886,7 @@
       10.32,
       10.65
     ],
-    "last_updated": "2026-07-01T05:40:28.920094",
+    "last_updated": "2026-07-01T06:02:14.716114",
     "notes": "MB: MarketBeat 20260629",
     "group": "AI",
     "alarm": null
@@ -5885,7 +5921,7 @@
       9.85,
       10.28
     ],
-    "last_updated": "2026-07-01T05:40:30.520565",
+    "last_updated": "2026-07-01T06:02:16.406550",
     "notes": "MB: MarketBeat 20260629",
     "group": "AI",
     "alarm": null
@@ -5920,7 +5956,7 @@
       4.23,
       4.43
     ],
-    "last_updated": "2026-07-01T05:40:32.125012",
+    "last_updated": "2026-07-01T06:02:18.115121",
     "notes": "MB: MarketBeat 20260629",
     "group": "BTC Mining",
     "alarm": null
@@ -5953,7 +5989,7 @@
       4.21,
       4.13
     ],
-    "last_updated": "2026-07-01T05:40:33.454927",
+    "last_updated": "2026-07-01T06:02:19.704793",
     "notes": "MB: MarketBeat 20260629",
     "group": "Energy",
     "alarm": null
@@ -5984,7 +6020,7 @@
       41.48,
       41.05
     ],
-    "last_updated": "2026-07-01T05:40:34.843227",
+    "last_updated": "2026-07-01T06:02:21.504300",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -6015,7 +6051,7 @@
       139.66,
       139.09
     ],
-    "last_updated": "2026-07-01T05:40:36.514936",
+    "last_updated": "2026-07-01T06:02:23.018173",
     "notes": "",
     "group": "General",
     "alarm": null
@@ -6050,7 +6086,7 @@
       33.84,
       33.58
     ],
-    "last_updated": "2026-07-01T05:40:38.027106",
+    "last_updated": "2026-07-01T06:02:24.711603",
     "notes": "",
     "group": "AI",
     "alarm": null
@@ -6081,7 +6117,7 @@
       8.26,
       8.29
     ],
-    "last_updated": "2026-07-01T05:40:39.625595",
+    "last_updated": "2026-07-01T06:02:26.913928",
     "notes": "RG: Ross Givens 20260629",
     "group": "General",
     "alarm": null
@@ -6112,7 +6148,7 @@
       22.03,
       22.08
     ],
-    "last_updated": "2026-07-01T05:40:41.314235",
+    "last_updated": "2026-07-01T06:02:28.412037",
     "notes": "RG: Ross Givens 20260629",
     "group": "General",
     "alarm": null
@@ -6143,7 +6179,7 @@
       2.03,
       1.9
     ],
-    "last_updated": "2026-07-01T05:40:42.814823",
+    "last_updated": "2026-07-01T06:02:30.013129",
     "notes": "RG: Ross Givens 20260629",
     "group": "General",
     "alarm": null
@@ -6177,9 +6213,42 @@
       15.37,
       14.55
     ],
-    "last_updated": "2026-07-01T05:40:44.513390",
+    "last_updated": "2026-07-01T06:02:31.413800",
     "notes": "SALP: 0260629",
     "group": "AI Cloud",
     "alarm": null
+  },
+  "AAPL": {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "cat": "Technology",
+    "theme": [
+      "Chip",
+      "AI Cloud"
+    ],
+    "live_price": 289.36,
+    "fair_value": 315.09,
+    "mkt_cap": "$4.25T",
+    "mkt_cap_raw": 4249933053952,
+    "week52_low": 201.5,
+    "week52_high": 317.4,
+    "pe": 35.07,
+    "pb": 39.86,
+    "ps": 9.41,
+    "peg": 2.29,
+    "gross_margin": 47.9,
+    "chg_pct": 2.7,
+    "trend": [
+      297.01,
+      294.3,
+      293.08,
+      275.15,
+      283.78,
+      281.74,
+      289.36
+    ],
+    "last_updated": "2026-07-01T06:03:53.783856",
+    "notes": "",
+    "group": "Chip"
   }
 }
