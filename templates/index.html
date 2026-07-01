@@ -134,6 +134,8 @@
   @keyframes alarmflash { 0%,100% { background: inherit; } 50% { background: rgba(248,113,113,0.35) !important; } }
   @keyframes datainfo-glow { 0%,100% { box-shadow: 0 0 0px rgba(59,130,246,0); border-color:#3b82f6; } 50% { box-shadow: 0 0 8px 2px rgba(59,130,246,0.8); border-color:#93c5fd; } }
   .btn-datainfo-flash { animation: datainfo-glow 1.8s ease-in-out infinite; }
+  @keyframes redflash { 0%,100% { color:#f87171; opacity:1; } 50% { color:#ff0000; opacity:0.4; } }
+  .delayed-warning { animation: redflash 1s ease-in-out infinite; font-weight:700; color:#f87171; }
   .group-pill { display: inline-block; background: rgba(168,85,247,0.18); color: #d8b4fe; border: 1px solid rgba(168,85,247,0.4); border-radius: 12px; padding: 2px 9px; font-size: 10px; font-weight: 600; cursor: pointer; white-space: nowrap; }
   .group-pill:hover { background: rgba(168,85,247,0.32); }
   .group-filter-bar { display:flex; flex-wrap:wrap; gap:6px; padding: 8px 0 4px; }
@@ -288,7 +290,7 @@
       </div>
       <button class="btn btn-primary" onclick="openAddModal()">+ Add Ticker</button>
       <button class="btn btn-legend" onclick="openLegend()" title="Column Definitions">? Legend</button>
-      <button id="btn-datainfo" class="btn btn-legend btn-datainfo-flash" onclick="openDataInfo();this.classList.remove('btn-datainfo-flash')" title="About Data &amp; Limits" style="background:#1e3a5f;border-color:#3b82f6;color:#93c5fd">&#9432; Data Info</button>
+      <button id="btn-datainfo" class="btn btn-legend btn-datainfo-flash" onclick="openDataInfo()" title="About Data &amp; Limits" style="background:#1e3a5f;border-color:#3b82f6;color:#93c5fd">&#9432; Data Info</button>
     </div>
   </div>
 </div>
@@ -674,7 +676,7 @@
         <div style="color:#fcd34d;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Refresh Schedule</div>
         <div style="display:grid;grid-template-columns:160px 1fr;gap:6px 12px;color:#e2e8f0;font-size:13px;line-height:1.6">
           <div style="color:#93c5fd;font-weight:600">Price updates</div>
-          <div>Every <strong style="color:#fff">60 seconds</strong> — pulled in batches of 50 symbols with a 3-second pause between batches to avoid triggering rate limits.</div>
+          <div>Every <strong style="color:#fff">60 seconds</strong> — pulled in batches of 50 symbols with a 3-second pause between batches to avoid triggering rate limits.<br><span class="delayed-warning">⚠ Yahoo Finance free data is delayed ~15 minutes during market hours — NOT real-time.</span></div>
           <div style="color:#93c5fd;font-weight:600">Fundamentals</div>
           <div>Every <strong style="color:#fff">10 minutes</strong> — P/E, P/B, Fair Value, Gross Margin, etc. Each ticker fetches individually with a 1.2-second delay between requests.</div>
           <div style="color:#93c5fd;font-weight:600">184-ticker estimate</div>
