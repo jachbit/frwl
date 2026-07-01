@@ -6181,5 +6181,38 @@
     "notes": "SALP: 0260629",
     "group": "AI Cloud",
     "alarm": null
+  },
+  "AAPL": {
+    "symbol": "AAPL",
+    "company": "Apple Inc.",
+    "cat": "Technology",
+    "theme": [
+      "Chip",
+      "AI Cloud"
+    ],
+    "live_price": 289.36,
+    "fair_value": 315.09,
+    "mkt_cap": "$4.25T",
+    "mkt_cap_raw": 4249933053952,
+    "week52_low": 201.5,
+    "week52_high": 317.4,
+    "pe": 35.07,
+    "pb": 39.86,
+    "ps": 9.41,
+    "peg": 2.29,
+    "gross_margin": 47.9,
+    "chg_pct": 2.7,
+    "trend": [
+      297.01,
+      294.3,
+      293.08,
+      275.15,
+      283.78,
+      281.74,
+      289.36
+    ],
+    "last_updated": "2026-07-01T05:52:36.942485",
+    "notes": "",
+    "group": "Chip"
   }
 }
