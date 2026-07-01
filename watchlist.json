@@ -3535,7 +3535,9 @@
     "symbol": "IEMG",
     "company": "iShares Core MSCI Emerging Markets ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 82.84,
     "fair_value": null,
     "mkt_cap": null,
