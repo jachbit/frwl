@@ -8,7 +8,7 @@
       "Clean Energy",
       "EV"
     ],
-    "live_price": 9.42,
+    "live_price": 9.18,
     "fair_value": 10.07,
     "mkt_cap": "$2.64B",
     "mkt_cap_raw": 2640510976,
@@ -19,7 +19,7 @@
     "ps": 3.0,
     "peg": null,
     "gross_margin": 7.6,
-    "chg_pct": -2.8,
+    "chg_pct": -5.26,
     "trend": [
       9.24,
       8.53,
@@ -31,7 +31,10 @@
     ],
     "last_updated": "2026-07-01T16:56:18.698794",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP",
+      "Positions"
+    ],
     "alarm": null
   },
   "PL": {
@@ -41,7 +44,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 33.65,
+    "live_price": 31.61,
     "fair_value": 39.8,
     "mkt_cap": "$12.07B",
     "mkt_cap_raw": 12074917888,
@@ -52,7 +55,7 @@
     "ps": 35.98,
     "peg": null,
     "gross_margin": 55.6,
-    "chg_pct": 1.41,
+    "chg_pct": -4.72,
     "trend": [
       28.53,
       26.3,
@@ -64,7 +67,9 @@
     ],
     "last_updated": "2026-07-01T16:56:20.029512",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "TSLA": {
@@ -79,7 +84,7 @@
       "Energy",
       "Robotics"
     ],
-    "live_price": 427.35,
+    "live_price": 425.3,
     "fair_value": 421.16,
     "mkt_cap": "$1.60T",
     "mkt_cap_raw": 1599074467840,
@@ -90,7 +95,7 @@
     "ps": 16.34,
     "peg": 5.56,
     "gross_margin": 19.1,
-    "chg_pct": 2.73,
+    "chg_pct": 2.24,
     "trend": [
       381.61,
       375.53,
@@ -102,7 +107,9 @@
     ],
     "last_updated": "2026-07-01T17:06:33.334373",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "INTC": {
@@ -115,7 +122,7 @@
       "AI Cloud",
       "Robotics"
     ],
-    "live_price": 128.8,
+    "live_price": 127.02,
     "fair_value": 98.5,
     "mkt_cap": "$644.23B",
     "mkt_cap_raw": 644232642560,
@@ -126,7 +133,7 @@
     "ps": 11.98,
     "peg": 1.36,
     "gross_margin": 37.2,
-    "chg_pct": -7.6,
+    "chg_pct": -8.88,
     "trend": [
       132.28,
       131.65,
@@ -138,7 +145,9 @@
     ],
     "last_updated": "2026-07-01T17:06:34.767016",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "SPCX": {
@@ -149,7 +158,7 @@
       "AI",
       "Space"
     ],
-    "live_price": 160.94,
+    "live_price": 157.54,
     "fair_value": 187.8,
     "mkt_cap": "$2.10T",
     "mkt_cap_raw": 2102007300096,
@@ -160,7 +169,7 @@
     "ps": 108.91,
     "peg": null,
     "gross_margin": 48.8,
-    "chg_pct": -6.6,
+    "chg_pct": -8.58,
     "trend": [
       156.11,
       154.54,
@@ -172,7 +181,10 @@
     ],
     "last_updated": "2026-07-01T17:06:36.117041",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space",
+      "Positions"
+    ],
     "alarm": null
   },
   "NVO": {
@@ -182,7 +194,7 @@
     "theme": [
       "Pharma"
     ],
-    "live_price": 48.94,
+    "live_price": 48.78,
     "fair_value": 47.36,
     "mkt_cap": "$217.20B",
     "mkt_cap_raw": 217203654656,
@@ -193,7 +205,7 @@
     "ps": 0.66,
     "peg": 3.56,
     "gross_margin": 83.2,
-    "chg_pct": 2.06,
+    "chg_pct": 1.71,
     "trend": [
       47.42,
       47.41,
@@ -205,7 +217,9 @@
     ],
     "last_updated": "2026-07-01T17:06:37.569685",
     "notes": "",
-    "group": "Pharma",
+    "group": [
+      "Pharma"
+    ],
     "alarm": null
   },
   "MSFT": {
@@ -217,7 +231,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 387.11,
+    "live_price": 384.28,
     "fair_value": 561.11,
     "mkt_cap": "$2.87T",
     "mkt_cap_raw": 2869901656064,
@@ -228,7 +242,7 @@
     "ps": 9.02,
     "peg": 1.15,
     "gross_margin": 68.3,
-    "chg_pct": 3.08,
+    "chg_pct": 2.32,
     "trend": [
       373.94,
       365.46,
@@ -240,7 +254,9 @@
     ],
     "last_updated": "2026-07-01T17:06:38.975539",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "PLTR": {
@@ -253,7 +269,7 @@
       "HPC",
       "Space"
     ],
-    "live_price": 127.0,
+    "live_price": 125.73,
     "fair_value": 182.75,
     "mkt_cap": "$303.28B",
     "mkt_cap_raw": 303283961856,
@@ -264,7 +280,7 @@
     "ps": 58.05,
     "peg": 1.62,
     "gross_margin": 84.1,
-    "chg_pct": 8.23,
+    "chg_pct": 7.15,
     "trend": [
       116.7,
       113.5,
@@ -276,7 +292,10 @@
     ],
     "last_updated": "2026-07-01T17:06:40.323907",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI",
+      "Positions"
+    ],
     "alarm": null
   },
   "IGV": {
@@ -286,7 +305,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 94.28,
+    "live_price": 93.39,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -297,7 +316,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 3.9,
+    "chg_pct": 2.92,
     "trend": [
       87.32,
       86.17,
@@ -309,7 +328,9 @@
     ],
     "last_updated": "2026-07-01T17:06:42.089137",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "NOW": {
@@ -320,7 +341,7 @@
       "AI",
       "Robotics"
     ],
-    "live_price": 106.52,
+    "live_price": 105.77,
     "fair_value": 141.48,
     "mkt_cap": "$108.95B",
     "mkt_cap_raw": 108952535040,
@@ -331,7 +352,7 @@
     "ps": 7.8,
     "peg": 0.95,
     "gross_margin": 76.6,
-    "chg_pct": 7.02,
+    "chg_pct": 6.26,
     "trend": [
       95.94,
       93.8,
@@ -343,7 +364,9 @@
     ],
     "last_updated": "2026-07-01T17:06:43.790233",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "NVDA": {
@@ -357,7 +380,7 @@
       "HPC",
       "EV"
     ],
-    "live_price": 197.71,
+    "live_price": 197.58,
     "fair_value": 301.62,
     "mkt_cap": "$4.77T",
     "mkt_cap_raw": 4771333275648,
@@ -368,7 +391,7 @@
     "ps": 18.82,
     "peg": 0.59,
     "gross_margin": 74.1,
-    "chg_pct": -0.91,
+    "chg_pct": -0.98,
     "trend": [
       200.04,
       199.0,
@@ -380,7 +403,9 @@
     ],
     "last_updated": "2026-07-01T17:06:45.389974",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "AVGO": {
@@ -395,7 +420,7 @@
       "Cyber",
       "Robotics"
     ],
-    "live_price": 369.43,
+    "live_price": 369.34,
     "fair_value": 523.73,
     "mkt_cap": "$1.76T",
     "mkt_cap_raw": 1755927674880,
@@ -406,7 +431,7 @@
     "ps": 23.27,
     "peg": 0.66,
     "gross_margin": 76.3,
-    "chg_pct": -2.36,
+    "chg_pct": -2.38,
     "trend": [
       380.15,
       382.07,
@@ -418,7 +443,9 @@
     ],
     "last_updated": "2026-07-01T17:06:46.985771",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "UBER": {
@@ -426,7 +453,7 @@
     "company": "Uber Technologies, Inc.",
     "cat": "Technology",
     "theme": [],
-    "live_price": 73.2,
+    "live_price": 72.67,
     "fair_value": 104.48,
     "mkt_cap": "$148.80B",
     "mkt_cap_raw": 148802289664,
@@ -437,7 +464,7 @@
     "ps": 2.77,
     "peg": 6.18,
     "gross_margin": 39.6,
-    "chg_pct": 1.24,
+    "chg_pct": 0.51,
     "trend": [
       69.67,
       73.85,
@@ -449,7 +476,9 @@
     ],
     "last_updated": "2026-07-01T17:06:48.393036",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "ZDGE": {
@@ -459,7 +488,7 @@
     "theme": [
       "AI"
     ],
-    "live_price": 3.29,
+    "live_price": 3.28,
     "fair_value": 6.0,
     "mkt_cap": "$43.00M",
     "mkt_cap_raw": 42995796,
@@ -470,7 +499,7 @@
     "ps": 1.37,
     "peg": null,
     "gross_margin": 93.2,
-    "chg_pct": 3.42,
+    "chg_pct": 3.11,
     "trend": [
       3.09,
       3.03,
@@ -482,7 +511,9 @@
     ],
     "last_updated": "2026-07-01T17:06:49.990764",
     "notes": "WSZ:WallStreetZen_260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "VTEX": {
@@ -513,7 +544,9 @@
     ],
     "last_updated": "2026-07-01T17:06:51.586191",
     "notes": "WSZ:WallStreetZen_260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "RERE": {
@@ -521,7 +554,7 @@
     "company": "ATRenew Inc.",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 4.09,
+    "live_price": 4.07,
     "fair_value": 7.55,
     "mkt_cap": "$907.01M",
     "mkt_cap_raw": 907005056,
@@ -532,7 +565,7 @@
     "ps": 0.04,
     "peg": null,
     "gross_margin": 20.6,
-    "chg_pct": 5.67,
+    "chg_pct": 5.3,
     "trend": [
       3.62,
       3.78,
@@ -544,7 +577,9 @@
     ],
     "last_updated": "2026-07-01T17:06:53.182757",
     "notes": "WSZ:WallStreetZen_260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "TBLA": {
@@ -555,7 +590,7 @@
       "AI",
       "Chip"
     ],
-    "live_price": 5.16,
+    "live_price": 5.2,
     "fair_value": 5.79,
     "mkt_cap": "$1.40B",
     "mkt_cap_raw": 1400787328,
@@ -566,7 +601,7 @@
     "ps": 0.72,
     "peg": null,
     "gross_margin": 29.7,
-    "chg_pct": 2.28,
+    "chg_pct": 2.97,
     "trend": [
       4.67,
       4.65,
@@ -578,7 +613,9 @@
     ],
     "last_updated": "2026-07-01T17:06:54.691220",
     "notes": "WSZ:WallStreetZen_260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "ALOY": {
@@ -588,7 +625,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 15.8,
+    "live_price": 14.99,
     "fair_value": 19.0,
     "mkt_cap": "$1.07B",
     "mkt_cap_raw": 1069869568,
@@ -599,7 +636,7 @@
     "ps": 710.4,
     "peg": null,
     "gross_margin": 20.0,
-    "chg_pct": 7.7,
+    "chg_pct": 2.18,
     "trend": [
       19.17,
       16.67,
@@ -611,7 +648,9 @@
     ],
     "last_updated": "2026-07-01T17:06:56.292791",
     "notes": "RG: Ross Givens",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "IONQ": {
@@ -621,7 +660,7 @@
     "theme": [
       "AI Cloud"
     ],
-    "live_price": 53.47,
+    "live_price": 51.42,
     "fair_value": 68.79,
     "mkt_cap": "$19.92B",
     "mkt_cap_raw": 19923283968,
@@ -632,7 +671,7 @@
     "ps": 106.47,
     "peg": null,
     "gross_margin": 36.1,
-    "chg_pct": 0.51,
+    "chg_pct": -3.35,
     "trend": [
       57.85,
       53.6,
@@ -644,7 +683,9 @@
     ],
     "last_updated": "2026-07-01T17:06:57.894860",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "QBTS": {
@@ -655,7 +696,7 @@
       "AI Cloud",
       "Pharma"
     ],
-    "live_price": 24.25,
+    "live_price": 23.51,
     "fair_value": 37.39,
     "mkt_cap": "$8.97B",
     "mkt_cap_raw": 8972219392,
@@ -666,7 +707,7 @@
     "ps": 721.01,
     "peg": null,
     "gross_margin": 66.3,
-    "chg_pct": 1.23,
+    "chg_pct": -1.84,
     "trend": [
       25.03,
       22.98,
@@ -678,7 +719,9 @@
     ],
     "last_updated": "2026-07-01T17:06:59.381669",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "RGTI": {
@@ -690,7 +733,7 @@
       "AI Cloud",
       "HPC"
     ],
-    "live_price": 19.34,
+    "live_price": 18.68,
     "fair_value": 29.65,
     "mkt_cap": "$6.42B",
     "mkt_cap_raw": 6415263744,
@@ -701,7 +744,7 @@
     "ps": 640.5,
     "peg": null,
     "gross_margin": 30.0,
-    "chg_pct": 0.73,
+    "chg_pct": -2.71,
     "trend": [
       21.28,
       19.53,
@@ -713,7 +756,9 @@
     ],
     "last_updated": "2026-07-01T17:07:00.714539",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "NBIS": {
@@ -725,7 +770,7 @@
       "Chip",
       "Robotics"
     ],
-    "live_price": 235.3,
+    "live_price": 229.18,
     "fair_value": 245.43,
     "mkt_cap": "$59.58B",
     "mkt_cap_raw": 59575943168,
@@ -736,7 +781,7 @@
     "ps": 67.86,
     "peg": 0.63,
     "gross_margin": 72.1,
-    "chg_pct": -15.81,
+    "chg_pct": -18.0,
     "trend": [
       275.25,
       259.66,
@@ -748,7 +793,9 @@
     ],
     "last_updated": "2026-07-01T17:07:02.043524",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "IREN": {
@@ -760,7 +807,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 43.96,
+    "live_price": 43.32,
     "fair_value": 80.93,
     "mkt_cap": "$15.68B",
     "mkt_cap_raw": 15676417024,
@@ -771,7 +818,7 @@
     "ps": 20.71,
     "peg": 3.11,
     "gross_margin": 68.4,
-    "chg_pct": -4.85,
+    "chg_pct": -6.23,
     "trend": [
       54.72,
       50.3,
@@ -783,7 +830,9 @@
     ],
     "last_updated": "2026-07-01T17:07:03.588764",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "CRWV": {
@@ -798,7 +847,7 @@
       "HPC",
       "Robotics"
     ],
-    "live_price": 86.24,
+    "live_price": 85.68,
     "fair_value": 143.41,
     "mkt_cap": "$46.92B",
     "mkt_cap_raw": 46916325376,
@@ -809,7 +858,7 @@
     "ps": 7.53,
     "peg": null,
     "gross_margin": 69.4,
-    "chg_pct": -14.89,
+    "chg_pct": -15.43,
     "trend": [
       105.72,
       100.88,
@@ -821,7 +870,9 @@
     ],
     "last_updated": "2026-07-01T17:07:05.086992",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "APLD": {
@@ -835,7 +886,7 @@
       "BTC Mining",
       "HPC"
     ],
-    "live_price": 36.99,
+    "live_price": 35.52,
     "fair_value": 73.36,
     "mkt_cap": "$10.56B",
     "mkt_cap_raw": 10556325888,
@@ -846,7 +897,7 @@
     "ps": 33.06,
     "peg": 1.83,
     "gross_margin": 45.4,
-    "chg_pct": -1.16,
+    "chg_pct": -5.1,
     "trend": [
       45.27,
       41.98,
@@ -858,7 +909,9 @@
     ],
     "last_updated": "2026-07-01T17:07:06.451660",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "CEVA": {
@@ -870,7 +923,7 @@
       "Chip",
       "Space"
     ],
-    "live_price": 46.1,
+    "live_price": 45.51,
     "fair_value": 46.11,
     "mkt_cap": "$1.28B",
     "mkt_cap_raw": 1280834432,
@@ -881,7 +934,7 @@
     "ps": 11.4,
     "peg": 4.14,
     "gross_margin": 87.2,
-    "chg_pct": -2.4,
+    "chg_pct": -3.66,
     "trend": [
       45.48,
       45.04,
@@ -893,7 +946,9 @@
     ],
     "last_updated": "2026-07-01T17:07:07.888746",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "NASA": {
@@ -903,7 +958,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 30.34,
+    "live_price": 29.43,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -914,7 +969,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -0.52,
+    "chg_pct": -3.49,
     "trend": [
       28.74,
       27.34,
@@ -926,7 +981,9 @@
     ],
     "last_updated": "2026-07-01T17:07:09.390508",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "CIBR": {
@@ -936,7 +993,7 @@
     "theme": [
       "Cyber"
     ],
-    "live_price": 91.78,
+    "live_price": 91.11,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -947,7 +1004,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.55,
+    "chg_pct": 1.8,
     "trend": [
       84.1376,
       83.728,
@@ -959,7 +1016,9 @@
     ],
     "last_updated": "2026-07-01T17:07:11.194013",
     "notes": "",
-    "group": "ETF",
+    "group": [
+      "ETF"
+    ],
     "alarm": null
   },
   "PANW": {
@@ -972,7 +1031,7 @@
       "Cyber",
       "Robotics"
     ],
-    "live_price": 356.64,
+    "live_price": 352.04,
     "fair_value": 314.48,
     "mkt_cap": "$290.34B",
     "mkt_cap_raw": 290343747584,
@@ -983,7 +1042,7 @@
     "ps": 27.37,
     "peg": 4.96,
     "gross_margin": 72.0,
-    "chg_pct": 4.89,
+    "chg_pct": 3.54,
     "trend": [
       290.92,
       285.26,
@@ -995,7 +1054,9 @@
     ],
     "last_updated": "2026-07-01T17:07:12.898776",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "CRWD": {
@@ -1008,7 +1069,7 @@
       "Cyber",
       "Robotics"
     ],
-    "live_price": 777.32,
+    "live_price": 772.74,
     "fair_value": 713.8,
     "mkt_cap": "$197.66B",
     "mkt_cap_raw": 197655576576,
@@ -1019,7 +1080,7 @@
     "ps": 38.8,
     "peg": 5.71,
     "gross_margin": 75.1,
-    "chg_pct": 2.04,
+    "chg_pct": 1.44,
     "trend": [
       684.86,
       675.44,
@@ -1031,7 +1092,9 @@
     ],
     "last_updated": "2026-07-01T17:07:14.489068",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "DDOG": {
@@ -1044,7 +1107,7 @@
       "Cyber",
       "Robotics"
     ],
-    "live_price": 268.14,
+    "live_price": 264.48,
     "fair_value": 242.12,
     "mkt_cap": "$95.52B",
     "mkt_cap_raw": 95520137216,
@@ -1055,7 +1118,7 @@
     "ps": 26.01,
     "peg": 1.49,
     "gross_margin": 79.9,
-    "chg_pct": 3.13,
+    "chg_pct": 1.72,
     "trend": [
       220.57,
       222.65,
@@ -1067,7 +1130,9 @@
     ],
     "last_updated": "2026-07-01T17:07:16.087881",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "MYRG": {
@@ -1082,7 +1147,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 463.92,
+    "live_price": 463.11,
     "fair_value": 455.0,
     "mkt_cap": "$7.22B",
     "mkt_cap_raw": 7224960512,
@@ -1093,7 +1158,7 @@
     "ps": 1.89,
     "peg": 3.41,
     "gross_margin": 12.1,
-    "chg_pct": -9.11,
+    "chg_pct": -9.27,
     "trend": [
       468.0,
       470.08,
@@ -1105,7 +1170,9 @@
     ],
     "last_updated": "2026-07-01T17:07:17.593720",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "NESR": {
@@ -1115,7 +1182,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 29.14,
+    "live_price": 28.8,
     "fair_value": 31.86,
     "mkt_cap": "$2.95B",
     "mkt_cap_raw": 2949782272,
@@ -1126,7 +1193,7 @@
     "ps": 2.07,
     "peg": null,
     "gross_margin": 12.5,
-    "chg_pct": -1.89,
+    "chg_pct": -3.03,
     "trend": [
       25.07,
       25.17,
@@ -1138,7 +1205,9 @@
     ],
     "last_updated": "2026-07-01T17:07:19.388108",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "DAL": {
@@ -1146,7 +1215,7 @@
     "company": "Delta Air Lines, Inc.",
     "cat": "Industrials",
     "theme": [],
-    "live_price": 93.93,
+    "live_price": 93.03,
     "fair_value": 86.41,
     "mkt_cap": "$61.72B",
     "mkt_cap_raw": 61724618752,
@@ -1157,7 +1226,7 @@
     "ps": 0.95,
     "peg": 0.21,
     "gross_margin": 19.9,
-    "chg_pct": 0.96,
+    "chg_pct": -0.0,
     "trend": [
       86.72,
       90.65,
@@ -1169,7 +1238,9 @@
     ],
     "last_updated": "2026-07-01T17:07:20.773077",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "ORCL": {
@@ -1180,7 +1251,7 @@
       "AI",
       "BTC Mining"
     ],
-    "live_price": 144.33,
+    "live_price": 142.73,
     "fair_value": 252.64,
     "mkt_cap": "$415.80B",
     "mkt_cap_raw": 415796002816,
@@ -1191,7 +1262,7 @@
     "ps": 6.17,
     "peg": 0.84,
     "gross_margin": 65.8,
-    "chg_pct": -1.74,
+    "chg_pct": -2.83,
     "trend": [
       165.16,
       157.53,
@@ -1203,7 +1274,9 @@
     ],
     "last_updated": "2026-07-01T17:07:22.184193",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "GOOGL": {
@@ -1215,7 +1288,7 @@
       "Space",
       "Cyber"
     ],
-    "live_price": 358.71,
+    "live_price": 361.21,
     "fair_value": 432.83,
     "mkt_cap": "$4.38T",
     "mkt_cap_raw": 4382920015872,
@@ -1226,7 +1299,7 @@
     "ps": 10.37,
     "peg": 1.33,
     "gross_margin": 60.4,
-    "chg_pct": 0.31,
+    "chg_pct": 1.01,
     "trend": [
       346.13,
       345.29,
@@ -1238,7 +1311,9 @@
     ],
     "last_updated": "2026-07-01T17:07:23.694047",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "ZS": {
@@ -1249,7 +1324,7 @@
       "AI",
       "Cyber"
     ],
-    "live_price": 148.15,
+    "live_price": 146.45,
     "fair_value": 192.58,
     "mkt_cap": "$23.90B",
     "mkt_cap_raw": 23897432064,
@@ -1260,7 +1335,7 @@
     "ps": 7.53,
     "peg": 1.44,
     "gross_margin": 76.7,
-    "chg_pct": 4.78,
+    "chg_pct": 3.58,
     "trend": [
       126.17,
       127.27,
@@ -1272,7 +1347,9 @@
     ],
     "last_updated": "2026-07-01T17:07:25.280678",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "SOXX": {
@@ -1282,7 +1359,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 604.31,
+    "live_price": 599.7,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -1293,7 +1370,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -5.8,
+    "chg_pct": -6.52,
     "trend": [
       603.39,
       601.5,
@@ -1305,7 +1382,9 @@
     ],
     "last_updated": "2026-07-01T17:07:26.994183",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "NU": {
@@ -1316,7 +1395,7 @@
       "BTC Mining",
       "Fintech"
     ],
-    "live_price": 13.65,
+    "live_price": 13.36,
     "fair_value": 17.82,
     "mkt_cap": "$66.63B",
     "mkt_cap_raw": 66630160384,
@@ -1327,7 +1406,7 @@
     "ps": 8.77,
     "peg": 0.78,
     "gross_margin": 0.0,
-    "chg_pct": 2.36,
+    "chg_pct": 0.23,
     "trend": [
       12.59,
       12.46,
@@ -1339,7 +1418,9 @@
     ],
     "last_updated": "2026-07-01T17:07:28.581522",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "AGX": {
@@ -1349,7 +1430,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 764.84,
+    "live_price": 764.69,
     "fair_value": 679.8,
     "mkt_cap": "$10.74B",
     "mkt_cap_raw": 10742388736,
@@ -1360,7 +1441,7 @@
     "ps": 10.31,
     "peg": null,
     "gross_margin": 20.7,
-    "chg_pct": -3.43,
+    "chg_pct": -3.45,
     "trend": [
       736.77,
       732.24,
@@ -1372,7 +1453,9 @@
     ],
     "last_updated": "2026-07-01T17:07:30.390940",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "MTZ": {
@@ -1383,7 +1466,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 385.67,
+    "live_price": 390.83,
     "fair_value": 465.65,
     "mkt_cap": "$30.50B",
     "mkt_cap_raw": 30495631360,
@@ -1394,7 +1477,7 @@
     "ps": 2.0,
     "peg": 1.79,
     "gross_margin": 12.8,
-    "chg_pct": -7.72,
+    "chg_pct": -6.49,
     "trend": [
       390.44,
       393.14,
@@ -1406,7 +1489,9 @@
     ],
     "last_updated": "2026-07-01T17:07:32.089736",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "PWR": {
@@ -1417,7 +1502,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 692.03,
+    "live_price": 691.66,
     "fair_value": 761.35,
     "mkt_cap": "$104.11B",
     "mkt_cap_raw": 104109473792,
@@ -1428,7 +1513,7 @@
     "ps": 3.46,
     "peg": 1.9,
     "gross_margin": 15.1,
-    "chg_pct": -3.72,
+    "chg_pct": -3.77,
     "trend": [
       702.29,
       701.88,
@@ -1440,7 +1525,9 @@
     ],
     "last_updated": "2026-07-01T17:07:33.779511",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "FORM": {
@@ -1450,7 +1537,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 152.26,
+    "live_price": 147.13,
     "fair_value": 144.67,
     "mkt_cap": "$11.87B",
     "mkt_cap_raw": 11873290240,
@@ -1461,7 +1548,7 @@
     "ps": 14.14,
     "peg": 1.39,
     "gross_margin": 42.2,
-    "chg_pct": -5.72,
+    "chg_pct": -8.9,
     "trend": [
       142.79,
       141.42,
@@ -1473,7 +1560,9 @@
     ],
     "last_updated": "2026-07-01T17:07:35.144276",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "KEYS": {
@@ -1485,7 +1574,7 @@
       "AI Cloud",
       "Space"
     ],
-    "live_price": 340.23,
+    "live_price": 335.73,
     "fair_value": 383.08,
     "mkt_cap": "$58.04B",
     "mkt_cap_raw": 58037772288,
@@ -1496,7 +1585,7 @@
     "ps": 9.53,
     "peg": 1.41,
     "gross_margin": 62.1,
-    "chg_pct": -2.79,
+    "chg_pct": -4.08,
     "trend": [
       352.58,
       351.3,
@@ -1508,7 +1597,9 @@
     ],
     "last_updated": "2026-07-01T17:07:36.652498",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "QUBT": {
@@ -1519,7 +1610,7 @@
       "Chip",
       "EV"
     ],
-    "live_price": 9.75,
+    "live_price": 9.43,
     "fair_value": 18.33,
     "mkt_cap": "$2.20B",
     "mkt_cap_raw": 2201537280,
@@ -1530,7 +1621,7 @@
     "ps": 507.97,
     "peg": null,
     "gross_margin": -15.4,
-    "chg_pct": 0.52,
+    "chg_pct": -2.78,
     "trend": [
       10.49,
       9.7,
@@ -1542,7 +1633,9 @@
     ],
     "last_updated": "2026-07-01T17:07:38.282250",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "FJTSY": {
@@ -1556,7 +1649,7 @@
       "AI Cloud",
       "Pharma"
     ],
-    "live_price": 20.3,
+    "live_price": 20.2,
     "fair_value": 30.97,
     "mkt_cap": "$35.22B",
     "mkt_cap_raw": 35215986688,
@@ -1567,7 +1660,7 @@
     "ps": 0.01,
     "peg": null,
     "gross_margin": 35.6,
-    "chg_pct": 2.27,
+    "chg_pct": 1.76,
     "trend": [
       19.6,
       19.99,
@@ -1579,7 +1672,9 @@
     ],
     "last_updated": "2026-07-01T17:07:39.892675",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "AMPG": {
@@ -1589,7 +1684,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 7.36,
+    "live_price": 7.1,
     "fair_value": 7.0,
     "mkt_cap": "$186.76M",
     "mkt_cap_raw": 186759632,
@@ -1600,7 +1695,7 @@
     "ps": 6.93,
     "peg": null,
     "gross_margin": 27.5,
-    "chg_pct": 2.66,
+    "chg_pct": -0.96,
     "trend": [
       7.73,
       7.07,
@@ -1612,7 +1707,9 @@
     ],
     "last_updated": "2026-07-01T17:07:41.337510",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "QNT": {
@@ -1622,7 +1719,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 78.83,
+    "live_price": 78.41,
     "fair_value": 93.0,
     "mkt_cap": "$20.42B",
     "mkt_cap_raw": 20416145408,
@@ -1633,7 +1730,7 @@
     "ps": 1195.11,
     "peg": null,
     "gross_margin": 74.4,
-    "chg_pct": -4.33,
+    "chg_pct": -4.84,
     "trend": [
       77.46,
       71.1,
@@ -1645,7 +1742,9 @@
     ],
     "last_updated": "2026-07-01T17:07:42.697385",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "HON": {
@@ -1657,7 +1756,7 @@
       "Energy",
       "Robotics"
     ],
-    "live_price": 221.77,
+    "live_price": 221.75,
     "fair_value": 474.75,
     "mkt_cap": "$70.31B",
     "mkt_cap_raw": 70314901504,
@@ -1668,7 +1767,7 @@
     "ps": 1.87,
     "peg": 2.13,
     "gross_margin": 36.9,
-    "chg_pct": -0.64,
+    "chg_pct": -0.65,
     "trend": [
       222.37,
       227.42,
@@ -1680,7 +1779,9 @@
     ],
     "last_updated": "2026-07-01T17:07:44.488036",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "LASR": {
@@ -1692,7 +1793,7 @@
       "Space",
       "Energy"
     ],
-    "live_price": 65.96,
+    "live_price": 66.96,
     "fair_value": 86.43,
     "mkt_cap": "$3.72B",
     "mkt_cap_raw": 3722974720,
@@ -1703,7 +1804,7 @@
     "ps": 12.84,
     "peg": 1.78,
     "gross_margin": 31.3,
-    "chg_pct": -5.11,
+    "chg_pct": -3.67,
     "trend": [
       66.44,
       63.81,
@@ -1715,7 +1816,9 @@
     ],
     "last_updated": "2026-07-01T17:07:46.084939",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "INHD": {
@@ -1748,7 +1851,9 @@
     ],
     "last_updated": "2026-07-01T17:07:47.487746",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "STI": {
@@ -1758,7 +1863,7 @@
     "theme": [
       "EV"
     ],
-    "live_price": 9.16,
+    "live_price": 9.08,
     "fair_value": null,
     "mkt_cap": "$71.26M",
     "mkt_cap_raw": 71260280,
@@ -1769,7 +1874,7 @@
     "ps": 721.43,
     "peg": null,
     "gross_margin": 91.6,
-    "chg_pct": -1.98,
+    "chg_pct": -2.89,
     "trend": [
       13.28,
       11.83,
@@ -1781,7 +1886,9 @@
     ],
     "last_updated": "2026-07-01T17:07:49.086436",
     "notes": "",
-    "group": "EV",
+    "group": [
+      "EV"
+    ],
     "alarm": null
   },
   "ASTC": {
@@ -1793,7 +1900,7 @@
       "Space",
       "Energy"
     ],
-    "live_price": 11.88,
+    "live_price": 11.81,
     "fair_value": null,
     "mkt_cap": "$21.88M",
     "mkt_cap_raw": 21879476,
@@ -1804,7 +1911,7 @@
     "ps": 21.73,
     "peg": 1.02,
     "gross_margin": 33.4,
-    "chg_pct": 5.04,
+    "chg_pct": 4.47,
     "trend": [
       11.78,
       10.2,
@@ -1816,7 +1923,9 @@
     ],
     "last_updated": "2026-07-01T17:07:50.590576",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "PAVS": {
@@ -1827,7 +1936,7 @@
       "AI",
       "Chip"
     ],
-    "live_price": 6.93,
+    "live_price": 7.08,
     "fair_value": null,
     "mkt_cap": "$3.48M",
     "mkt_cap_raw": 3484800,
@@ -1838,7 +1947,7 @@
     "ps": 0.28,
     "peg": null,
     "gross_margin": 20.0,
-    "chg_pct": -7.17,
+    "chg_pct": -5.09,
     "trend": [
       0.147,
       0.134,
@@ -1850,7 +1959,9 @@
     ],
     "last_updated": "2026-07-01T17:07:52.190493",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "DSY": {
@@ -1858,7 +1969,7 @@
     "company": "Big Tree Cloud Holdings Limited",
     "cat": "Consumer Defensive",
     "theme": [],
-    "live_price": 2.74,
+    "live_price": 2.85,
     "fair_value": null,
     "mkt_cap": "$13.02M",
     "mkt_cap_raw": 13020132,
@@ -1869,7 +1980,7 @@
     "ps": 1.78,
     "peg": null,
     "gross_margin": 66.9,
-    "chg_pct": 5.38,
+    "chg_pct": 9.62,
     "trend": [
       3.17,
       2.89,
@@ -1881,7 +1992,9 @@
     ],
     "last_updated": "2026-07-01T17:07:53.689400",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "AAOI": {
@@ -1891,7 +2004,7 @@
     "theme": [
       "AI Cloud"
     ],
-    "live_price": 140.5,
+    "live_price": 139.0,
     "fair_value": 151.3,
     "mkt_cap": "$11.31B",
     "mkt_cap_raw": 11311021056,
@@ -1902,7 +2015,7 @@
     "ps": 22.31,
     "peg": 0.78,
     "gross_margin": 29.6,
-    "chg_pct": -5.0,
+    "chg_pct": -6.02,
     "trend": [
       147.44,
       146.97,
@@ -1914,7 +2027,9 @@
     ],
     "last_updated": "2026-07-01T17:07:55.035827",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "LITE": {
@@ -1928,7 +2043,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 806.42,
+    "live_price": 801.16,
     "fair_value": 1111.29,
     "mkt_cap": "$62.73B",
     "mkt_cap_raw": 62728970240,
@@ -1939,7 +2054,7 @@
     "ps": 25.21,
     "peg": 0.63,
     "gross_margin": 40.8,
-    "chg_pct": -6.0,
+    "chg_pct": -6.62,
     "trend": [
       827.92,
       842.53,
@@ -1951,7 +2066,9 @@
     ],
     "last_updated": "2026-07-01T17:07:56.686190",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "COHR": {
@@ -1961,7 +2078,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 366.86,
+    "live_price": 368.67,
     "fair_value": 384.45,
     "mkt_cap": "$71.55B",
     "mkt_cap_raw": 71547256832,
@@ -1972,7 +2089,7 @@
     "ps": 10.84,
     "peg": 0.92,
     "gross_margin": 37.0,
-    "chg_pct": -6.66,
+    "chg_pct": -6.2,
     "trend": [
       381.22,
       392.5,
@@ -1984,7 +2101,9 @@
     ],
     "last_updated": "2026-07-01T17:07:58.291170",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "FN": {
@@ -1997,7 +2116,7 @@
       "Energy",
       "Biotech"
     ],
-    "live_price": 547.57,
+    "live_price": 547.38,
     "fair_value": 749.11,
     "mkt_cap": "$19.62B",
     "mkt_cap_raw": 19616782336,
@@ -2008,7 +2127,7 @@
     "ps": 4.63,
     "peg": null,
     "gross_margin": 12.0,
-    "chg_pct": -4.44,
+    "chg_pct": -4.48,
     "trend": [
       583.55,
       568.17,
@@ -2020,7 +2139,9 @@
     ],
     "last_updated": "2026-07-01T17:07:59.925862",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "STRL": {
@@ -2031,7 +2152,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 783.59,
+    "live_price": 776.55,
     "fair_value": 941.17,
     "mkt_cap": "$24.10B",
     "mkt_cap_raw": 24102744064,
@@ -2042,7 +2163,7 @@
     "ps": 8.36,
     "peg": 1.38,
     "gross_margin": 23.3,
-    "chg_pct": -6.61,
+    "chg_pct": -7.45,
     "trend": [
       892.25,
       867.23,
@@ -2054,7 +2175,9 @@
     ],
     "last_updated": "2026-07-01T17:08:01.308108",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "POWL": {
@@ -2066,7 +2189,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 268.04,
+    "live_price": 264.86,
     "fair_value": 316.25,
     "mkt_cap": "$9.80B",
     "mkt_cap_raw": 9801934848,
@@ -2077,7 +2200,7 @@
     "ps": 8.66,
     "peg": 3.08,
     "gross_margin": 30.1,
-    "chg_pct": -6.69,
+    "chg_pct": -7.79,
     "trend": [
       291.5,
       294.49,
@@ -2089,7 +2212,9 @@
     ],
     "last_updated": "2026-07-01T17:08:02.710867",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "FCX": {
@@ -2099,7 +2224,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 61.12,
+    "live_price": 60.55,
     "fair_value": 70.5,
     "mkt_cap": "$88.01B",
     "mkt_cap_raw": 88007409664,
@@ -2110,7 +2235,7 @@
     "ps": 3.33,
     "peg": 4.21,
     "gross_margin": 38.6,
-    "chg_pct": -2.71,
+    "chg_pct": -3.61,
     "trend": [
       64.4,
       61.84,
@@ -2122,7 +2247,9 @@
     ],
     "last_updated": "2026-07-01T17:08:04.333284",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "FRO": {
@@ -2132,7 +2259,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 34.74,
+    "live_price": 34.71,
     "fair_value": 44.25,
     "mkt_cap": "$7.74B",
     "mkt_cap_raw": 7736145408,
@@ -2143,7 +2270,7 @@
     "ps": 3.44,
     "peg": 5.58,
     "gross_margin": 55.8,
-    "chg_pct": -0.47,
+    "chg_pct": -0.54,
     "trend": [
       42.88,
       40.72,
@@ -2155,7 +2282,9 @@
     ],
     "last_updated": "2026-07-01T17:08:06.085319",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "BOAT": {
@@ -2163,7 +2292,7 @@
     "company": "SonicShares Global Shipping ETF",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 37.98,
+    "live_price": 37.71,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2174,7 +2303,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -1.22,
+    "chg_pct": -1.94,
     "trend": [
       41.74,
       41.45,
@@ -2186,7 +2315,9 @@
     ],
     "last_updated": "2026-07-01T17:08:07.445964",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "PDYN": {
@@ -2199,7 +2330,7 @@
       "Space",
       "Robotics"
     ],
-    "live_price": 6.26,
+    "live_price": 6.05,
     "fair_value": 11.25,
     "mkt_cap": "$295.99M",
     "mkt_cap_raw": 295985056,
@@ -2210,7 +2341,7 @@
     "ps": 41.84,
     "peg": null,
     "gross_margin": 32.0,
-    "chg_pct": 2.96,
+    "chg_pct": -0.49,
     "trend": [
       6.47,
       5.98,
@@ -2222,7 +2353,9 @@
     ],
     "last_updated": "2026-07-01T17:08:08.808766",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "MRCY": {
@@ -2234,7 +2367,7 @@
       "Space",
       "Robotics"
     ],
-    "live_price": 124.53,
+    "live_price": 123.05,
     "fair_value": 101.5,
     "mkt_cap": "$7.44B",
     "mkt_cap_raw": 7443866112,
@@ -2245,7 +2378,7 @@
     "ps": 7.7,
     "peg": 2.79,
     "gross_margin": 28.7,
-    "chg_pct": 2.49,
+    "chg_pct": 1.28,
     "trend": [
       110.87,
       105.0,
@@ -2257,7 +2390,9 @@
     ],
     "last_updated": "2026-07-01T17:08:10.169297",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "ATLO": {
@@ -2267,7 +2402,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 30.53,
+    "live_price": 30.55,
     "fair_value": 31.0,
     "mkt_cap": "$269.70M",
     "mkt_cap_raw": 269702368,
@@ -2278,7 +2413,7 @@
     "ps": 3.9,
     "peg": 1.03,
     "gross_margin": 0.0,
-    "chg_pct": 3.23,
+    "chg_pct": 4.2,
     "trend": [
       30.85,
       30.67,
@@ -2290,7 +2425,9 @@
     ],
     "last_updated": "2026-07-01T17:08:11.607347",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "RDW": {
@@ -2303,7 +2440,7 @@
       "Energy",
       "Biotech"
     ],
-    "live_price": 12.56,
+    "live_price": 11.97,
     "fair_value": 15.67,
     "mkt_cap": "$2.49B",
     "mkt_cap_raw": 2494719232,
@@ -2314,7 +2451,7 @@
     "ps": 6.73,
     "peg": null,
     "gross_margin": 12.9,
-    "chg_pct": 2.41,
+    "chg_pct": -2.44,
     "trend": [
       12.22,
       11.38,
@@ -2326,7 +2463,9 @@
     ],
     "last_updated": "2026-07-01T17:08:12.949875",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "RXT": {
@@ -2341,7 +2480,7 @@
       "Space",
       "Energy"
     ],
-    "live_price": 6.7,
+    "live_price": 6.49,
     "fair_value": 4.9,
     "mkt_cap": "$1.67B",
     "mkt_cap_raw": 1673529088,
@@ -2352,7 +2491,7 @@
     "ps": 0.62,
     "peg": 4.93,
     "gross_margin": 18.9,
-    "chg_pct": 2.92,
+    "chg_pct": -0.31,
     "trend": [
       7.27,
       6.82,
@@ -2364,7 +2503,9 @@
     ],
     "last_updated": "2026-07-01T17:08:14.307316",
     "notes": "MB: MarketBeat 20260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "OLLI": {
@@ -2374,7 +2515,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 76.31,
+    "live_price": 75.51,
     "fair_value": 120.2,
     "mkt_cap": "$4.60B",
     "mkt_cap_raw": 4603215872,
@@ -2385,7 +2526,7 @@
     "ps": 1.69,
     "peg": null,
     "gross_margin": 40.7,
-    "chg_pct": -1.15,
+    "chg_pct": -2.19,
     "trend": [
       72.79,
       74.09,
@@ -2397,7 +2538,9 @@
     ],
     "last_updated": "2026-07-01T17:08:15.666650",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "TJX": {
@@ -2405,7 +2548,7 @@
     "company": "The TJX Companies, Inc.",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 151.51,
+    "live_price": 151.32,
     "fair_value": 177.63,
     "mkt_cap": "$167.25B",
     "mkt_cap_raw": 167252230144,
@@ -2416,7 +2559,7 @@
     "ps": 2.72,
     "peg": 3.32,
     "gross_margin": 31.4,
-    "chg_pct": 0.18,
+    "chg_pct": 0.05,
     "trend": [
       164.35,
       165.17,
@@ -2428,7 +2571,9 @@
     ],
     "last_updated": "2026-07-01T17:08:17.146547",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "SAGT": {
@@ -2438,7 +2583,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 1.13,
+    "live_price": 1.14,
     "fair_value": null,
     "mkt_cap": "$21.43M",
     "mkt_cap_raw": 21431250,
@@ -2449,7 +2594,7 @@
     "ps": 0.28,
     "peg": null,
     "gross_margin": 27.2,
-    "chg_pct": -4.23,
+    "chg_pct": -3.39,
     "trend": [
       1.3,
       1.21,
@@ -2461,7 +2606,9 @@
     ],
     "last_updated": "2026-07-01T17:08:18.499388",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "LFS": {
@@ -2469,7 +2616,7 @@
     "company": "Leifras Co., Ltd.",
     "cat": "Communication Services",
     "theme": [],
-    "live_price": 2.48,
+    "live_price": 2.52,
     "fair_value": null,
     "mkt_cap": "$64.88M",
     "mkt_cap_raw": 64878340,
@@ -2480,7 +2627,7 @@
     "ps": 0.01,
     "peg": null,
     "gross_margin": 31.9,
-    "chg_pct": -2.75,
+    "chg_pct": -1.18,
     "trend": [
       2.24,
       2.39,
@@ -2492,7 +2639,9 @@
     ],
     "last_updated": "2026-07-01T17:08:19.854097",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "BE": {
@@ -2504,7 +2653,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 304.39,
+    "live_price": 289.52,
     "fair_value": 266.93,
     "mkt_cap": "$86.55B",
     "mkt_cap_raw": 86549159936,
@@ -2515,7 +2664,7 @@
     "ps": 35.34,
     "peg": 1.34,
     "gross_margin": 30.1,
-    "chg_pct": -7.92,
+    "chg_pct": -12.42,
     "trend": [
       321.98,
       326.19,
@@ -2527,7 +2676,9 @@
     ],
     "last_updated": "2026-07-01T17:08:21.217456",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "MU": {
@@ -2538,7 +2689,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 1049.09,
+    "live_price": 1032.28,
     "fair_value": 1454.12,
     "mkt_cap": "$1.19T",
     "mkt_cap_raw": 1185027063808,
@@ -2549,7 +2700,7 @@
     "ps": 13.13,
     "peg": 0.17,
     "gross_margin": 72.6,
-    "chg_pct": -9.28,
+    "chg_pct": -10.73,
     "trend": [
       1051.77,
       1048.51,
@@ -2561,7 +2712,9 @@
     ],
     "last_updated": "2026-07-01T17:08:22.672231",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "EOSE": {
@@ -2573,7 +2726,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 5.76,
+    "live_price": 5.55,
     "fair_value": 9.62,
     "mkt_cap": "$1.96B",
     "mkt_cap_raw": 1957366272,
@@ -2584,7 +2737,7 @@
     "ps": 12.18,
     "peg": null,
     "gross_margin": -101.9,
-    "chg_pct": -1.96,
+    "chg_pct": -5.61,
     "trend": [
       6.49,
       6.06,
@@ -2596,7 +2749,9 @@
     ],
     "last_updated": "2026-07-01T17:08:24.032128",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "GLXY": {
@@ -2607,7 +2762,7 @@
       "AI Cloud",
       "BTC Mining"
     ],
-    "live_price": 27.1,
+    "live_price": 25.86,
     "fair_value": 41.69,
     "mkt_cap": "$10.56B",
     "mkt_cap_raw": 10558494720,
@@ -2618,7 +2773,7 @@
     "ps": 0.18,
     "peg": null,
     "gross_margin": 100.0,
-    "chg_pct": -0.73,
+    "chg_pct": -5.27,
     "trend": [
       31.35,
       28.58,
@@ -2630,7 +2785,9 @@
     ],
     "last_updated": "2026-07-01T17:08:25.389659",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "CIFR": {
@@ -2643,7 +2800,7 @@
       "HPC",
       "Energy"
     ],
-    "live_price": 23.24,
+    "live_price": 22.84,
     "fair_value": 32.62,
     "mkt_cap": "$9.50B",
     "mkt_cap_raw": 9502212096,
@@ -2654,7 +2811,7 @@
     "ps": 45.29,
     "peg": null,
     "gross_margin": 12.4,
-    "chg_pct": -5.07,
+    "chg_pct": -6.7,
     "trend": [
       27.64,
       26.22,
@@ -2666,7 +2823,9 @@
     ],
     "last_updated": "2026-07-01T17:08:26.748539",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "QQQM": {
@@ -2674,7 +2833,7 @@
     "company": "Invesco NASDAQ 100 ETF",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 299.76,
+    "live_price": 298.61,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2685,7 +2844,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -1.13,
+    "chg_pct": -1.51,
     "trend": [
       293.87,
       292.63,
@@ -2697,7 +2856,9 @@
     ],
     "last_updated": "2026-07-01T17:08:28.142796",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "ARKQ": {
@@ -2707,7 +2868,7 @@
     "theme": [
       "Robotics"
     ],
-    "live_price": 132.07,
+    "live_price": 130.41,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2718,7 +2879,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -0.7,
+    "chg_pct": -1.94,
     "trend": [
       126.36,
       124.22,
@@ -2730,7 +2891,9 @@
     ],
     "last_updated": "2026-07-01T17:08:29.519894",
     "notes": "",
-    "group": "ETF",
+    "group": [
+      "ETF"
+    ],
     "alarm": null
   },
   "SMH": {
@@ -2740,7 +2903,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 623.62,
+    "live_price": 620.46,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2751,7 +2914,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -5.08,
+    "chg_pct": -5.56,
     "trend": [
       622.05,
       618.92,
@@ -2763,7 +2926,9 @@
     ],
     "last_updated": "2026-07-01T17:08:30.980393",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "SPMO": {
@@ -2771,7 +2936,7 @@
     "company": "Invesco S&P 500 Momentum ETF",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 155.84,
+    "live_price": 155.34,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2782,7 +2947,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -3.53,
+    "chg_pct": -3.84,
     "trend": [
       154.34,
       153.79,
@@ -2794,7 +2959,9 @@
     ],
     "last_updated": "2026-07-01T17:08:32.362422",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "VLU": {
@@ -2802,7 +2969,7 @@
     "company": "State Street SPDR S&P 1500 Value Tilt ETF",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 239.8,
+    "live_price": 238.84,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2813,7 +2980,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 0.67,
+    "chg_pct": 0.27,
     "trend": [
       236.12,
       236.11,
@@ -2825,7 +2992,9 @@
     ],
     "last_updated": "2026-07-01T17:08:33.785033",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "IAU": {
@@ -2833,7 +3002,7 @@
     "company": "iShares Gold Trust",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 76.56,
+    "live_price": 75.95,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2844,7 +3013,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.63,
+    "chg_pct": 0.82,
     "trend": [
       77.33,
       74.99,
@@ -2856,7 +3025,9 @@
     ],
     "last_updated": "2026-07-01T17:08:35.131422",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "SLV": {
@@ -2864,7 +3035,7 @@
     "company": "iShares Silver Trust",
     "cat": "\u2014",
     "theme": [],
-    "live_price": 54.24,
+    "live_price": 53.58,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2875,7 +3046,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.69,
+    "chg_pct": 1.44,
     "trend": [
       55.73,
       51.78,
@@ -2887,7 +3058,9 @@
     ],
     "last_updated": "2026-07-01T17:08:36.482001",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "DRAM": {
@@ -2897,7 +3070,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 66.56,
+    "live_price": 65.87,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2908,7 +3081,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -9.33,
+    "chg_pct": -10.25,
     "trend": [
       69.22,
       69.93,
@@ -2920,7 +3093,9 @@
     ],
     "last_updated": "2026-07-01T17:08:37.880437",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "EUV": {
@@ -2930,7 +3105,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 29.72,
+    "live_price": 29.53,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2941,7 +3116,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -7.01,
+    "chg_pct": -7.6,
     "trend": [
       28.77,
       28.68,
@@ -2953,7 +3128,9 @@
     ],
     "last_updated": "2026-07-01T17:08:39.246750",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "QTUM": {
@@ -2963,7 +3140,7 @@
     "theme": [
       "AI"
     ],
-    "live_price": 161.7,
+    "live_price": 160.36,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -2974,7 +3151,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -2.56,
+    "chg_pct": -3.37,
     "trend": [
       163.07,
       159.89,
@@ -2986,7 +3163,9 @@
     ],
     "last_updated": "2026-07-01T17:08:40.681736",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "ITA": {
@@ -2996,7 +3175,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 244.51,
+    "live_price": 243.85,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3007,7 +3186,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.05,
+    "chg_pct": 0.78,
     "trend": [
       235.93,
       236.19,
@@ -3019,7 +3198,9 @@
     ],
     "last_updated": "2026-07-01T17:08:42.087730",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "XLE": {
@@ -3029,7 +3210,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 52.94,
+    "live_price": 52.82,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3040,7 +3221,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -0.48,
+    "chg_pct": -0.71,
     "trend": [
       54.46,
       53.57,
@@ -3052,7 +3233,9 @@
     ],
     "last_updated": "2026-07-01T17:08:43.686177",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "CEG": {
@@ -3063,7 +3246,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 233.14,
+    "live_price": 236.5,
     "fair_value": 360.24,
     "mkt_cap": "$83.24B",
     "mkt_cap_raw": 83235127296,
@@ -3074,7 +3257,7 @@
     "ps": 2.79,
     "peg": 3.74,
     "gross_margin": 23.3,
-    "chg_pct": -6.37,
+    "chg_pct": -5.02,
     "trend": [
       270.26,
       267.97,
@@ -3086,7 +3269,9 @@
     ],
     "last_updated": "2026-07-01T17:08:45.081651",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "NEE": {
@@ -3098,7 +3283,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 86.75,
+    "live_price": 86.39,
     "fair_value": 99.2,
     "mkt_cap": "$181.09B",
     "mkt_cap_raw": 181093318656,
@@ -3109,7 +3294,7 @@
     "ps": 6.5,
     "peg": 1.95,
     "gross_margin": 61.4,
-    "chg_pct": -1.24,
+    "chg_pct": -1.65,
     "trend": [
       86.43,
       87.62,
@@ -3121,7 +3306,9 @@
     ],
     "last_updated": "2026-07-01T17:08:46.578908",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "CCJ": {
@@ -3133,7 +3320,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 100.29,
+    "live_price": 97.34,
     "fair_value": 132.19,
     "mkt_cap": "$43.78B",
     "mkt_cap_raw": 43775422464,
@@ -3144,7 +3331,7 @@
     "ps": 12.37,
     "peg": 1.92,
     "gross_margin": 36.8,
-    "chg_pct": -1.34,
+    "chg_pct": -4.24,
     "trend": [
       108.89,
       106.64,
@@ -3156,7 +3343,9 @@
     ],
     "last_updated": "2026-07-01T17:08:48.012914",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "UEC": {
@@ -3166,7 +3355,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 10.62,
+    "live_price": 10.57,
     "fair_value": 18.25,
     "mkt_cap": "$5.22B",
     "mkt_cap_raw": 5215949312,
@@ -3177,7 +3366,7 @@
     "ps": 258.22,
     "peg": 1.37,
     "gross_margin": 0.0,
-    "chg_pct": -0.61,
+    "chg_pct": -1.12,
     "trend": [
       11.34,
       10.9,
@@ -3189,7 +3378,9 @@
     ],
     "last_updated": "2026-07-01T17:08:49.368925",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "UUUU": {
@@ -3199,7 +3390,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 14.4,
+    "live_price": 14.23,
     "fair_value": 26.12,
     "mkt_cap": "$3.60B",
     "mkt_cap_raw": 3597586432,
@@ -3210,7 +3401,7 @@
     "ps": 42.39,
     "peg": null,
     "gross_margin": 34.6,
-    "chg_pct": -1.37,
+    "chg_pct": -2.53,
     "trend": [
       15.47,
       15.03,
@@ -3222,7 +3413,9 @@
     ],
     "last_updated": "2026-07-01T17:08:50.719269",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "OKLO": {
@@ -3233,7 +3426,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 53.34,
+    "live_price": 52.49,
     "fair_value": 88.63,
     "mkt_cap": "$9.31B",
     "mkt_cap_raw": 9312868352,
@@ -3244,7 +3437,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 1.81,
+    "chg_pct": 0.18,
     "trend": [
       57.19,
       54.06,
@@ -3256,7 +3449,9 @@
     ],
     "last_updated": "2026-07-01T17:08:52.066743",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "SMR": {
@@ -3267,7 +3462,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 10.34,
+    "live_price": 10.15,
     "fair_value": 15.36,
     "mkt_cap": "$3.57B",
     "mkt_cap_raw": 3573542144,
@@ -3278,7 +3473,7 @@
     "ps": 191.42,
     "peg": null,
     "gross_margin": 23.8,
-    "chg_pct": 3.5,
+    "chg_pct": 1.6,
     "trend": [
       10.86,
       10.21,
@@ -3290,7 +3485,9 @@
     ],
     "last_updated": "2026-07-01T17:08:53.433568",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "NNE": {
@@ -3302,7 +3499,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 21.3,
+    "live_price": 20.75,
     "fair_value": 46.25,
     "mkt_cap": "$1.11B",
     "mkt_cap_raw": 1112280832,
@@ -3313,7 +3510,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -0.7,
+    "chg_pct": -3.26,
     "trend": [
       23.9,
       23.15,
@@ -3325,7 +3522,9 @@
     ],
     "last_updated": "2026-07-01T17:08:54.784364",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "BWXT": {
@@ -3338,7 +3537,7 @@
       "Pharma",
       "Robotics"
     ],
-    "live_price": 192.85,
+    "live_price": 191.29,
     "fair_value": 238.79,
     "mkt_cap": "$17.66B",
     "mkt_cap_raw": 17661470720,
@@ -3349,7 +3548,7 @@
     "ps": 5.23,
     "peg": 1.67,
     "gross_margin": 22.7,
-    "chg_pct": -0.85,
+    "chg_pct": -1.65,
     "trend": [
       209.89,
       205.65,
@@ -3361,7 +3560,9 @@
     ],
     "last_updated": "2026-07-01T17:08:56.169926",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "FCEL": {
@@ -3374,7 +3575,7 @@
       "Energy",
       "Pharma"
     ],
-    "live_price": 33.33,
+    "live_price": 31.89,
     "fair_value": 22.0,
     "mkt_cap": "$2.24B",
     "mkt_cap_raw": 2243915264,
@@ -3385,7 +3586,7 @@
     "ps": 13.37,
     "peg": 0.36,
     "gross_margin": -18.2,
-    "chg_pct": -9.93,
+    "chg_pct": -13.81,
     "trend": [
       21.82,
       21.56,
@@ -3397,7 +3598,9 @@
     ],
     "last_updated": "2026-07-01T17:08:57.539302",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "HIMS": {
@@ -3407,7 +3610,7 @@
     "theme": [
       "Pharma"
     ],
-    "live_price": 37.78,
+    "live_price": 37.53,
     "fair_value": 28.35,
     "mkt_cap": "$8.75B",
     "mkt_cap_raw": 8747942912,
@@ -3418,7 +3621,7 @@
     "ps": 3.69,
     "peg": 2.15,
     "gross_margin": 72.9,
-    "chg_pct": 8.94,
+    "chg_pct": 8.22,
     "trend": [
       32.96,
       32.7,
@@ -3430,7 +3633,9 @@
     ],
     "last_updated": "2026-07-01T17:08:58.897293",
     "notes": "",
-    "group": "Pharma",
+    "group": [
+      "Pharma"
+    ],
     "alarm": null
   },
   "UVXY": {
@@ -3440,7 +3645,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 25.34,
+    "live_price": 25.16,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3451,7 +3656,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.82,
+    "chg_pct": 1.1,
     "trend": [
       28.0,
       27.65,
@@ -3463,7 +3668,9 @@
     ],
     "last_updated": "2026-07-01T17:09:00.281776",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "MITK": {
@@ -3473,7 +3680,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 20.83,
+    "live_price": 20.14,
     "fair_value": 18.5,
     "mkt_cap": "$941.56M",
     "mkt_cap_raw": 941562112,
@@ -3484,7 +3691,7 @@
     "ps": 4.97,
     "peg": 1.38,
     "gross_margin": 83.5,
-    "chg_pct": 3.35,
+    "chg_pct": -0.05,
     "trend": [
       17.32,
       17.38,
@@ -3496,7 +3703,9 @@
     ],
     "last_updated": "2026-07-01T17:09:01.634341",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "EWY": {
@@ -3506,7 +3715,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 187.79,
+    "live_price": 185.56,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3517,7 +3726,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -6.46,
+    "chg_pct": -7.57,
     "trend": [
       192.2,
       197.26,
@@ -3529,7 +3738,9 @@
     ],
     "last_updated": "2026-07-01T17:09:03.034717",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "IEMG": {
@@ -3539,7 +3750,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 80.97,
+    "live_price": 80.64,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3550,7 +3761,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -3.62,
+    "chg_pct": -4.02,
     "trend": [
       81.32,
       81.45,
@@ -3562,7 +3773,9 @@
     ],
     "last_updated": "2026-07-01T17:09:04.411510",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "SOXQ": {
@@ -3572,7 +3785,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 105.82,
+    "live_price": 105.11,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3583,7 +3796,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -6.05,
+    "chg_pct": -6.68,
     "trend": [
       106.11,
       105.84,
@@ -3595,7 +3808,9 @@
     ],
     "last_updated": "2026-07-01T17:09:05.771680",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "XSD": {
@@ -3605,7 +3820,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 604.15,
+    "live_price": 595.7,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3616,7 +3831,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -3.18,
+    "chg_pct": -4.54,
     "trend": [
       603.65,
       589.98,
@@ -3628,7 +3843,9 @@
     ],
     "last_updated": "2026-07-01T17:09:07.480490",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "VGT": {
@@ -3638,7 +3855,7 @@
     "theme": [
       "ETF"
     ],
-    "live_price": 117.9,
+    "live_price": 117.23,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3649,7 +3866,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -1.42,
+    "chg_pct": -1.98,
     "trend": [
       115.932,
       115.13,
@@ -3661,7 +3878,9 @@
     ],
     "last_updated": "2026-07-01T17:09:09.185190",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "OTEX": {
@@ -3674,7 +3893,7 @@
       "AI Cloud",
       "Cyber"
     ],
-    "live_price": 23.07,
+    "live_price": 22.85,
     "fair_value": 29.0,
     "mkt_cap": "$5.61B",
     "mkt_cap_raw": 5610354176,
@@ -3685,7 +3904,7 @@
     "ps": 1.08,
     "peg": 1.02,
     "gross_margin": 76.5,
-    "chg_pct": 5.05,
+    "chg_pct": 4.05,
     "trend": [
       21.16,
       21.2,
@@ -3697,7 +3916,9 @@
     ],
     "last_updated": "2026-07-01T17:09:10.784010",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "DGII": {
@@ -3708,7 +3929,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 75.96,
+    "live_price": 74.12,
     "fair_value": 72.2,
     "mkt_cap": "$2.85B",
     "mkt_cap_raw": 2851417344,
@@ -3719,7 +3940,7 @@
     "ps": 6.0,
     "peg": 0.98,
     "gross_margin": 64.5,
-    "chg_pct": 1.42,
+    "chg_pct": -1.04,
     "trend": [
       68.75,
       67.74,
@@ -3731,7 +3952,9 @@
     ],
     "last_updated": "2026-07-01T17:09:12.285322",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "RSKD": {
@@ -3743,7 +3966,7 @@
       "Chip",
       "Fintech"
     ],
-    "live_price": 5.05,
+    "live_price": 4.99,
     "fair_value": 5.55,
     "mkt_cap": "$726.66M",
     "mkt_cap_raw": 726661888,
@@ -3754,7 +3977,7 @@
     "ps": 2.07,
     "peg": null,
     "gross_margin": 52.4,
-    "chg_pct": 0.29,
+    "chg_pct": -0.71,
     "trend": [
       4.92,
       4.88,
@@ -3766,7 +3989,9 @@
     ],
     "last_updated": "2026-07-01T17:09:13.887825",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "HPE": {
@@ -3776,7 +4001,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 43.88,
+    "live_price": 43.96,
     "fair_value": 64.13,
     "mkt_cap": "$57.95B",
     "mkt_cap_raw": 57953767424,
@@ -3787,7 +4012,7 @@
     "ps": 1.49,
     "peg": 0.85,
     "gross_margin": 33.8,
-    "chg_pct": -2.72,
+    "chg_pct": -2.54,
     "trend": [
       48.92,
       48.75,
@@ -3799,7 +4024,9 @@
     ],
     "last_updated": "2026-07-01T17:09:15.508011",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "CLF": {
@@ -3810,7 +4037,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 9.51,
+    "live_price": 9.43,
     "fair_value": 11.75,
     "mkt_cap": "$5.42B",
     "mkt_cap_raw": 5418939392,
@@ -3821,7 +4048,7 @@
     "ps": 0.29,
     "peg": 0.43,
     "gross_margin": -2.9,
-    "chg_pct": 0.8,
+    "chg_pct": -0.05,
     "trend": [
       11.16,
       10.57,
@@ -3833,7 +4060,9 @@
     ],
     "last_updated": "2026-07-01T17:09:17.092582",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "TER": {
@@ -3847,7 +4076,7 @@
       "Space",
       "Robotics"
     ],
-    "live_price": 434.77,
+    "live_price": 427.34,
     "fair_value": 398.71,
     "mkt_cap": "$68.12B",
     "mkt_cap_raw": 68120887296,
@@ -3858,7 +4087,7 @@
     "ps": 17.99,
     "peg": 1.73,
     "gross_margin": 58.7,
-    "chg_pct": -10.17,
+    "chg_pct": -11.71,
     "trend": [
       420.12,
       427.2,
@@ -3870,7 +4099,9 @@
     ],
     "last_updated": "2026-07-01T17:09:18.690721",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "TEM": {
@@ -3882,7 +4113,7 @@
       "Biotech",
       "Pharma"
     ],
-    "live_price": 61.58,
+    "live_price": 61.6,
     "fair_value": 66.53,
     "mkt_cap": "$11.06B",
     "mkt_cap_raw": 11061189632,
@@ -3893,7 +4124,7 @@
     "ps": 8.11,
     "peg": null,
     "gross_margin": 63.4,
-    "chg_pct": 7.35,
+    "chg_pct": 7.37,
     "trend": [
       48.61,
       51.94,
@@ -3905,7 +4136,9 @@
     ],
     "last_updated": "2026-07-01T17:09:20.220936",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RDDT": {
@@ -3913,7 +4146,7 @@
     "company": "Reddit, Inc.",
     "cat": "Communication Services",
     "theme": [],
-    "live_price": 193.92,
+    "live_price": 197.42,
     "fair_value": 224.92,
     "mkt_cap": "$37.36B",
     "mkt_cap_raw": 37358305280,
@@ -3924,7 +4157,7 @@
     "ps": 15.1,
     "peg": 1.2,
     "gross_margin": 91.4,
-    "chg_pct": 12.03,
+    "chg_pct": 14.05,
     "trend": [
       165.63,
       160.72,
@@ -3936,7 +4169,9 @@
     ],
     "last_updated": "2026-07-01T17:09:21.985419",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "IBIT": {
@@ -3946,7 +4181,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 33.9,
+    "live_price": 34.0,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -3957,7 +4192,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.22,
+    "chg_pct": 2.5,
     "trend": [
       35.31,
       33.87,
@@ -3969,7 +4204,9 @@
     ],
     "last_updated": "2026-07-01T17:09:23.333731",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "SOFI": {
@@ -3980,7 +4217,7 @@
       "BTC Mining",
       "Fintech"
     ],
-    "live_price": 18.66,
+    "live_price": 18.44,
     "fair_value": 20.9,
     "mkt_cap": "$23.94B",
     "mkt_cap_raw": 23942367232,
@@ -3991,7 +4228,7 @@
     "ps": 6.13,
     "peg": 0.84,
     "gross_margin": 83.5,
-    "chg_pct": 4.15,
+    "chg_pct": 2.95,
     "trend": [
       17.29,
       17.31,
@@ -4003,7 +4240,9 @@
     ],
     "last_updated": "2026-07-01T17:09:24.681663",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "HOOD": {
@@ -4013,7 +4252,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 107.85,
+    "live_price": 108.65,
     "fair_value": 104.54,
     "mkt_cap": "$97.25B",
     "mkt_cap_raw": 97245544448,
@@ -4024,7 +4263,7 @@
     "ps": 21.08,
     "peg": 2.67,
     "gross_margin": 92.2,
-    "chg_pct": 7.53,
+    "chg_pct": 8.32,
     "trend": [
       103.25,
       97.19,
@@ -4036,7 +4275,9 @@
     ],
     "last_updated": "2026-07-01T17:09:26.188739",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "BULL": {
@@ -4044,7 +4285,7 @@
     "company": "Webull Corporation",
     "cat": "Technology",
     "theme": [],
-    "live_price": 6.88,
+    "live_price": 7.18,
     "fair_value": 12.0,
     "mkt_cap": "$3.66B",
     "mkt_cap_raw": 3656253184,
@@ -4055,7 +4296,7 @@
     "ps": 6.02,
     "peg": null,
     "gross_margin": 76.3,
-    "chg_pct": 5.52,
+    "chg_pct": 10.12,
     "trend": [
       6.64,
       6.71,
@@ -4067,7 +4308,9 @@
     ],
     "last_updated": "2026-07-01T17:09:28.583006",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "MP": {
@@ -4078,7 +4321,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 55.79,
+    "live_price": 54.31,
     "fair_value": 80.44,
     "mkt_cap": "$9.93B",
     "mkt_cap_raw": 9933638656,
@@ -4089,7 +4332,7 @@
     "ps": 28.58,
     "peg": null,
     "gross_margin": 37.2,
-    "chg_pct": -0.61,
+    "chg_pct": -3.24,
     "trend": [
       58.9,
       56.51,
@@ -4101,7 +4344,9 @@
     ],
     "last_updated": "2026-07-01T17:09:30.093794",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "BBAI": {
@@ -4114,7 +4359,7 @@
       "HPC",
       "Cyber"
     ],
-    "live_price": 3.74,
+    "live_price": 3.63,
     "fair_value": 5.33,
     "mkt_cap": "$1.79B",
     "mkt_cap_raw": 1789594624,
@@ -4125,7 +4370,7 @@
     "ps": 14.05,
     "peg": null,
     "gross_margin": 25.8,
-    "chg_pct": 1.02,
+    "chg_pct": -1.76,
     "trend": [
       3.77,
       3.52,
@@ -4137,7 +4382,9 @@
     ],
     "last_updated": "2026-07-01T17:09:31.587101",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "META": {
@@ -4148,7 +4395,7 @@
       "AI",
       "Chip"
     ],
-    "live_price": 617.9,
+    "live_price": 612.91,
     "fair_value": 827.32,
     "mkt_cap": "$1.57T",
     "mkt_cap_raw": 1570535243776,
@@ -4159,7 +4406,7 @@
     "ps": 7.31,
     "peg": 0.8,
     "gross_margin": 81.9,
-    "chg_pct": 10.03,
+    "chg_pct": 9.14,
     "trend": [
       562.2,
       557.67,
@@ -4171,7 +4418,9 @@
     ],
     "last_updated": "2026-07-01T17:09:33.202358",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "NUCL": {
@@ -4183,7 +4432,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 9.69,
+    "live_price": 9.56,
     "fair_value": null,
     "mkt_cap": "$286.48M",
     "mkt_cap_raw": 286475680,
@@ -4194,7 +4443,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 0.83,
+    "chg_pct": -0.52,
     "trend": [
       11.57,
       9.94,
@@ -4206,7 +4455,9 @@
     ],
     "last_updated": "2026-07-01T17:09:34.890025",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "CNXU": {
@@ -4218,7 +4469,7 @@
       "Biotech",
       "Pharma"
     ],
-    "live_price": 10.19,
+    "live_price": 10.26,
     "fair_value": 20.0,
     "mkt_cap": "$273.47M",
     "mkt_cap_raw": 273470144,
@@ -4229,7 +4480,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -6.62,
+    "chg_pct": -5.96,
     "trend": [
       10.55,
       10.69,
@@ -4241,7 +4492,9 @@
     ],
     "last_updated": "2026-07-01T17:09:36.288476",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RVI": {
@@ -4249,7 +4502,7 @@
     "company": "Robinhood Ventures Fund I",
     "cat": "Financial Services",
     "theme": [],
-    "live_price": 34.72,
+    "live_price": 34.26,
     "fair_value": null,
     "mkt_cap": "$952.29M",
     "mkt_cap_raw": 952290240,
@@ -4260,7 +4513,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 3.67,
+    "chg_pct": 2.3,
     "trend": [
       36.93,
       35.2,
@@ -4272,7 +4525,9 @@
     ],
     "last_updated": "2026-07-01T17:09:37.979731",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "RNG": {
@@ -4283,7 +4538,7 @@
       "AI",
       "Chip"
     ],
-    "live_price": 41.23,
+    "live_price": 40.99,
     "fair_value": 45.4,
     "mkt_cap": "$3.44B",
     "mkt_cap_raw": 3439385344,
@@ -4294,7 +4549,7 @@
     "ps": 1.35,
     "peg": 0.21,
     "gross_margin": 71.6,
-    "chg_pct": 3.67,
+    "chg_pct": 3.07,
     "trend": [
       35.42,
       35.85,
@@ -4306,7 +4561,9 @@
     ],
     "last_updated": "2026-07-01T17:09:39.585593",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "SIMO": {
@@ -4317,7 +4574,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 321.78,
+    "live_price": 316.98,
     "fair_value": 256.7,
     "mkt_cap": "$10.89B",
     "mkt_cap_raw": 10886110208,
@@ -4328,7 +4585,7 @@
     "ps": 10.26,
     "peg": 0.7,
     "gross_margin": 48.1,
-    "chg_pct": -4.08,
+    "chg_pct": -5.51,
     "trend": [
       319.0,
       321.66,
@@ -4340,7 +4597,9 @@
     ],
     "last_updated": "2026-07-01T17:09:41.381031",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "ALMU": {
@@ -4352,7 +4611,7 @@
       "Space",
       "Clean Energy"
     ],
-    "live_price": 21.34,
+    "live_price": 20.5,
     "fair_value": 28.67,
     "mkt_cap": "$390.09M",
     "mkt_cap_raw": 390086688,
@@ -4363,7 +4622,7 @@
     "ps": 75.07,
     "peg": null,
     "gross_margin": 37.7,
-    "chg_pct": -2.56,
+    "chg_pct": -6.39,
     "trend": [
       21.84,
       21.025,
@@ -4375,7 +4634,9 @@
     ],
     "last_updated": "2026-07-01T17:09:42.988638",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "AIRJ": {
@@ -4387,7 +4648,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 5.38,
+    "live_price": 5.18,
     "fair_value": 8.15,
     "mkt_cap": "$388.79M",
     "mkt_cap_raw": 388791168,
@@ -4398,7 +4659,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -4.78,
+    "chg_pct": -8.32,
     "trend": [
       5.03,
       4.96,
@@ -4410,7 +4671,9 @@
     ],
     "last_updated": "2026-07-01T17:09:44.583652",
     "notes": "",
-    "group": "AI Cloud",
+    "group": [
+      "AI Cloud"
+    ],
     "alarm": null
   },
   "AMPX": {
@@ -4422,7 +4685,7 @@
       "Robotics",
       "EV"
     ],
-    "live_price": 13.6,
+    "live_price": 13.59,
     "fair_value": 22.12,
     "mkt_cap": "$1.92B",
     "mkt_cap_raw": 1924713216,
@@ -4433,7 +4696,7 @@
     "ps": 21.32,
     "peg": null,
     "gross_margin": 18.1,
-    "chg_pct": -2.15,
+    "chg_pct": -2.22,
     "trend": [
       14.12,
       12.52,
@@ -4445,7 +4708,9 @@
     ],
     "last_updated": "2026-07-01T17:09:45.926694",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "MRAM": {
@@ -4457,7 +4722,7 @@
       "AI Cloud",
       "Space"
     ],
-    "live_price": 22.81,
+    "live_price": 22.34,
     "fair_value": 18.0,
     "mkt_cap": "$535.56M",
     "mkt_cap_raw": 535556672,
@@ -4468,7 +4733,7 @@
     "ps": 9.41,
     "peg": null,
     "gross_margin": 51.5,
-    "chg_pct": -5.35,
+    "chg_pct": -7.3,
     "trend": [
       22.55,
       21.4,
@@ -4480,7 +4745,9 @@
     ],
     "last_updated": "2026-07-01T17:09:47.286089",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "SCCO": {
@@ -4490,7 +4757,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 171.04,
+    "live_price": 168.9,
     "fair_value": 165.21,
     "mkt_cap": "$142.72B",
     "mkt_cap_raw": 142720237568,
@@ -4501,7 +4768,7 @@
     "ps": 9.81,
     "peg": 5.41,
     "gross_margin": 62.7,
-    "chg_pct": -3.29,
+    "chg_pct": -4.5,
     "trend": [
       178.57,
       171.84,
@@ -4513,7 +4780,9 @@
     ],
     "last_updated": "2026-07-01T17:09:48.991890",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "HBM": {
@@ -4523,7 +4792,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 22.82,
+    "live_price": 22.59,
     "fair_value": 33.6,
     "mkt_cap": "$10.20B",
     "mkt_cap_raw": 10202576896,
@@ -4534,7 +4803,7 @@
     "ps": 4.3,
     "peg": null,
     "gross_margin": 55.3,
-    "chg_pct": -3.02,
+    "chg_pct": -3.99,
     "trend": [
       25.36,
       22.99,
@@ -4546,7 +4815,9 @@
     ],
     "last_updated": "2026-07-01T17:09:50.992026",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "CSX": {
@@ -4554,7 +4825,7 @@
     "company": "CSX Corporation",
     "cat": "Industrials",
     "theme": [],
-    "live_price": 48.44,
+    "live_price": 48.33,
     "fair_value": 47.2,
     "mkt_cap": "$89.94B",
     "mkt_cap_raw": 89943212032,
@@ -4565,7 +4836,7 @@
     "ps": 6.36,
     "peg": 2.17,
     "gross_margin": 46.8,
-    "chg_pct": 3.03,
+    "chg_pct": 2.81,
     "trend": [
       46.16,
       46.06,
@@ -4577,7 +4848,9 @@
     ],
     "last_updated": "2026-07-01T17:09:52.581368",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "MCHP": {
@@ -4588,7 +4861,7 @@
       "Chip",
       "Space"
     ],
-    "live_price": 89.86,
+    "live_price": 88.69,
     "fair_value": 112.96,
     "mkt_cap": "$48.74B",
     "mkt_cap_raw": 48741060608,
@@ -4599,7 +4872,7 @@
     "ps": 10.34,
     "peg": 0.32,
     "gross_margin": 57.7,
-    "chg_pct": -1.85,
+    "chg_pct": -3.13,
     "trend": [
       93.26,
       92.48,
@@ -4611,7 +4884,9 @@
     ],
     "last_updated": "2026-07-01T17:09:54.093271",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "URG": {
@@ -4622,7 +4897,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 1.38,
+    "live_price": 1.37,
     "fair_value": 2.33,
     "mkt_cap": "$548.32M",
     "mkt_cap_raw": 548317952,
@@ -4633,7 +4908,7 @@
     "ps": 17.61,
     "peg": null,
     "gross_margin": -178.9,
-    "chg_pct": 0.38,
+    "chg_pct": -0.74,
     "trend": [
       1.41,
       1.35,
@@ -4645,7 +4920,9 @@
     ],
     "last_updated": "2026-07-01T17:09:55.690544",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "APA": {
@@ -4655,7 +4932,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 32.11,
+    "live_price": 31.87,
     "fair_value": 43.46,
     "mkt_cap": "$11.32B",
     "mkt_cap_raw": 11321688064,
@@ -4666,7 +4943,7 @@
     "ps": 1.35,
     "peg": 0.55,
     "gross_margin": 72.3,
-    "chg_pct": -1.44,
+    "chg_pct": -2.18,
     "trend": [
       34.22,
       33.33,
@@ -4678,7 +4955,9 @@
     ],
     "last_updated": "2026-07-01T17:09:57.481554",
     "notes": "",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "HAL": {
@@ -4690,7 +4969,7 @@
       "Chip",
       "Energy"
     ],
-    "live_price": 33.4,
+    "live_price": 33.01,
     "fair_value": 44.24,
     "mkt_cap": "$27.90B",
     "mkt_cap_raw": 27898107904,
@@ -4701,7 +4980,7 @@
     "ps": 1.26,
     "peg": 0.9,
     "gross_margin": 15.3,
-    "chg_pct": -1.41,
+    "chg_pct": -2.56,
     "trend": [
       35.11,
       33.9,
@@ -4713,7 +4992,9 @@
     ],
     "last_updated": "2026-07-01T17:09:59.183745",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "EPD": {
@@ -4724,7 +5005,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 36.6,
+    "live_price": 36.53,
     "fair_value": 41.25,
     "mkt_cap": "$79.22B",
     "mkt_cap_raw": 79217221632,
@@ -4735,7 +5016,7 @@
     "ps": 1.54,
     "peg": 1.49,
     "gross_margin": 14.3,
-    "chg_pct": -0.31,
+    "chg_pct": -0.5,
     "trend": [
       37.13,
       36.09,
@@ -4747,7 +5028,9 @@
     ],
     "last_updated": "2026-07-01T17:10:00.785417",
     "notes": "",
-    "group": "Clean Energy",
+    "group": [
+      "Clean Energy"
+    ],
     "alarm": null
   },
   "FIG": {
@@ -4758,7 +5041,7 @@
       "AI",
       "EV"
     ],
-    "live_price": 19.77,
+    "live_price": 19.48,
     "fair_value": 35.44,
     "mkt_cap": "$10.43B",
     "mkt_cap_raw": 10430153728,
@@ -4769,7 +5052,7 @@
     "ps": 8.98,
     "peg": 3.39,
     "gross_margin": 79.8,
-    "chg_pct": 9.27,
+    "chg_pct": 7.64,
     "trend": [
       18.99,
       18.64,
@@ -4781,7 +5064,9 @@
     ],
     "last_updated": "2026-07-01T17:10:02.190939",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RWT": {
@@ -4791,7 +5076,7 @@
     "theme": [
       "HPC"
     ],
-    "live_price": 4.74,
+    "live_price": 4.66,
     "fair_value": 6.66,
     "mkt_cap": "$594.15M",
     "mkt_cap_raw": 594148672,
@@ -4802,7 +5087,7 @@
     "ps": 3.55,
     "peg": 1.47,
     "gross_margin": 69.1,
-    "chg_pct": -1.46,
+    "chg_pct": -3.22,
     "trend": [
       4.81,
       4.81,
@@ -4814,7 +5099,9 @@
     ],
     "last_updated": "2026-07-01T17:10:03.686112",
     "notes": "",
-    "group": "HPC",
+    "group": [
+      "HPC"
+    ],
     "alarm": null
   },
   "USAR": {
@@ -4827,7 +5114,7 @@
       "BTC Mining",
       "Space"
     ],
-    "live_price": 20.98,
+    "live_price": 19.98,
     "fair_value": 39.5,
     "mkt_cap": "$5.13B",
     "mkt_cap_raw": 5128057344,
@@ -4838,7 +5125,7 @@
     "ps": 698.55,
     "peg": null,
     "gross_margin": 4.1,
-    "chg_pct": -3.14,
+    "chg_pct": -7.76,
     "trend": [
       22.89,
       21.42,
@@ -4850,7 +5137,9 @@
     ],
     "last_updated": "2026-07-01T17:10:05.016500",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "BMNR": {
@@ -4861,7 +5150,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 14.44,
+    "live_price": 14.15,
     "fair_value": 34.43,
     "mkt_cap": "$8.19B",
     "mkt_cap_raw": 8187666944,
@@ -4872,7 +5161,7 @@
     "ps": 489.93,
     "peg": null,
     "gross_margin": 66.6,
-    "chg_pct": 8.95,
+    "chg_pct": 6.76,
     "trend": [
       15.13,
       14.02,
@@ -4884,7 +5173,9 @@
     ],
     "last_updated": "2026-07-01T17:10:06.361425",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "MNDY": {
@@ -4894,7 +5185,7 @@
     "theme": [
       "EV"
     ],
-    "live_price": 76.43,
+    "live_price": 76.26,
     "fair_value": 108.12,
     "mkt_cap": "$3.95B",
     "mkt_cap_raw": 3948841984,
@@ -4905,7 +5196,7 @@
     "ps": 3.04,
     "peg": 0.28,
     "gross_margin": 89.1,
-    "chg_pct": 5.58,
+    "chg_pct": 5.35,
     "trend": [
       70.01,
       70.92,
@@ -4917,7 +5208,9 @@
     ],
     "last_updated": "2026-07-01T17:10:07.891280",
     "notes": "",
-    "group": "EV",
+    "group": [
+      "EV"
+    ],
     "alarm": null
   },
   "BRZE": {
@@ -4929,7 +5222,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 22.95,
+    "live_price": 22.93,
     "fair_value": 34.35,
     "mkt_cap": "$2.58B",
     "mkt_cap_raw": 2580391680,
@@ -4940,7 +5233,7 @@
     "ps": 3.28,
     "peg": 1.09,
     "gross_margin": 66.5,
-    "chg_pct": 6.58,
+    "chg_pct": 6.49,
     "trend": [
       19.26,
       19.48,
@@ -4952,7 +5245,9 @@
     ],
     "last_updated": "2026-07-01T17:10:09.581027",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "MDLZ": {
@@ -4964,7 +5259,7 @@
       "Energy",
       "Pharma"
     ],
-    "live_price": 58.74,
+    "live_price": 59.35,
     "fair_value": 67.25,
     "mkt_cap": "$75.43B",
     "mkt_cap_raw": 75427258368,
@@ -4975,7 +5270,7 @@
     "ps": 1.92,
     "peg": 1.0,
     "gross_margin": 28.8,
-    "chg_pct": 1.37,
+    "chg_pct": 2.42,
     "trend": [
       60.5524,
       61.2268,
@@ -4987,7 +5282,9 @@
     ],
     "last_updated": "2026-07-01T17:10:11.190214",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "BKSY": {
@@ -5002,7 +5299,7 @@
       "Space",
       "Energy"
     ],
-    "live_price": 29.69,
+    "live_price": 28.74,
     "fair_value": 40.5,
     "mkt_cap": "$1.10B",
     "mkt_cap_raw": 1100839168,
@@ -5013,7 +5310,7 @@
     "ps": 11.26,
     "peg": null,
     "gross_margin": 69.3,
-    "chg_pct": 5.25,
+    "chg_pct": 1.86,
     "trend": [
       26.9,
       25.21,
@@ -5025,7 +5322,9 @@
     ],
     "last_updated": "2026-07-01T17:10:12.692568",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "SIDU": {
@@ -5037,7 +5336,7 @@
       "Chip",
       "Space"
     ],
-    "live_price": 2.87,
+    "live_price": 2.73,
     "fair_value": 10.0,
     "mkt_cap": "$231.30M",
     "mkt_cap_raw": 231297760,
@@ -5048,7 +5347,7 @@
     "ps": 66.0,
     "peg": null,
     "gross_margin": -145.9,
-    "chg_pct": 2.32,
+    "chg_pct": -2.5,
     "trend": [
       2.94,
       2.71,
@@ -5060,7 +5359,9 @@
     ],
     "last_updated": "2026-07-01T17:10:14.085127",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "EVLV": {
@@ -5070,7 +5371,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 6.53,
+    "live_price": 6.37,
     "fair_value": 10.12,
     "mkt_cap": "$1.17B",
     "mkt_cap_raw": 1170063488,
@@ -5081,7 +5382,7 @@
     "ps": 7.3,
     "peg": null,
     "gross_margin": 49.8,
-    "chg_pct": 10.59,
+    "chg_pct": 7.97,
     "trend": [
       5.54,
       5.49,
@@ -5093,7 +5394,9 @@
     ],
     "last_updated": "2026-07-01T17:10:15.487124",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "VRT": {
@@ -5106,7 +5409,7 @@
       "AI Cloud",
       "Energy"
     ],
-    "live_price": 315.17,
+    "live_price": 311.58,
     "fair_value": 376.96,
     "mkt_cap": "$121.09B",
     "mkt_cap_raw": 121090301952,
@@ -5117,7 +5420,7 @@
     "ps": 11.17,
     "peg": 1.52,
     "gross_margin": 37.2,
-    "chg_pct": -6.3,
+    "chg_pct": -7.37,
     "trend": [
       318.32,
       316.43,
@@ -5129,7 +5432,9 @@
     ],
     "last_updated": "2026-07-01T17:10:16.992762",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "OUST": {
@@ -5140,7 +5445,7 @@
       "AI",
       "Robotics"
     ],
-    "live_price": 61.79,
+    "live_price": 60.02,
     "fair_value": 46.86,
     "mkt_cap": "$3.90B",
     "mkt_cap_raw": 3903151616,
@@ -5151,7 +5456,7 @@
     "ps": 21.06,
     "peg": null,
     "gross_margin": 47.7,
-    "chg_pct": -1.27,
+    "chg_pct": -4.11,
     "trend": [
       45.16,
       40.71,
@@ -5163,7 +5468,9 @@
     ],
     "last_updated": "2026-07-01T17:10:18.585991",
     "notes": "MB: MarketBeat 20260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "CBRS": {
@@ -5175,7 +5482,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 220.57,
+    "live_price": 221.27,
     "fair_value": 299.3,
     "mkt_cap": "$49.10B",
     "mkt_cap_raw": 49096204288,
@@ -5186,7 +5493,7 @@
     "ps": 81.3,
     "peg": null,
     "gross_margin": 40.3,
-    "chg_pct": 1.18,
+    "chg_pct": 1.5,
     "trend": [
       226.72,
       182.26,
@@ -5198,7 +5505,9 @@
     ],
     "last_updated": "2026-07-01T17:10:20.081697",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RBLX": {
@@ -5206,7 +5515,7 @@
     "company": "Roblox Corporation",
     "cat": "Communication Services",
     "theme": [],
-    "live_price": 57.68,
+    "live_price": 57.97,
     "fair_value": 65.97,
     "mkt_cap": "$41.21B",
     "mkt_cap_raw": 41211736064,
@@ -5217,7 +5526,7 @@
     "ps": 7.78,
     "peg": 8.18,
     "gross_margin": 24.1,
-    "chg_pct": 6.61,
+    "chg_pct": 7.14,
     "trend": [
       47.11,
       47.94,
@@ -5229,7 +5538,9 @@
     ],
     "last_updated": "2026-07-01T17:10:21.485348",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "CRDO": {
@@ -5239,7 +5550,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 262.98,
+    "live_price": 259.09,
     "fair_value": 269.81,
     "mkt_cap": "$48.76B",
     "mkt_cap_raw": 48759779328,
@@ -5250,7 +5561,7 @@
     "ps": 36.52,
     "peg": null,
     "gross_margin": 68.0,
-    "chg_pct": -4.25,
+    "chg_pct": -5.66,
     "trend": [
       272.005,
       268.99,
@@ -5262,7 +5573,9 @@
     ],
     "last_updated": "2026-07-01T17:10:23.182947",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "NLST": {
@@ -5273,7 +5586,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 2.98,
+    "live_price": 2.84,
     "fair_value": 5.0,
     "mkt_cap": "$993.29M",
     "mkt_cap_raw": 993285120,
@@ -5284,7 +5597,7 @@
     "ps": 3.75,
     "peg": 5.36,
     "gross_margin": 12.3,
-    "chg_pct": -2.93,
+    "chg_pct": -7.49,
     "trend": [
       2.69,
       2.69,
@@ -5296,7 +5609,9 @@
     ],
     "last_updated": "2026-07-01T17:10:24.684967",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "HROW": {
@@ -5307,7 +5622,7 @@
       "Chip",
       "Pharma"
     ],
-    "live_price": 42.51,
+    "live_price": 43.0,
     "fair_value": 67.75,
     "mkt_cap": "$1.59B",
     "mkt_cap_raw": 1586428672,
@@ -5318,7 +5633,7 @@
     "ps": 5.9,
     "peg": null,
     "gross_margin": 74.1,
-    "chg_pct": -1.07,
+    "chg_pct": 0.07,
     "trend": [
       42.78,
       42.68,
@@ -5330,7 +5645,9 @@
     ],
     "last_updated": "2026-07-01T17:10:26.048987",
     "notes": "",
-    "group": "Chip",
+    "group": [
+      "Chip"
+    ],
     "alarm": null
   },
   "VWAV": {
@@ -5342,7 +5659,7 @@
       "Chip",
       "Space"
     ],
-    "live_price": 4.15,
+    "live_price": 4.06,
     "fair_value": null,
     "mkt_cap": "$110.13M",
     "mkt_cap_raw": 110126536,
@@ -5353,7 +5670,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -1.91,
+    "chg_pct": -4.04,
     "trend": [
       4.645,
       4.45,
@@ -5365,7 +5682,9 @@
     ],
     "last_updated": "2026-07-01T17:10:27.408428",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RAMP": {
@@ -5373,7 +5692,7 @@
     "company": "LiveRamp Holdings, Inc.",
     "cat": "Technology",
     "theme": [],
-    "live_price": 37.73,
+    "live_price": 37.69,
     "fair_value": 40.58,
     "mkt_cap": "$2.27B",
     "mkt_cap_raw": 2267415552,
@@ -5384,7 +5703,7 @@
     "ps": 2.79,
     "peg": 0.59,
     "gross_margin": 70.7,
-    "chg_pct": 0.24,
+    "chg_pct": 0.15,
     "trend": [
       37.6,
       37.45,
@@ -5396,7 +5715,9 @@
     ],
     "last_updated": "2026-07-01T17:10:28.790259",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "KULR": {
@@ -5408,7 +5729,7 @@
       "Space",
       "EV"
     ],
-    "live_price": 3.98,
+    "live_price": 3.88,
     "fair_value": 8.0,
     "mkt_cap": "$184.33M",
     "mkt_cap_raw": 184334800,
@@ -5419,7 +5740,7 @@
     "ps": 9.93,
     "peg": null,
     "gross_margin": -0.8,
-    "chg_pct": 4.32,
+    "chg_pct": 1.44,
     "trend": [
       3.86,
       3.69,
@@ -5431,7 +5752,9 @@
     ],
     "last_updated": "2026-07-01T17:10:30.591249",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "TSEM": {
@@ -5442,7 +5765,7 @@
       "Chip",
       "Space"
     ],
-    "live_price": 243.57,
+    "live_price": 245.46,
     "fair_value": 313.83,
     "mkt_cap": "$28.82B",
     "mkt_cap_raw": 28816760832,
@@ -5453,7 +5776,7 @@
     "ps": 17.77,
     "peg": 7.2,
     "gross_margin": 24.8,
-    "chg_pct": -4.91,
+    "chg_pct": -4.17,
     "trend": [
       282.65,
       275.32,
@@ -5465,7 +5788,9 @@
     ],
     "last_updated": "2026-07-01T17:10:31.944508",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "SHOP": {
@@ -5475,7 +5800,7 @@
     "theme": [
       "Fintech"
     ],
-    "live_price": 122.48,
+    "live_price": 121.63,
     "fair_value": 148.22,
     "mkt_cap": "$158.96B",
     "mkt_cap_raw": 158962696192,
@@ -5486,7 +5811,7 @@
     "ps": 12.85,
     "peg": 2.1,
     "gross_margin": 48.0,
-    "chg_pct": 7.27,
+    "chg_pct": 6.52,
     "trend": [
       107.68,
       114.17,
@@ -5498,7 +5823,9 @@
     ],
     "last_updated": "2026-07-01T17:10:33.310083",
     "notes": "",
-    "group": "Fintech",
+    "group": [
+      "Fintech"
+    ],
     "alarm": null
   },
   "SMX": {
@@ -5509,7 +5836,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 14.69,
+    "live_price": 14.91,
     "fair_value": null,
     "mkt_cap": "$9.55M",
     "mkt_cap_raw": 9545250,
@@ -5520,7 +5847,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 11.25,
+    "chg_pct": 12.95,
     "trend": [
       14.59,
       14.79,
@@ -5532,7 +5859,9 @@
     ],
     "last_updated": "2026-07-01T17:10:34.657662",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "ACHR": {
@@ -5542,7 +5871,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 4.96,
+    "live_price": 4.93,
     "fair_value": 10.61,
     "mkt_cap": "$3.83B",
     "mkt_cap_raw": 3825767424,
@@ -5553,7 +5882,7 @@
     "ps": 2013.56,
     "peg": null,
     "gross_margin": 15.8,
-    "chg_pct": 4.09,
+    "chg_pct": 3.46,
     "trend": [
       5.25,
       5.05,
@@ -5565,7 +5894,9 @@
     ],
     "last_updated": "2026-07-01T17:10:36.012933",
     "notes": "",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "IRDM": {
@@ -5575,7 +5906,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 56.46,
+    "live_price": 55.72,
     "fair_value": 37.88,
     "mkt_cap": "$5.97B",
     "mkt_cap_raw": 5970635776,
@@ -5586,7 +5917,7 @@
     "ps": 6.82,
     "peg": 2.48,
     "gross_margin": 71.6,
-    "chg_pct": 4.36,
+    "chg_pct": 2.99,
     "trend": [
       44.16,
       42.28,
@@ -5598,7 +5929,9 @@
     ],
     "last_updated": "2026-07-01T17:10:37.380889",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "RKLB": {
@@ -5608,7 +5941,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 106.16,
+    "live_price": 100.07,
     "fair_value": 109.81,
     "mkt_cap": "$66.15B",
     "mkt_cap_raw": 66150748160,
@@ -5619,7 +5952,7 @@
     "ps": 97.34,
     "peg": null,
     "gross_margin": 36.6,
-    "chg_pct": 4.59,
+    "chg_pct": -1.41,
     "trend": [
       95.12,
       85.41,
@@ -5631,7 +5964,9 @@
     ],
     "last_updated": "2026-07-01T17:10:38.780073",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "ASTS": {
@@ -5641,7 +5976,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 91.19,
+    "live_price": 86.1,
     "fair_value": 81.47,
     "mkt_cap": "$35.13B",
     "mkt_cap_raw": 35134976000,
@@ -5652,7 +5987,7 @@
     "ps": 413.67,
     "peg": null,
     "gross_margin": 44.8,
-    "chg_pct": 3.9,
+    "chg_pct": -1.9,
     "trend": [
       72.87,
       68.01,
@@ -5664,7 +5999,9 @@
     ],
     "last_updated": "2026-07-01T17:10:40.146636",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Space",
+    "group": [
+      "Space"
+    ],
     "alarm": null
   },
   "UFO": {
@@ -5674,7 +6011,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 51.31,
+    "live_price": 50.18,
     "fair_value": null,
     "mkt_cap": null,
     "mkt_cap_raw": 0,
@@ -5685,7 +6022,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 0.61,
+    "chg_pct": -1.61,
     "trend": [
       48.0696,
       46.4216,
@@ -5697,7 +6034,9 @@
     ],
     "last_updated": "2026-07-01T17:10:41.522624",
     "notes": "MB: MarketBeat 20260629",
-    "group": "ETF",
+    "group": [
+      "ETF"
+    ],
     "alarm": null
   },
   "JACK": {
@@ -5705,7 +6044,7 @@
     "company": "Jack in the Box Inc.",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 16.7,
+    "live_price": 17.41,
     "fair_value": 16.04,
     "mkt_cap": "$320.65M",
     "mkt_cap_raw": 320650368,
@@ -5716,7 +6055,7 @@
     "ps": 0.22,
     "peg": 0.89,
     "gross_margin": 27.0,
-    "chg_pct": 5.73,
+    "chg_pct": 10.19,
     "trend": [
       11.58,
       13.35,
@@ -5728,7 +6067,9 @@
     ],
     "last_updated": "2026-07-01T17:10:42.934778",
     "notes": "RG: Ross Givens 20260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "SLS": {
@@ -5739,7 +6080,7 @@
       "Biotech",
       "Pharma"
     ],
-    "live_price": 13.31,
+    "live_price": 13.27,
     "fair_value": 10.0,
     "mkt_cap": "$2.59B",
     "mkt_cap_raw": 2590634240,
@@ -5750,7 +6091,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -7.53,
+    "chg_pct": -7.85,
     "trend": [
       9.07,
       9.17,
@@ -5762,7 +6103,9 @@
     ],
     "last_updated": "2026-07-01T17:10:44.298989",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Biotech",
+    "group": [
+      "Biotech"
+    ],
     "alarm": null
   },
   "SMMT": {
@@ -5773,7 +6116,7 @@
       "Biotech",
       "Pharma"
     ],
-    "live_price": 14.53,
+    "live_price": 14.38,
     "fair_value": 28.43,
     "mkt_cap": "$11.28B",
     "mkt_cap_raw": 11281523712,
@@ -5784,7 +6127,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -0.0,
+    "chg_pct": -1.03,
     "trend": [
       14.25,
       14.25,
@@ -5796,7 +6139,9 @@
     ],
     "last_updated": "2026-07-01T17:10:45.663549",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Biotech",
+    "group": [
+      "Biotech"
+    ],
     "alarm": null
   },
   "UPC": {
@@ -5806,7 +6151,7 @@
     "theme": [
       "Pharma"
     ],
-    "live_price": 5.67,
+    "live_price": 5.56,
     "fair_value": null,
     "mkt_cap": "$3.77M",
     "mkt_cap_raw": 3771037,
@@ -5817,7 +6162,7 @@
     "ps": 0.21,
     "peg": null,
     "gross_margin": 35.3,
-    "chg_pct": -11.82,
+    "chg_pct": -13.53,
     "trend": [
       3.04,
       2.95,
@@ -5829,7 +6174,9 @@
     ],
     "last_updated": "2026-07-01T17:10:47.038760",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Pharma",
+    "group": [
+      "Pharma"
+    ],
     "alarm": null
   },
   "SMCI": {
@@ -5842,7 +6189,7 @@
       "AI Cloud",
       "HPC"
     ],
-    "live_price": 28.47,
+    "live_price": 27.65,
     "fair_value": 37.25,
     "mkt_cap": "$18.28B",
     "mkt_cap_raw": 18283866112,
@@ -5853,7 +6200,7 @@
     "ps": 0.54,
     "peg": 0.91,
     "gross_margin": 8.4,
-    "chg_pct": -3.11,
+    "chg_pct": -5.89,
     "trend": [
       33.32,
       32.45,
@@ -5865,7 +6212,9 @@
     ],
     "last_updated": "2026-07-01T17:10:48.421401",
     "notes": "MB: MarketBeat 20260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "RCAT": {
@@ -5878,7 +6227,7 @@
       "Space",
       "Robotics"
     ],
-    "live_price": 11.04,
+    "live_price": 10.55,
     "fair_value": 22.0,
     "mkt_cap": "$1.68B",
     "mkt_cap_raw": 1677919744,
@@ -5889,7 +6238,7 @@
     "ps": 30.75,
     "peg": null,
     "gross_margin": 7.5,
-    "chg_pct": 3.52,
+    "chg_pct": -1.08,
     "trend": [
       10.18,
       9.34,
@@ -5901,7 +6250,9 @@
     ],
     "last_updated": "2026-07-01T17:10:49.790073",
     "notes": "MB: MarketBeat 20260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "POET": {
@@ -5913,7 +6264,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 9.84,
+    "live_price": 9.7,
     "fair_value": 17.5,
     "mkt_cap": "$1.69B",
     "mkt_cap_raw": 1688846080,
@@ -5924,7 +6275,7 @@
     "ps": 1196.5,
     "peg": null,
     "gross_margin": 100.0,
-    "chg_pct": -4.47,
+    "chg_pct": -5.83,
     "trend": [
       10.73,
       10.66,
@@ -5936,7 +6287,9 @@
     ],
     "last_updated": "2026-07-01T17:10:51.133039",
     "notes": "MB: MarketBeat 20260629",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "TMC": {
@@ -5948,7 +6301,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 4.43,
+    "live_price": 4.36,
     "fair_value": 10.83,
     "mkt_cap": "$2.47B",
     "mkt_cap_raw": 2474386432,
@@ -5959,7 +6312,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -1.01,
+    "chg_pct": -2.46,
     "trend": [
       4.82,
       4.56,
@@ -5971,7 +6324,9 @@
     ],
     "last_updated": "2026-07-01T17:10:52.478437",
     "notes": "MB: MarketBeat 20260629",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "BORR": {
@@ -5981,7 +6336,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 4.39,
+    "live_price": 4.3,
     "fair_value": 5.76,
     "mkt_cap": "$1.35B",
     "mkt_cap_raw": 1347417472,
@@ -5992,7 +6347,7 @@
     "ps": 1.28,
     "peg": null,
     "gross_margin": 50.5,
-    "chg_pct": 1.84,
+    "chg_pct": -0.02,
     "trend": [
       4.24,
       4.37,
@@ -6004,7 +6359,9 @@
     ],
     "last_updated": "2026-07-01T17:10:53.827374",
     "notes": "MB: MarketBeat 20260629",
-    "group": "Energy",
+    "group": [
+      "Energy"
+    ],
     "alarm": null
   },
   "NKE": {
@@ -6012,7 +6369,7 @@
     "company": "NIKE, Inc.",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 42.4,
+    "live_price": 43.14,
     "fair_value": 55.22,
     "mkt_cap": "$62.75B",
     "mkt_cap_raw": 62752587776,
@@ -6023,7 +6380,7 @@
     "ps": 1.35,
     "peg": 1.45,
     "gross_margin": 40.9,
-    "chg_pct": 5.89,
+    "chg_pct": 7.75,
     "trend": [
       42.38,
       41.82,
@@ -6035,7 +6392,9 @@
     ],
     "last_updated": "2026-07-01T17:10:55.300085",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "STZ": {
@@ -6043,7 +6402,7 @@
     "company": "Constellation Brands, Inc.",
     "cat": "Consumer Defensive",
     "theme": [],
-    "live_price": 134.69,
+    "live_price": 136.87,
     "fair_value": 174.91,
     "mkt_cap": "$23.31B",
     "mkt_cap_raw": 23305443328,
@@ -6054,7 +6413,7 @@
     "ps": 2.55,
     "peg": 2.59,
     "gross_margin": 51.7,
-    "chg_pct": -6.3,
+    "chg_pct": -4.79,
     "trend": [
       143.38,
       143.02,
@@ -6066,7 +6425,9 @@
     ],
     "last_updated": "2026-07-01T17:10:56.687200",
     "notes": "",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "PRGS": {
@@ -6078,7 +6439,7 @@
       "Chip",
       "Robotics"
     ],
-    "live_price": 40.14,
+    "live_price": 39.16,
     "fair_value": 50.83,
     "mkt_cap": "$1.68B",
     "mkt_cap_raw": 1679567616,
@@ -6089,7 +6450,7 @@
     "ps": 1.7,
     "peg": 1.13,
     "gross_margin": 85.3,
-    "chg_pct": 22.93,
+    "chg_pct": 19.93,
     "trend": [
       28.84,
       29.96,
@@ -6101,7 +6462,9 @@
     ],
     "last_updated": "2026-07-01T17:10:58.073734",
     "notes": "",
-    "group": "AI",
+    "group": [
+      "AI"
+    ],
     "alarm": null
   },
   "WEN": {
@@ -6109,7 +6472,7 @@
     "company": "The Wendy's Company",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 8.67,
+    "live_price": 8.94,
     "fair_value": 7.79,
     "mkt_cap": "$1.65B",
     "mkt_cap_raw": 1652419584,
@@ -6120,7 +6483,7 @@
     "ps": 0.75,
     "peg": 1.35,
     "gross_margin": 34.1,
-    "chg_pct": 5.22,
+    "chg_pct": 8.5,
     "trend": [
       6.26,
       7.86,
@@ -6132,7 +6495,9 @@
     ],
     "last_updated": "2026-07-01T17:10:59.493226",
     "notes": "RG: Ross Givens 20260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "GME": {
@@ -6140,7 +6505,7 @@
     "company": "GameStop Corp.",
     "cat": "Consumer Cyclical",
     "theme": [],
-    "live_price": 22.47,
+    "live_price": 22.63,
     "fair_value": null,
     "mkt_cap": "$10.06B",
     "mkt_cap_raw": 10061900800,
@@ -6151,7 +6516,7 @@
     "ps": 2.7,
     "peg": 0.31,
     "gross_margin": 34.4,
-    "chg_pct": 2.12,
+    "chg_pct": 2.85,
     "trend": [
       21.08,
       21.44,
@@ -6163,7 +6528,9 @@
     ],
     "last_updated": "2026-07-01T17:11:00.859487",
     "notes": "RG: Ross Givens 20260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "AMC": {
@@ -6171,7 +6538,7 @@
     "company": "AMC Entertainment Holdings, Inc.",
     "cat": "Communication Services",
     "theme": [],
-    "live_price": 1.86,
+    "live_price": 1.92,
     "fair_value": 2.16,
     "mkt_cap": "$1.65B",
     "mkt_cap_raw": 1646855552,
@@ -6182,7 +6549,7 @@
     "ps": 0.33,
     "peg": 12.22,
     "gross_margin": 16.0,
-    "chg_pct": -4.03,
+    "chg_pct": -0.67,
     "trend": [
       2.08,
       2.0,
@@ -6194,7 +6561,9 @@
     ],
     "last_updated": "2026-07-01T17:11:02.259647",
     "notes": "RG: Ross Givens 20260629",
-    "group": "General",
+    "group": [
+      "General"
+    ],
     "alarm": null
   },
   "CLSK": {
@@ -6205,7 +6574,7 @@
       "AI Cloud",
       "BTC Mining"
     ],
-    "live_price": 14.1,
+    "live_price": 13.62,
     "fair_value": 21.12,
     "mkt_cap": "$3.61B",
     "mkt_cap_raw": 3607917056,
@@ -6216,7 +6585,7 @@
     "ps": 4.88,
     "peg": null,
     "gross_margin": 50.7,
-    "chg_pct": -2.99,
+    "chg_pct": -6.26,
     "trend": [
       17.19,
       16.23,
@@ -6228,7 +6597,9 @@
     ],
     "last_updated": "2026-07-01T17:11:03.615245",
     "notes": "SALP: 0260629",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "AAPL": {
@@ -6239,7 +6610,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 294.2,
+    "live_price": 294.38,
     "fair_value": 315.09,
     "mkt_cap": "$4.32T",
     "mkt_cap_raw": 4319551422464,
@@ -6250,7 +6621,7 @@
     "ps": 9.57,
     "peg": 2.29,
     "gross_margin": 47.9,
-    "chg_pct": 1.8,
+    "chg_pct": 1.86,
     "trend": [
       294.3,
       293.08,
@@ -6262,7 +6633,9 @@
     ],
     "last_updated": "2026-07-01T17:11:05.063154",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "AMZN": {
@@ -6273,7 +6646,7 @@
       "AI",
       "Chip"
     ],
-    "live_price": 244.32,
+    "live_price": 241.7,
     "fair_value": 312.99,
     "mkt_cap": "$2.62T",
     "mkt_cap_raw": 2616236703744,
@@ -6284,7 +6657,7 @@
     "ps": 3.52,
     "peg": 1.83,
     "gross_margin": 50.6,
-    "chg_pct": 2.1,
+    "chg_pct": 1.0,
     "trend": [
       234.11,
       234.27,
@@ -6296,7 +6669,9 @@
     ],
     "last_updated": "2026-07-01T17:11:06.404932",
     "notes": "",
-    "group": "MAG7",
+    "group": [
+      "MAG7"
+    ],
     "alarm": null
   },
   "BTC-USD": {
@@ -6306,7 +6681,7 @@
     "theme": [
       "BTC Mining"
     ],
-    "live_price": 59861.46,
+    "live_price": 59948.36,
     "fair_value": null,
     "mkt_cap": "$1.20T",
     "mkt_cap_raw": 1198116569088,
@@ -6317,7 +6692,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.29,
+    "chg_pct": 2.43,
     "trend": [
       59721.6758,
       60016.4297,
@@ -6329,7 +6704,9 @@
     ],
     "last_updated": "2026-07-01T17:11:07.752915",
     "notes": "",
-    "group": "BTC Mining",
+    "group": [
+      "BTC Mining"
+    ],
     "alarm": null
   },
   "HCA": {
@@ -6339,7 +6716,7 @@
     "theme": [
       "Pharma"
     ],
-    "live_price": 391.33,
+    "live_price": 393.3,
     "fair_value": 500.29,
     "mkt_cap": "$86.76B",
     "mkt_cap_raw": 86756007936,
@@ -6350,7 +6727,7 @@
     "ps": 1.14,
     "peg": 1.18,
     "gross_margin": 41.6,
-    "chg_pct": -0.14,
+    "chg_pct": 0.36,
     "trend": [
       386.92,
       387.76,
@@ -6362,7 +6739,9 @@
     ],
     "last_updated": "2026-07-01T17:11:09.157407",
     "notes": "",
-    "group": "Pharma",
+    "group": [
+      "Pharma"
+    ],
     "alarm": null
   },
   "RIOT": {
@@ -6374,7 +6753,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 24.84,
+    "live_price": 23.96,
     "fair_value": 29.15,
     "mkt_cap": "$9.34B",
     "mkt_cap_raw": 9336554496,
@@ -6385,7 +6764,7 @@
     "ps": 14.29,
     "peg": null,
     "gross_margin": 32.3,
-    "chg_pct": -9.08,
+    "chg_pct": -12.3,
     "trend": [
       28.69,
       27.42,
@@ -6397,7 +6776,9 @@
     ],
     "last_updated": "2026-07-01T17:11:10.514897",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "SNDK": {
@@ -6408,7 +6789,7 @@
       "Chip",
       "AI Cloud"
     ],
-    "live_price": 2042.29,
+    "live_price": 2032.22,
     "fair_value": 1863.82,
     "mkt_cap": "$301.72B",
     "mkt_cap_raw": 301720305664,
@@ -6419,7 +6800,7 @@
     "ps": 22.89,
     "peg": null,
     "gross_margin": 56.0,
-    "chg_pct": -9.11,
+    "chg_pct": -9.56,
     "trend": [
       1963.6,
       1914.46,
@@ -6431,7 +6812,9 @@
     ],
     "last_updated": "2026-07-01T17:11:11.861434",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "CORZ": {
@@ -6444,7 +6827,7 @@
       "BTC Mining",
       "Space"
     ],
-    "live_price": 24.18,
+    "live_price": 23.71,
     "fair_value": 32.87,
     "mkt_cap": "$7.68B",
     "mkt_cap_raw": 7683287040,
@@ -6455,7 +6838,7 @@
     "ps": 21.66,
     "peg": null,
     "gross_margin": 21.6,
-    "chg_pct": -6.02,
+    "chg_pct": -7.85,
     "trend": [
       29.16,
       27.79,
@@ -6467,7 +6850,9 @@
     ],
     "last_updated": "2026-07-01T17:11:13.216431",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "SEI": {
@@ -6479,7 +6864,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 73.93,
+    "live_price": 73.44,
     "fair_value": 92.37,
     "mkt_cap": "$6.88B",
     "mkt_cap_raw": 6882239488,
@@ -6490,7 +6875,7 @@
     "ps": 9.94,
     "peg": 0.94,
     "gross_margin": 46.9,
-    "chg_pct": -9.18,
+    "chg_pct": -9.78,
     "trend": [
       77.95,
       75.98,
@@ -6502,7 +6887,9 @@
     ],
     "last_updated": "2026-07-01T17:11:14.599695",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "BTDR": {
@@ -6514,7 +6901,7 @@
       "BTC Mining",
       "HPC"
     ],
-    "live_price": 15.8,
+    "live_price": 15.44,
     "fair_value": 22.64,
     "mkt_cap": "$3.80B",
     "mkt_cap_raw": 3795693056,
@@ -6525,7 +6912,7 @@
     "ps": 5.14,
     "peg": null,
     "gross_margin": 3.5,
-    "chg_pct": -1.19,
+    "chg_pct": -3.44,
     "trend": [
       17.23,
       17.52,
@@ -6537,7 +6924,9 @@
     ],
     "last_updated": "2026-07-01T17:11:15.960661",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "PSIX": {
@@ -6551,7 +6940,7 @@
       "Energy",
       "EV"
     ],
-    "live_price": 37.32,
+    "live_price": 36.72,
     "fair_value": 70.37,
     "mkt_cap": "$860.24M",
     "mkt_cap_raw": 860242816,
@@ -6562,7 +6951,7 @@
     "ps": 1.2,
     "peg": 0.82,
     "gross_margin": 24.3,
-    "chg_pct": -3.46,
+    "chg_pct": -5.01,
     "trend": [
       39.09,
       38.44,
@@ -6574,7 +6963,9 @@
     ],
     "last_updated": "2026-07-01T17:11:17.309656",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "WYFI": {
@@ -6587,7 +6978,7 @@
       "AI Cloud",
       "HPC"
     ],
-    "live_price": 36.3,
+    "live_price": 34.94,
     "fair_value": 36.1,
     "mkt_cap": "$1.39B",
     "mkt_cap_raw": 1385478144,
@@ -6598,7 +6989,7 @@
     "ps": 16.75,
     "peg": null,
     "gross_margin": 87.3,
-    "chg_pct": -6.8,
+    "chg_pct": -10.3,
     "trend": [
       44.76,
       38.71,
@@ -6610,7 +7001,9 @@
     ],
     "last_updated": "2026-07-01T17:11:18.660004",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "AMD": {
@@ -6623,7 +7016,7 @@
       "AI Cloud",
       "HPC"
     ],
-    "live_price": 552.44,
+    "live_price": 540.88,
     "fair_value": 506.02,
     "mkt_cap": "$896.55B",
     "mkt_cap_raw": 896553123840,
@@ -6634,7 +7027,7 @@
     "ps": 23.94,
     "peg": 1.25,
     "gross_margin": 53.1,
-    "chg_pct": -4.68,
+    "chg_pct": -6.67,
     "trend": [
       519.85,
       519.74,
@@ -6646,7 +7039,9 @@
     ],
     "last_updated": "2026-07-01T17:11:20.012955",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "BW": {
@@ -6657,7 +7052,7 @@
       "Clean Energy",
       "Energy"
     ],
-    "live_price": 13.03,
+    "live_price": 12.73,
     "fair_value": 24.67,
     "mkt_cap": "$1.94B",
     "mkt_cap_raw": 1939379072,
@@ -6668,7 +7063,7 @@
     "ps": 2.97,
     "peg": null,
     "gross_margin": 24.4,
-    "chg_pct": -7.59,
+    "chg_pct": -9.72,
     "trend": [
       15.9,
       14.42,
@@ -6680,7 +7075,9 @@
     ],
     "last_updated": "2026-07-01T17:11:21.389018",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "PUMP": {
@@ -6691,7 +7088,7 @@
       "AI Cloud",
       "Energy"
     ],
-    "live_price": 13.31,
+    "live_price": 13.34,
     "fair_value": 18.45,
     "mkt_cap": "$1.62B",
     "mkt_cap_raw": 1624674944,
@@ -6702,7 +7099,7 @@
     "ps": 1.38,
     "peg": null,
     "gross_margin": 22.4,
-    "chg_pct": -7.25,
+    "chg_pct": -7.04,
     "trend": [
       14.65,
       13.98,
@@ -6714,7 +7111,9 @@
     ],
     "last_updated": "2026-07-01T17:11:22.733824",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "TSM": {
@@ -6725,7 +7124,7 @@
       "Chip",
       "HPC"
     ],
-    "live_price": 445.46,
+    "live_price": 444.36,
     "fair_value": 487.56,
     "mkt_cap": "$2.31T",
     "mkt_cap_raw": 2309692325888,
@@ -6736,7 +7135,7 @@
     "ps": 0.56,
     "peg": 1.36,
     "gross_margin": 61.9,
-    "chg_pct": -6.55,
+    "chg_pct": -6.79,
     "trend": [
       436.39,
       440.83,
@@ -6748,7 +7147,9 @@
     ],
     "last_updated": "2026-07-01T17:11:24.138912",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "HIVE": {
@@ -6760,7 +7161,7 @@
       "BTC Mining",
       "Energy"
     ],
-    "live_price": 3.53,
+    "live_price": 3.46,
     "fair_value": 7.07,
     "mkt_cap": "$941.36M",
     "mkt_cap_raw": 941356480,
@@ -6771,7 +7172,7 @@
     "ps": 3.16,
     "peg": null,
     "gross_margin": 36.2,
-    "chg_pct": -2.62,
+    "chg_pct": -4.42,
     "trend": [
       4.63,
       4.14,
@@ -6783,7 +7184,9 @@
     ],
     "last_updated": "2026-07-01T17:11:25.496511",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "ASML": {
@@ -6793,7 +7196,7 @@
     "theme": [
       "Chip"
     ],
-    "live_price": 1849.99,
+    "live_price": 1843.04,
     "fair_value": 1745.36,
     "mkt_cap": "$712.84B",
     "mkt_cap_raw": 712841560064,
@@ -6804,7 +7207,7 @@
     "ps": 21.16,
     "peg": 2.69,
     "gross_margin": 52.6,
-    "chg_pct": -6.97,
+    "chg_pct": -7.32,
     "trend": [
       1778.46,
       1762.77,
@@ -6816,7 +7219,9 @@
     ],
     "last_updated": "2026-07-01T17:11:26.915327",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "GLW": {
@@ -6829,7 +7234,7 @@
       "Energy",
       "Pharma"
     ],
-    "live_price": 221.8,
+    "live_price": 220.61,
     "fair_value": 206.07,
     "mkt_cap": "$189.76B",
     "mkt_cap_raw": 189762043904,
@@ -6840,7 +7245,7 @@
     "ps": 11.63,
     "peg": 1.73,
     "gross_margin": 36.4,
-    "chg_pct": -12.5,
+    "chg_pct": -12.97,
     "trend": [
       194.07,
       205.83,
@@ -6852,7 +7257,9 @@
     ],
     "last_updated": "2026-07-01T17:11:28.384412",
     "notes": "",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "KRC": {
@@ -6862,7 +7269,7 @@
     "theme": [
       "Space"
     ],
-    "live_price": 38.87,
+    "live_price": 39.15,
     "fair_value": 37.14,
     "mkt_cap": "$4.56B",
     "mkt_cap_raw": 4561470464,
@@ -6873,7 +7280,7 @@
     "ps": 4.1,
     "peg": 1.82,
     "gross_margin": 66.3,
-    "chg_pct": 3.64,
+    "chg_pct": 4.41,
     "trend": [
       36.6769,
       36.4008,
@@ -6885,7 +7292,9 @@
     ],
     "last_updated": "2026-07-01T17:11:29.839516",
     "notes": "CLOSED",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "HUT": {
@@ -6899,7 +7308,7 @@
       "Energy",
       "Robotics"
     ],
-    "live_price": 106.81,
+    "live_price": 105.79,
     "fair_value": 126.94,
     "mkt_cap": "$12.02B",
     "mkt_cap_raw": 12021932032,
@@ -6910,7 +7319,7 @@
     "ps": 42.28,
     "peg": null,
     "gross_margin": 59.7,
-    "chg_pct": -7.97,
+    "chg_pct": -8.85,
     "trend": [
       120.51,
       116.1,
@@ -6922,7 +7331,9 @@
     ],
     "last_updated": "2026-07-01T17:11:31.507238",
     "notes": "CLOSED",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "EQT": {
@@ -6932,7 +7343,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 52.7,
+    "live_price": 52.51,
     "fair_value": 69.17,
     "mkt_cap": "$32.93B",
     "mkt_cap_raw": 32925161472,
@@ -6943,7 +7354,7 @@
     "ps": 3.52,
     "peg": 2.39,
     "gross_margin": 81.0,
-    "chg_pct": -1.64,
+    "chg_pct": -1.99,
     "trend": [
       51.66,
       51.48,
@@ -6955,7 +7366,9 @@
     ],
     "last_updated": "2026-07-01T17:11:33.183007",
     "notes": "CLOSED",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   },
   "LBRT": {
@@ -6965,7 +7378,7 @@
     "theme": [
       "Energy"
     ],
-    "live_price": 24.75,
+    "live_price": 24.32,
     "fair_value": 33.92,
     "mkt_cap": "$4.04B",
     "mkt_cap_raw": 4035723776,
@@ -6976,7 +7389,7 @@
     "ps": 1.0,
     "peg": null,
     "gross_margin": 19.7,
-    "chg_pct": -6.5,
+    "chg_pct": -8.12,
     "trend": [
       27.05,
       26.21,
@@ -6988,7 +7401,9 @@
     ],
     "last_updated": "2026-07-01T17:11:34.889203",
     "notes": "CLOSED",
-    "group": "SALP",
+    "group": [
+      "SALP"
+    ],
     "alarm": null
   }
 }
