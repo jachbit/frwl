@@ -2892,7 +2892,7 @@
   "DRAM": {
     "symbol": "DRAM",
     "company": "Roundhill Memory ETF",
-    "cat": "\u2014",
+    "cat": "ETF",
     "theme": [
       "ETF"
     ],
