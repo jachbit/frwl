@@ -9,7 +9,7 @@ Data: yFinance (prices + fundamentals)
 Prices refreshed every 60s | Fundamentals every 5 min
 """
 
-import os, json, math, time, threading, pathlib, io, csv
+import os, json, math, time, threading, pathlib, io, csv, base64, urllib.request, urllib.error
 from datetime import datetime
 from flask import Flask, jsonify, Response, request, send_file
 
@@ -72,6 +72,73 @@ TICKER_DELAY   = 1.2   # seconds between individual ticker fetches in fundamenta
 BATCH_DELAY    = 3.0   # seconds between 50-symbol price batches
 RL_SLEEP       = 45    # seconds to pause when a rate-limit error is hit
 
+# ── GitHub backup (keeps watchlist safe across Render redeploys) ───────────────
+GH_TOKEN = os.getenv("GITHUB_TOKEN", "")
+GH_REPO  = os.getenv("GITHUB_REPO", "jachbit/frwl")
+GH_PATH  = "watchlist.json"
+GH_API   = f"https://api.github.com/repos/{GH_REPO}/contents/{GH_PATH}"
+
+def _gh_headers():
+    return {
+        "Authorization": f"token {GH_TOKEN}",
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json",
+        "User-Agent": "frwl-server",
+    }
+
+def _gh_restore():
+    """On startup: pull watchlist.json from GitHub if local is empty."""
+    global _watchlist
+    if not GH_TOKEN:
+        return
+    try:
+        req = urllib.request.Request(GH_API, headers=_gh_headers())
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = json.loads(r.read())
+        content = base64.b64decode(data["content"]).decode("utf-8")
+        restored = json.loads(content)
+        if restored:
+            _watchlist = restored
+            WATCHLIST_FILE.write_text(json.dumps(_watchlist, indent=2), encoding="utf-8")
+            print(f"  [GitHub] Restored {len(_watchlist)} tickers from GitHub backup")
+    except Exception as e:
+        print(f"  [GitHub] Restore skipped: {e}")
+
+def _gh_push():
+    """Push current watchlist.json to GitHub (runs in background thread)."""
+    if not GH_TOKEN:
+        return
+    try:
+        content_b64 = base64.b64encode(
+            json.dumps(_watchlist, indent=2).encode("utf-8")
+        ).decode("utf-8")
+        # get current SHA (needed for update)
+        sha = None
+        try:
+            req = urllib.request.Request(GH_API, headers=_gh_headers())
+            with urllib.request.urlopen(req, timeout=10) as r:
+                sha = json.loads(r.read()).get("sha")
+        except Exception:
+            pass
+        payload = {"message": "auto: watchlist backup", "content": content_b64}
+        if sha:
+            payload["sha"] = sha
+        req = urllib.request.Request(
+            GH_API,
+            data=json.dumps(payload).encode("utf-8"),
+            headers=_gh_headers(),
+            method="PUT",
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            r.read()
+        print(f"  [GitHub] Backup pushed ({len(_watchlist)} tickers)")
+    except Exception as e:
+        print(f"  [GitHub] Push failed: {e}")
+
+def _gh_push_async():
+    """Fire-and-forget GitHub push after every watchlist save."""
+    threading.Thread(target=_gh_push, daemon=True).start()
+
 class RateLimitError(Exception):
     pass
 
@@ -94,8 +161,10 @@ def _load_watchlist():
     else:
         _watchlist = {}
 
-def _save_watchlist():
+def _save_watchlist(backup=False):
     WATCHLIST_FILE.write_text(json.dumps(_watchlist, indent=2), encoding="utf-8")
+    if backup:
+        _gh_push_async()
 
 def _fmt_mktcap(v):
     if not v: return None
@@ -348,7 +417,7 @@ def api_add():
     data["group"] = (body.get("group") or (themes[0] if themes else "General")).strip()
     with _lock:
         _watchlist[sym] = data
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True, "data": data})
 
 @app.route("/api/remove/<symbol>", methods=["DELETE", "OPTIONS"])
@@ -358,7 +427,7 @@ def api_remove(symbol):
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
         del _watchlist[sym]
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True, "symbol": sym})
 
 @app.route("/api/refresh/<symbol>", methods=["POST", "OPTIONS"])
@@ -380,7 +449,7 @@ def api_refresh_one(symbol):
     with _lock:
         if sym in _watchlist:
             _watchlist[sym] = data
-            _save_watchlist()
+            _save_watchlist(backup=True)
     return jsonify({"success": True, "data": data})
 
 @app.route("/api/update_note", methods=["POST", "OPTIONS"])
@@ -392,7 +461,7 @@ def api_update_note():
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
         _watchlist[sym]["notes"] = notes
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True})
 
 @app.route("/api/set_alarm", methods=["POST", "OPTIONS"])
@@ -411,7 +480,7 @@ def api_set_alarm():
             try: price = round(float(price), 2)
             except Exception: return jsonify({"error": "Invalid price"}), 400
             _watchlist[sym]["alarm"] = {"price": price, "direction": direction, "enabled": enabled}
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True, "alarm": _watchlist[sym]["alarm"]})
 
 @app.route("/api/update_group", methods=["POST", "OPTIONS"])
@@ -423,7 +492,7 @@ def api_update_group():
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
         _watchlist[sym]["group"] = group
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True})
 
 @app.route("/api/batch_update_group", methods=["POST", "OPTIONS"])
@@ -439,7 +508,7 @@ def api_batch_update_group():
             if sym in _watchlist:
                 _watchlist[sym]["group"] = group
                 updated += 1
-        if updated: _save_watchlist()
+        if updated: _save_watchlist(backup=True)
     return jsonify({"success": True, "updated": updated})
 
 @app.route("/api/rename_group", methods=["POST", "OPTIONS"])
@@ -455,7 +524,7 @@ def api_rename_group():
             if (data.get("group") or "General") == from_grp:
                 data["group"] = to_grp
                 updated += 1
-        if updated: _save_watchlist()
+        if updated: _save_watchlist(backup=True)
     return jsonify({"success": True, "updated": updated})
 
 @app.route("/api/update_theme", methods=["POST", "OPTIONS"])
@@ -467,7 +536,7 @@ def api_update_theme():
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
         _watchlist[sym]["theme"] = themes
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True})
 
 @app.route("/api/update_cat", methods=["POST", "OPTIONS"])
@@ -479,7 +548,7 @@ def api_update_cat():
     with _lock:
         if sym not in _watchlist: return jsonify({"error": f"{sym} not found"}), 404
         _watchlist[sym]["cat"] = cat
-        _save_watchlist()
+        _save_watchlist(backup=True)
     return jsonify({"success": True})
 
 @app.route("/api/export/csv")
@@ -540,7 +609,7 @@ def api_import_csv():
                     "last_updated": datetime.now().isoformat(),
                 }
                 added += 1
-            if added: _save_watchlist()
+            if added: _save_watchlist(backup=True)
         return jsonify({"success": True, "added": added, "skipped": skipped})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -553,6 +622,8 @@ if __name__ == "__main__":
     print(f"  Port: {PORT}  |  Data: yFinance only")
     print("=" * 56)
     _load_watchlist()
+    if len(_watchlist) == 0:
+        _gh_restore()
     print(f"  Loaded {len(_watchlist)} tickers from watchlist.json")
     for sym, d in _watchlist.items():
         existing = _theme_list(d.get("theme"))
