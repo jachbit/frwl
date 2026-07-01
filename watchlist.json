@@ -2804,7 +2804,9 @@
     "symbol": "VLU",
     "company": "State Street SPDR S&P 1500 Value Tilt ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 238.21,
     "fair_value": null,
     "mkt_cap": null,
