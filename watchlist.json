@@ -3435,7 +3435,7 @@
   "UVXY": {
     "symbol": "UVXY",
     "company": "ProShares Ultra VIX Short-Term Futures ETF",
-    "cat": "\u2014",
+    "cat": "ETF",
     "theme": [
       "ETF"
     ],
