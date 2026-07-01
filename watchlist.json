@@ -6237,7 +6237,7 @@
     "ps": 9.41,
     "peg": 2.29,
     "gross_margin": 47.9,
-    "chg_pct": 2.7,
+    "chg_pct": 2.88,
     "trend": [
       297.01,
       294.3,
@@ -6250,5 +6250,38 @@
     "last_updated": "2026-07-01T06:03:53.783856",
     "notes": "",
     "group": "MAG7"
+  },
+  "AMZN": {
+    "symbol": "AMZN",
+    "company": "Amazon.com, Inc.",
+    "cat": "Consumer Cyclical",
+    "theme": [
+      "AI",
+      "Chip"
+    ],
+    "live_price": 238.34,
+    "fair_value": 312.99,
+    "mkt_cap": "$2.56T",
+    "mkt_cap_raw": 2563849584640,
+    "week52_low": 196.0,
+    "week52_high": 278.56,
+    "pe": 31.65,
+    "pb": 5.8,
+    "ps": 3.45,
+    "peg": 1.83,
+    "gross_margin": 50.6,
+    "chg_pct": -0.75,
+    "trend": [
+      232.79,
+      234.11,
+      234.27,
+      227.01,
+      232.69,
+      240.14,
+      238.34
+    ],
+    "last_updated": "2026-07-01T06:09:00.574679",
+    "notes": "",
+    "group": "AI"
   }
 }
