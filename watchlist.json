@@ -31,7 +31,7 @@
     ],
     "last_updated": "2026-07-01T05:57:53.912861",
     "notes": "",
-    "group": "Energy",
+    "group": "SALP",
     "alarm": null
   },
   "PL": {
@@ -6270,7 +6270,7 @@
     "ps": 3.45,
     "peg": 1.83,
     "gross_margin": 50.6,
-    "chg_pct": -0.75,
+    "chg_pct": -0.84,
     "trend": [
       232.79,
       234.11,
