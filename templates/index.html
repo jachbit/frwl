@@ -286,6 +286,7 @@
       </div>
       <button class="btn btn-primary" onclick="openAddModal()">+ Add Ticker</button>
       <button class="btn btn-legend" onclick="openLegend()" title="Column Definitions">? Legend</button>
+      <button class="btn btn-legend" onclick="openDataInfo()" title="About Data &amp; Limits" style="background:#1e3a5f;border-color:#3b82f6;color:#93c5fd">&#9432; Data Info</button>
     </div>
   </div>
 </div>
@@ -643,6 +644,87 @@
     </div>
     <div class="modal-footer">
       <button class="btn btn-primary" onclick="closeLegend()">Got it</button>
+    </div>
+  </div>
+</div>
+
+<!-- Data Info Modal -->
+<div class="modal-overlay" id="datainfo-modal">
+  <div class="mini-modal" style="width:700px;max-width:96vw;max-height:90vh;overflow-y:auto">
+    <div class="modal-header">
+      <span class="modal-title">&#9432; About Data &amp; Rate Limits</span>
+      <button class="modal-close" onclick="closeDataInfo()">&times;</button>
+    </div>
+    <div style="padding:10px 0 4px">
+
+      <!-- Source -->
+      <div style="background:#0f2233;border-left:3px solid #3b82f6;border-radius:4px;padding:10px 14px;margin-bottom:10px">
+        <div style="color:#93c5fd;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Data Source</div>
+        <div style="color:#e2e8f0;font-size:13px;line-height:1.6">
+          All prices and fundamentals are pulled from <strong style="color:#fff">Yahoo Finance (yFinance)</strong> — a free, public data service.
+          No paid API keys are required, which makes this app free to run and safe to share.
+          Data is for <em>personal research and educational purposes only</em> — not real-time trading data.
+        </div>
+      </div>
+
+      <!-- Refresh schedule -->
+      <div style="background:#0f2233;border-left:3px solid #f59e0b;border-radius:4px;padding:10px 14px;margin-bottom:10px">
+        <div style="color:#fcd34d;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Refresh Schedule</div>
+        <div style="display:grid;grid-template-columns:160px 1fr;gap:6px 12px;color:#e2e8f0;font-size:13px;line-height:1.6">
+          <div style="color:#93c5fd;font-weight:600">Price updates</div>
+          <div>Every <strong style="color:#fff">60 seconds</strong> — pulled in batches of 50 symbols with a 3-second pause between batches to avoid triggering rate limits.</div>
+          <div style="color:#93c5fd;font-weight:600">Fundamentals</div>
+          <div>Every <strong style="color:#fff">10 minutes</strong> — P/E, P/B, Fair Value, Gross Margin, etc. Each ticker fetches individually with a 1.2-second delay between requests.</div>
+          <div style="color:#93c5fd;font-weight:600">184-ticker estimate</div>
+          <div>A full fundamentals pass across all tickers takes approximately <strong style="color:#fff">4 minutes</strong> to complete. This is intentional — slower fetching = fewer rate-limit blocks.</div>
+        </div>
+      </div>
+
+      <!-- Rate limits -->
+      <div style="background:#0f2233;border-left:3px solid #f87171;border-radius:4px;padding:10px 14px;margin-bottom:10px">
+        <div style="color:#fca5a5;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Rate Limits — What They Are &amp; What to Expect</div>
+        <div style="color:#e2e8f0;font-size:13px;line-height:1.6;margin-bottom:8px">
+          Yahoo Finance limits how many requests one IP address can make in a short window. Because this app runs on a <strong style="color:#fff">shared hosting server</strong> (Render free tier),
+          all users share the same outbound IP — so heavy usage can temporarily trigger a throttle.
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div style="background:#1a0a0a;border:1px solid #7f1d1d;border-radius:4px;padding:8px 10px">
+            <div style="color:#fca5a5;font-size:11px;font-weight:700;margin-bottom:4px">&#9888; You might see:</div>
+            <ul style="color:#e2e8f0;font-size:12px;line-height:1.8;margin:0;padding-left:16px">
+              <li>"Yahoo Finance rate limit — wait 30 seconds"</li>
+              <li>Prices showing as <strong>—</strong> briefly after import</li>
+              <li>Fundamentals not updated immediately on first load</li>
+              <li>Occasional blank P/E or Fair Value cells</li>
+            </ul>
+          </div>
+          <div style="background:#0a1a0a;border:1px solid #14532d;border-radius:4px;padding:8px 10px">
+            <div style="color:#86efac;font-size:11px;font-weight:700;margin-bottom:4px">&#10003; What the app does automatically:</div>
+            <ul style="color:#e2e8f0;font-size:12px;line-height:1.8;margin:0;padding-left:16px">
+              <li>Auto-retries once after 8 seconds on rate limit</li>
+              <li>Waits 45 seconds before retrying during background refresh</li>
+              <li>Spaces out all requests to minimize throttling</li>
+              <li>Data fills in on the next refresh cycle automatically</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <div style="background:#0f2233;border-left:3px solid #a78bfa;border-radius:4px;padding:10px 14px;margin-bottom:4px">
+        <div style="color:#c4b5fd;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Tips for Best Experience</div>
+        <ul style="color:#e2e8f0;font-size:13px;line-height:1.9;margin:0;padding-left:18px">
+          <li>After importing a CSV, <strong style="color:#fff">wait 2–5 minutes</strong> for all fundamentals to populate — the background fetcher works through them gradually.</li>
+          <li>If you see a rate-limit error when adding a ticker, <strong style="color:#fff">wait 30 seconds</strong> and try again — the server auto-retries once already.</li>
+          <li>Prices update every 60 seconds during market hours. <strong style="color:#fff">After hours prices may lag</strong> by 15–60 minutes depending on Yahoo's feed.</li>
+          <li>Fair Value (analyst target) and some fundamentals are <strong style="color:#fff">not available for every ticker</strong> — ETFs and micro-caps often show —.</li>
+          <li>This app is <strong style="color:#fff">not connected to any brokerage</strong>. Data is for research only — always verify with your broker before trading.</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <span style="color:#64748b;font-size:11px">F.O.C.U.S.© Research Watchlist LITE &nbsp;·&nbsp; Jachbit 2026 &nbsp;·&nbsp; For Educational Purposes Only</span>
+      <button class="btn btn-primary" onclick="closeDataInfo()">Got it</button>
     </div>
   </div>
 </div>
@@ -1267,6 +1349,8 @@ async function saveNewGroup() {
 
 function openLegend() { document.getElementById('legend-modal').classList.add('open'); }
 function closeLegend() { document.getElementById('legend-modal').classList.remove('open'); }
+function openDataInfo() { document.getElementById('datainfo-modal').classList.add('open'); }
+function closeDataInfo() { document.getElementById('datainfo-modal').classList.remove('open'); }
 
 function openRenameGroup() {
   const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
@@ -1940,10 +2024,13 @@ document.getElementById('newgroup-modal').addEventListener('click', function(e) 
 document.getElementById('legend-modal').addEventListener('click', function(e) {
   if (e.target === this) closeLegend();
 });
+document.getElementById('datainfo-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeDataInfo();
+});
 
 // ── ESC to close any open modal ────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeAddModal(); closeEditCat(); closeEditTheme(); closeEditNote(); closeEditGroup(); closeRenameGroup(); closeNewGroup(); closeLegend(); closeAlarm(); closeAnnouncer(); }
+  if (e.key === 'Escape') { closeAddModal(); closeEditCat(); closeEditTheme(); closeEditNote(); closeEditGroup(); closeRenameGroup(); closeNewGroup(); closeLegend(); closeDataInfo(); closeAlarm(); closeAnnouncer(); }
 });
 
 // ── Notes modal ────────────────────────────────────────────────────────────────
