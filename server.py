@@ -105,39 +105,54 @@ def _gh_restore():
         print(f"  [GitHub] Restore skipped: {e}")
 
 def _gh_push():
-    """Push current watchlist.json to GitHub (runs in background thread)."""
+    """Push current watchlist.json to GitHub (runs in background thread). Retries once on SHA conflict."""
     if not GH_TOKEN:
         return
-    try:
-        content_b64 = base64.b64encode(
-            json.dumps(_watchlist, indent=2).encode("utf-8")
-        ).decode("utf-8")
-        # get current SHA (needed for update)
-        sha = None
+    for attempt in range(3):
         try:
-            req = urllib.request.Request(GH_API, headers=_gh_headers())
-            with urllib.request.urlopen(req, timeout=10) as r:
-                sha = json.loads(r.read()).get("sha")
-        except Exception:
-            pass
-        payload = {"message": "auto: watchlist backup", "content": content_b64}
-        if sha:
-            payload["sha"] = sha
-        req = urllib.request.Request(
-            GH_API,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=_gh_headers(),
-            method="PUT",
-        )
-        with urllib.request.urlopen(req, timeout=15) as r:
-            r.read()
-        print(f"  [GitHub] Backup pushed ({len(_watchlist)} tickers)")
-    except Exception as e:
-        print(f"  [GitHub] Push failed: {e}")
+            with _lock:
+                snapshot = json.dumps(_watchlist, indent=2)
+            content_b64 = base64.b64encode(snapshot.encode("utf-8")).decode("utf-8")
+            sha = None
+            try:
+                req = urllib.request.Request(GH_API, headers=_gh_headers())
+                with urllib.request.urlopen(req, timeout=10) as r:
+                    sha = json.loads(r.read()).get("sha")
+            except Exception:
+                pass
+            payload = {"message": "auto: watchlist backup", "content": content_b64}
+            if sha:
+                payload["sha"] = sha
+            req = urllib.request.Request(
+                GH_API,
+                data=json.dumps(payload).encode("utf-8"),
+                headers=_gh_headers(),
+                method="PUT",
+            )
+            with urllib.request.urlopen(req, timeout=15) as r:
+                r.read()
+            print(f"  [GitHub] Backup pushed ({len(_watchlist)} tickers)")
+            return
+        except urllib.error.HTTPError as e:
+            if e.code == 409 and attempt < 2:
+                print(f"  [GitHub] SHA conflict, retrying ({attempt+1})…")
+                time.sleep(2)
+            else:
+                print(f"  [GitHub] Push failed: {e}")
+                return
+        except Exception as e:
+            print(f"  [GitHub] Push failed: {e}")
+            return
 
+_gh_push_timer = None
 def _gh_push_async():
-    """Fire-and-forget GitHub push after every watchlist save."""
-    threading.Thread(target=_gh_push, daemon=True).start()
+    """Debounced GitHub push — waits 5s after last change before pushing."""
+    global _gh_push_timer
+    if _gh_push_timer:
+        _gh_push_timer.cancel()
+    _gh_push_timer = threading.Timer(5.0, _gh_push)
+    _gh_push_timer.daemon = True
+    _gh_push_timer.start()
 
 class RateLimitError(Exception):
     pass
@@ -313,6 +328,9 @@ def _refresh_fundamentals():
     with _lock:
         for sym, data in updated.items():
             if sym in _watchlist:
+                data["group"] = _watchlist[sym].get("group", data.get("group", "General"))
+                data["notes"] = _watchlist[sym].get("notes", data.get("notes", ""))
+                data["alarm"] = _watchlist[sym].get("alarm", data.get("alarm"))
                 _watchlist[sym] = data
         _save_watchlist()
         _last_refresh = datetime.now()
