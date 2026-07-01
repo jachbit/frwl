@@ -280,7 +280,16 @@
       </div>
     </div>
     <div class="hdr-buttons">
-      <button class="btn btn-outline btn-sm" onclick="exportCSV()">&#8595; CSV</button>
+      <div style="position:relative;display:inline-block" id="csv-export-wrap">
+        <button class="btn btn-outline btn-sm" onclick="toggleCSVMenu(event)">&#8595; CSV &#9662;</button>
+        <div id="csv-export-menu" style="display:none;position:absolute;top:110%;left:0;background:#0f2233;border:1px solid #3b82f6;border-radius:6px;z-index:999;min-width:160px;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+          <div style="padding:6px 0">
+            <div onclick="exportCSV('ALL')" style="padding:7px 14px;cursor:pointer;color:#e2e8f0;font-size:12px;font-weight:600" onmouseover="this.style.background='#1e3a5f'" onmouseout="this.style.background=''">&#8595; All Tickers</div>
+            <div style="border-top:1px solid #1e3a5f;margin:4px 0"></div>
+            <div id="csv-group-list"></div>
+          </div>
+        </div>
+      </div>
       <button class="btn btn-outline btn-sm" onclick="document.getElementById('csv-import-input').click()">&#8593; Import CSV</button>
       <input type="file" id="csv-import-input" accept=".csv" style="display:none" onchange="importCSV(this)">
       <button class="btn btn-navy btn-sm" onclick="exportPDF()">&#128438; PDF</button>
@@ -1956,9 +1965,23 @@ async function saveEditCat() {
 }
 
 // ── Exports ────────────────────────────────────────────────────────────────────
-function exportCSV() {
+function toggleCSVMenu(e) {
+  e.stopPropagation();
   if (watchlist.length === 0) { showToast('Watchlist is empty.','warn'); return; }
-  window.location.href = '/api/export/csv';
+  const menu = document.getElementById('csv-export-menu');
+  const groups = [...new Set(watchlist.map(r => r.group || 'General'))].sort();
+  document.getElementById('csv-group-list').innerHTML = groups.map(g =>
+    `<div onclick="exportCSV('${g.replace(/'/g,"\\'")}');document.getElementById('csv-export-menu').style.display='none'"
+      style="padding:7px 14px;cursor:pointer;color:#93c5fd;font-size:12px"
+      onmouseover="this.style.background='#1e3a5f'" onmouseout="this.style.background=''">&#8595; ${g}</div>`
+  ).join('');
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+}
+function exportCSV(group) {
+  if (watchlist.length === 0) { showToast('Watchlist is empty.','warn'); return; }
+  const url = (!group || group === 'ALL') ? '/api/export/csv' : `/api/export/csv/${encodeURIComponent(group)}`;
+  window.location.href = url;
+  document.getElementById('csv-export-menu').style.display = 'none';
 }
 
 async function importCSV(input) {
@@ -2024,6 +2047,10 @@ document.getElementById('renamegroup-modal').addEventListener('click', function(
 });
 document.getElementById('newgroup-modal').addEventListener('click', function(e) {
   if (e.target === this) closeNewGroup();
+});
+document.addEventListener('click', function(e) {
+  const wrap = document.getElementById('csv-export-wrap');
+  if (wrap && !wrap.contains(e.target)) document.getElementById('csv-export-menu').style.display = 'none';
 });
 document.getElementById('legend-modal').addEventListener('click', function(e) {
   if (e.target === this) closeLegend();

@@ -552,9 +552,12 @@ def api_update_cat():
     return jsonify({"success": True})
 
 @app.route("/api/export/csv")
-def api_export_csv():
+@app.route("/api/export/csv/<group>")
+def api_export_csv(group=None):
     with _lock:
         rows = list(_watchlist.values())
+    if group and group != "ALL":
+        rows = [r for r in rows if (r.get("group") or "General") == group]
     out = io.StringIO()
     w   = csv.writer(out)
     w.writerow(["#","Group","Symbol","Company","Sector","Theme","Mkt Cap","52W Low",
@@ -572,10 +575,11 @@ def api_export_csv():
             gm, f"{chg:+.2f}%", r.get("notes",""), r.get("last_updated",""),
         ])
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    grp_tag = f"_{group.replace(' ','_').upper()}" if group and group != "ALL" else ""
     return Response(
         out.getvalue().encode("utf-8"),
         mimetype="text/csv",
-        headers={"Content-Disposition": f"attachment; filename=FOCUS_WATCHLIST_LITE_{ts}.csv"},
+        headers={"Content-Disposition": f"attachment; filename=FOCUS_WATCHLIST_LITE{grp_tag}_{ts}.csv"},
     )
 
 @app.route("/api/import/csv", methods=["POST", "OPTIONS"])
