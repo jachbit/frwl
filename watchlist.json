@@ -2771,7 +2771,9 @@
     "symbol": "SPMO",
     "company": "Invesco S&P 500 Momentum ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 161.54,
     "fair_value": null,
     "mkt_cap": null,
