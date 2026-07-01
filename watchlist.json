@@ -160,7 +160,7 @@
     "ps": 116.62,
     "peg": null,
     "gross_margin": 48.8,
-    "chg_pct": 4.06,
+    "chg_pct": 4.61,
     "trend": [
       154.6,
       156.11,
@@ -193,7 +193,7 @@
     "ps": 0.65,
     "peg": 3.56,
     "gross_margin": 83.2,
-    "chg_pct": -0.83,
+    "chg_pct": -0.6,
     "trend": [
       45.88,
       47.42,
@@ -228,7 +228,7 @@
     "ps": 8.71,
     "peg": 1.15,
     "gross_margin": 68.3,
-    "chg_pct": 1.21,
+    "chg_pct": 0.44,
     "trend": [
       367.34,
       373.94,
@@ -264,7 +264,7 @@
     "ps": 53.54,
     "peg": 1.62,
     "gross_margin": 84.1,
-    "chg_pct": 0.84,
+    "chg_pct": 0.02,
     "trend": [
       119.5,
       116.7,
@@ -282,7 +282,7 @@
   "IGV": {
     "symbol": "IGV",
     "company": "iShares Expanded Tech-Software Sector ETF",
-    "cat": "ETF",
+    "cat": "\u2014",
     "theme": [
       "ETF"
     ],
@@ -297,7 +297,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 0.79,
+    "chg_pct": 0.47,
     "trend": [
       87.31,
       87.32,
@@ -309,7 +309,7 @@
     ],
     "last_updated": "2026-07-01T06:41:50.208354",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "NOW": {
@@ -331,7 +331,7 @@
     "ps": 7.33,
     "peg": 0.95,
     "gross_margin": 76.6,
-    "chg_pct": -0.69,
+    "chg_pct": -1.17,
     "trend": [
       93.01,
       95.94,
@@ -368,7 +368,7 @@
     "ps": 19.12,
     "peg": 0.59,
     "gross_margin": 74.1,
-    "chg_pct": 2.63,
+    "chg_pct": 2.55,
     "trend": [
       208.65,
       200.04,
@@ -406,7 +406,7 @@
     "ps": 23.81,
     "peg": 0.66,
     "gross_margin": 76.3,
-    "chg_pct": 1.42,
+    "chg_pct": 1.17,
     "trend": [
       392.13,
       380.15,
@@ -437,7 +437,7 @@
     "ps": 2.74,
     "peg": 6.18,
     "gross_margin": 39.6,
-    "chg_pct": -4.42,
+    "chg_pct": -4.22,
     "trend": [
       71.43,
       69.67,
@@ -470,7 +470,7 @@
     "ps": 1.29,
     "peg": null,
     "gross_margin": 93.2,
-    "chg_pct": -0.64,
+    "chg_pct": -0.32,
     "trend": [
       3.0,
       3.09,
@@ -501,7 +501,7 @@
     "ps": 2.76,
     "peg": null,
     "gross_margin": 78.4,
-    "chg_pct": -4.99,
+    "chg_pct": -3.15,
     "trend": [
       3.58,
       3.5,
@@ -532,7 +532,7 @@
     "ps": 0.04,
     "peg": null,
     "gross_margin": 20.6,
-    "chg_pct": -3.73,
+    "chg_pct": -5.15,
     "trend": [
       3.65,
       3.62,
@@ -599,7 +599,7 @@
     "ps": 654.67,
     "peg": null,
     "gross_margin": 20.0,
-    "chg_pct": 1.55,
+    "chg_pct": 1.76,
     "trend": [
       19.7,
       19.17,
@@ -632,7 +632,7 @@
     "ps": 106.25,
     "peg": null,
     "gross_margin": 36.1,
-    "chg_pct": -1.15,
+    "chg_pct": -1.1,
     "trend": [
       58.32,
       57.85,
@@ -666,7 +666,7 @@
     "ps": 714.16,
     "peg": null,
     "gross_margin": 66.3,
-    "chg_pct": 0.67,
+    "chg_pct": 0.65,
     "trend": [
       24.47,
       25.03,
@@ -701,7 +701,7 @@
     "ps": 641.17,
     "peg": null,
     "gross_margin": 30.0,
-    "chg_pct": -0.62,
+    "chg_pct": -0.41,
     "trend": [
       21.38,
       21.28,
@@ -736,7 +736,7 @@
     "ps": 79.87,
     "peg": 0.63,
     "gross_margin": 72.1,
-    "chg_pct": 5.75,
+    "chg_pct": 4.76,
     "trend": [
       283.61,
       275.25,
@@ -771,7 +771,7 @@
     "ps": 21.59,
     "peg": 3.11,
     "gross_margin": 68.4,
-    "chg_pct": -0.39,
+    "chg_pct": -1.03,
     "trend": [
       56.87,
       54.72,
@@ -809,7 +809,7 @@
     "ps": 8.72,
     "peg": null,
     "gross_margin": 69.4,
-    "chg_pct": 4.22,
+    "chg_pct": 3.96,
     "trend": [
       111.29,
       105.72,
@@ -846,7 +846,7 @@
     "ps": 33.39,
     "peg": 1.83,
     "gross_margin": 45.4,
-    "chg_pct": -1.24,
+    "chg_pct": -1.75,
     "trend": [
       45.2,
       45.27,
@@ -881,7 +881,7 @@
     "ps": 11.69,
     "peg": 4.14,
     "gross_margin": 87.2,
-    "chg_pct": 9.6,
+    "chg_pct": 8.41,
     "trend": [
       48.41,
       45.48,
@@ -914,7 +914,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 4.08,
+    "chg_pct": 3.16,
     "trend": [
       29.75,
       28.74,
@@ -947,7 +947,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.53,
+    "chg_pct": 2.1,
     "trend": [
       83.5082,
       84.1376,
@@ -959,7 +959,7 @@
     ],
     "last_updated": "2026-07-01T06:42:15.450151",
     "notes": "",
-    "group": "ETF",
+    "group": "Cyber",
     "alarm": null
   },
   "PANW": {
@@ -983,7 +983,7 @@
     "ps": 26.2,
     "peg": 4.96,
     "gross_margin": 72.0,
-    "chg_pct": 2.72,
+    "chg_pct": 2.73,
     "trend": [
       286.4,
       290.92,
@@ -1019,7 +1019,7 @@
     "ps": 38.14,
     "peg": 5.71,
     "gross_margin": 75.1,
-    "chg_pct": 2.72,
+    "chg_pct": 2.38,
     "trend": [
       684.86,
       675.44,
@@ -1054,7 +1054,7 @@
     "ps": 25.24,
     "peg": 1.49,
     "gross_margin": 79.9,
-    "chg_pct": 4.74,
+    "chg_pct": 4.24,
     "trend": [
       221.37,
       220.57,
@@ -1092,7 +1092,7 @@
     "ps": 2.04,
     "peg": 3.41,
     "gross_margin": 12.1,
-    "chg_pct": -0.15,
+    "chg_pct": 1.85,
     "trend": [
       483.08,
       468.0,
@@ -1125,7 +1125,7 @@
     "ps": 2.12,
     "peg": null,
     "gross_margin": 12.5,
-    "chg_pct": 5.05,
+    "chg_pct": 5.02,
     "trend": [
       25.06,
       25.07,
@@ -1156,7 +1156,7 @@
     "ps": 0.94,
     "peg": 0.21,
     "gross_margin": 19.9,
-    "chg_pct": 0.53,
+    "chg_pct": 0.86,
     "trend": [
       85.92,
       86.72,
@@ -1190,7 +1190,7 @@
     "ps": 6.27,
     "peg": 0.84,
     "gross_margin": 65.8,
-    "chg_pct": -0.82,
+    "chg_pct": -1.38,
     "trend": [
       175.07,
       165.16,
@@ -1225,7 +1225,7 @@
     "ps": 10.32,
     "peg": 1.33,
     "gross_margin": 60.4,
-    "chg_pct": 1.05,
+    "chg_pct": 1.17,
     "trend": [
       349.68,
       346.13,
@@ -1259,7 +1259,7 @@
     "ps": 7.19,
     "peg": 1.44,
     "gross_margin": 76.7,
-    "chg_pct": 2.58,
+    "chg_pct": 2.84,
     "trend": [
       124.06,
       126.17,
@@ -1292,7 +1292,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 4.3,
+    "chg_pct": 4.19,
     "trend": [
       655.01,
       603.39,
@@ -1326,7 +1326,7 @@
     "ps": 8.55,
     "peg": 0.78,
     "gross_margin": 0.0,
-    "chg_pct": 1.75,
+    "chg_pct": 1.9,
     "trend": [
       12.79,
       12.59,
@@ -1359,7 +1359,7 @@
     "ps": 10.74,
     "peg": null,
     "gross_margin": 20.7,
-    "chg_pct": 0.88,
+    "chg_pct": 0.6,
     "trend": [
       790.0,
       736.77,
@@ -1393,7 +1393,7 @@
     "ps": 2.15,
     "peg": 1.79,
     "gross_margin": 12.8,
-    "chg_pct": -3.04,
+    "chg_pct": -2.99,
     "trend": [
       406.32,
       390.44,
@@ -1460,7 +1460,7 @@
     "ps": 14.85,
     "peg": 1.39,
     "gross_margin": 42.2,
-    "chg_pct": 10.93,
+    "chg_pct": 10.3,
     "trend": [
       156.66,
       142.79,
@@ -1495,7 +1495,7 @@
     "ps": 9.83,
     "peg": 1.41,
     "gross_margin": 62.1,
-    "chg_pct": 2.92,
+    "chg_pct": 3.06,
     "trend": [
       373.34,
       352.58,
@@ -1529,7 +1529,7 @@
     "ps": 504.77,
     "peg": null,
     "gross_margin": -15.4,
-    "chg_pct": -2.22,
+    "chg_pct": -2.02,
     "trend": [
       10.54,
       10.49,
@@ -1566,7 +1566,7 @@
     "ps": 0.01,
     "peg": null,
     "gross_margin": 35.6,
-    "chg_pct": -1.34,
+    "chg_pct": -1.73,
     "trend": [
       19.68,
       19.6,
@@ -1599,7 +1599,7 @@
     "ps": 6.54,
     "peg": null,
     "gross_margin": 27.5,
-    "chg_pct": -1.0,
+    "chg_pct": -3.58,
     "trend": [
       8.45,
       7.73,
@@ -1632,7 +1632,7 @@
     "ps": 1240.65,
     "peg": null,
     "gross_margin": 74.4,
-    "chg_pct": 12.22,
+    "chg_pct": 10.92,
     "trend": [
       68.27,
       77.46,
@@ -1667,7 +1667,7 @@
     "ps": 1.88,
     "peg": 2.13,
     "gross_margin": 36.9,
-    "chg_pct": -1.71,
+    "chg_pct": -2.22,
     "trend": [
       228.11,
       222.37,
@@ -1702,7 +1702,7 @@
     "ps": 13.55,
     "peg": 1.78,
     "gross_margin": 31.3,
-    "chg_pct": 7.04,
+    "chg_pct": 6.4,
     "trend": [
       65.2,
       66.44,
@@ -1768,7 +1768,7 @@
     "ps": 728.49,
     "peg": null,
     "gross_margin": 91.6,
-    "chg_pct": -3.33,
+    "chg_pct": -5.4,
     "trend": [
       15.16,
       13.28,
@@ -1792,7 +1792,7 @@
       "Space",
       "Energy"
     ],
-    "live_price": 10.9,
+    "live_price": 10.91,
     "fair_value": null,
     "mkt_cap": "$19.62M",
     "mkt_cap_raw": 19621356,
@@ -1803,7 +1803,7 @@
     "ps": 19.48,
     "peg": 1.02,
     "gross_margin": 33.4,
-    "chg_pct": -10.47,
+    "chg_pct": -11.66,
     "trend": [
       11.27,
       11.78,
@@ -1837,7 +1837,7 @@
     "ps": 0.3,
     "peg": null,
     "gross_margin": 20.0,
-    "chg_pct": 20.81,
+    "chg_pct": -8.95,
     "trend": [
       0.161,
       0.147,
@@ -1868,7 +1868,7 @@
     "ps": 1.74,
     "peg": null,
     "gross_margin": 66.9,
-    "chg_pct": 0.75,
+    "chg_pct": -1.47,
     "trend": [
       3.44,
       3.17,
@@ -1901,7 +1901,7 @@
     "ps": 23.45,
     "peg": 0.78,
     "gross_margin": 29.6,
-    "chg_pct": -1.29,
+    "chg_pct": -0.7,
     "trend": [
       171.23,
       147.44,
@@ -1938,7 +1938,7 @@
     "ps": 26.83,
     "peg": 0.63,
     "gross_margin": 40.8,
-    "chg_pct": 0.78,
+    "chg_pct": 1.35,
     "trend": [
       893.93,
       827.92,
@@ -1971,7 +1971,7 @@
     "ps": 11.69,
     "peg": 0.92,
     "gross_margin": 37.0,
-    "chg_pct": 0.83,
+    "chg_pct": 1.64,
     "trend": [
       425.48,
       381.22,
@@ -2076,7 +2076,7 @@
     "ps": 9.22,
     "peg": 3.08,
     "gross_margin": 30.1,
-    "chg_pct": 1.87,
+    "chg_pct": 1.01,
     "trend": [
       307.8,
       291.5,
@@ -2109,7 +2109,7 @@
     "ps": 3.42,
     "peg": 4.21,
     "gross_margin": 38.6,
-    "chg_pct": 2.06,
+    "chg_pct": 1.86,
     "trend": [
       69.21,
       64.4,
@@ -2142,7 +2142,7 @@
     "ps": 3.44,
     "peg": 5.58,
     "gross_margin": 55.8,
-    "chg_pct": -1.83,
+    "chg_pct": -2.0,
     "trend": [
       41.58,
       42.88,
@@ -2173,7 +2173,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -1.17,
+    "chg_pct": -1.84,
     "trend": [
       41.7,
       41.74,
@@ -2209,7 +2209,7 @@
     "ps": 40.61,
     "peg": null,
     "gross_margin": 32.0,
-    "chg_pct": 4.65,
+    "chg_pct": 3.75,
     "trend": [
       6.77,
       6.47,
@@ -2244,7 +2244,7 @@
     "ps": 7.6,
     "peg": 2.79,
     "gross_margin": 28.7,
-    "chg_pct": 10.99,
+    "chg_pct": 11.8,
     "trend": [
       111.76,
       110.87,
@@ -2313,7 +2313,7 @@
     "ps": 6.56,
     "peg": null,
     "gross_margin": 12.9,
-    "chg_pct": 4.62,
+    "chg_pct": 1.86,
     "trend": [
       13.02,
       12.22,
@@ -2351,7 +2351,7 @@
     "ps": 0.6,
     "peg": 4.93,
     "gross_margin": 18.9,
-    "chg_pct": -0.68,
+    "chg_pct": -1.06,
     "trend": [
       6.835,
       7.27,
@@ -2384,7 +2384,7 @@
     "ps": 1.7,
     "peg": null,
     "gross_margin": 40.7,
-    "chg_pct": 6.29,
+    "chg_pct": 4.86,
     "trend": [
       73.42,
       72.79,
@@ -2415,7 +2415,7 @@
     "ps": 2.72,
     "peg": 3.32,
     "gross_margin": 31.4,
-    "chg_pct": 0.18,
+    "chg_pct": -0.19,
     "trend": [
       164.17,
       164.35,
@@ -2448,7 +2448,7 @@
     "ps": 0.31,
     "peg": null,
     "gross_margin": 27.2,
-    "chg_pct": 0.81,
+    "chg_pct": 0.8,
     "trend": [
       1.31,
       1.3,
@@ -2479,7 +2479,7 @@
     "ps": 0.01,
     "peg": null,
     "gross_margin": 31.9,
-    "chg_pct": 4.08,
+    "chg_pct": 1.27,
     "trend": [
       2.25,
       2.24,
@@ -2514,7 +2514,7 @@
     "ps": 35.16,
     "peg": 1.34,
     "gross_margin": 30.1,
-    "chg_pct": 10.07,
+    "chg_pct": 9.36,
     "trend": [
       345.85,
       321.98,
@@ -2548,7 +2548,7 @@
     "ps": 14.44,
     "peg": 0.17,
     "gross_margin": 72.6,
-    "chg_pct": 0.79,
+    "chg_pct": 1.37,
     "trend": [
       1211.38,
       1051.77,
@@ -2583,7 +2583,7 @@
     "ps": 12.42,
     "peg": null,
     "gross_margin": -101.9,
-    "chg_pct": -3.45,
+    "chg_pct": -4.08,
     "trend": [
       7.34,
       6.49,
@@ -2617,7 +2617,7 @@
     "ps": 0.18,
     "peg": null,
     "gross_margin": 100.0,
-    "chg_pct": -4.17,
+    "chg_pct": -3.73,
     "trend": [
       33.12,
       31.35,
@@ -2653,7 +2653,7 @@
     "ps": 47.76,
     "peg": null,
     "gross_margin": 12.4,
-    "chg_pct": -1.33,
+    "chg_pct": -1.72,
     "trend": [
       28.14,
       27.64,
@@ -2672,7 +2672,9 @@
     "symbol": "QQQM",
     "company": "Invesco NASDAQ 100 ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 302.97,
     "fair_value": null,
     "mkt_cap": null,
@@ -2684,7 +2686,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.65,
+    "chg_pct": 1.67,
     "trend": [
       303.9,
       293.87,
@@ -2696,7 +2698,7 @@
     ],
     "last_updated": "2026-07-01T06:43:33.706718",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "ARKQ": {
@@ -2717,7 +2719,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.98,
+    "chg_pct": 2.29,
     "trend": [
       130.04,
       126.36,
@@ -2750,7 +2752,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 3.78,
+    "chg_pct": 3.62,
     "trend": [
       668.91,
       622.05,
@@ -2769,7 +2771,9 @@
     "symbol": "SPMO",
     "company": "Invesco S&P 500 Momentum ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 161.54,
     "fair_value": null,
     "mkt_cap": null,
@@ -2793,14 +2797,16 @@
     ],
     "last_updated": "2026-07-01T06:43:37.704831",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "VLU": {
     "symbol": "VLU",
     "company": "State Street SPDR S&P 1500 Value Tilt ETF",
     "cat": "\u2014",
-    "theme": [],
+    "theme": [
+      "ETF"
+    ],
     "live_price": 238.21,
     "fair_value": null,
     "mkt_cap": null,
@@ -2824,7 +2830,7 @@
     ],
     "last_updated": "2026-07-01T06:43:39.102566",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "IAU": {
@@ -2843,7 +2849,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -0.03,
+    "chg_pct": -0.02,
     "trend": [
       78.8,
       77.33,
@@ -2874,7 +2880,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.5,
+    "chg_pct": 1.21,
     "trend": [
       58.91,
       55.73,
@@ -2892,10 +2898,8 @@
   "DRAM": {
     "symbol": "DRAM",
     "company": "Roundhill Memory ETF",
-    "cat": "ETF",
-    "theme": [
-      "ETF"
-    ],
+    "cat": "\u2014",
+    "theme": [],
     "live_price": 73.85,
     "fair_value": null,
     "mkt_cap": null,
@@ -2907,7 +2911,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.65,
+    "chg_pct": 2.9,
     "trend": [
       80.72,
       69.22,
@@ -2919,7 +2923,7 @@
     ],
     "last_updated": "2026-07-01T06:43:43.107761",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "EUV": {
@@ -2940,7 +2944,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 5.54,
+    "chg_pct": 5.3,
     "trend": [
       31.08,
       28.77,
@@ -2973,7 +2977,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.84,
+    "chg_pct": 2.59,
     "trend": [
       168.3213,
       163.07,
@@ -3006,7 +3010,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.38,
+    "chg_pct": 1.43,
     "trend": [
       235.51,
       235.93,
@@ -3039,7 +3043,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -0.88,
+    "chg_pct": -0.93,
     "trend": [
       54.06,
       54.46,
@@ -3073,7 +3077,7 @@
     "ps": 2.97,
     "peg": 3.74,
     "gross_margin": 23.3,
-    "chg_pct": -4.22,
+    "chg_pct": -4.33,
     "trend": [
       275.53,
       270.26,
@@ -3108,7 +3112,7 @@
     "ps": 6.57,
     "peg": 1.95,
     "gross_margin": 61.4,
-    "chg_pct": -1.0,
+    "chg_pct": -0.26,
     "trend": [
       86.08,
       86.43,
@@ -3143,7 +3147,7 @@
     "ps": 12.54,
     "peg": 1.92,
     "gross_margin": 36.8,
-    "chg_pct": -1.56,
+    "chg_pct": -0.53,
     "trend": [
       107.07,
       108.89,
@@ -3176,7 +3180,7 @@
     "ps": 258.7,
     "peg": 1.37,
     "gross_margin": 0.0,
-    "chg_pct": -1.57,
+    "chg_pct": -1.3,
     "trend": [
       11.47,
       11.34,
@@ -3209,7 +3213,7 @@
     "ps": 42.7,
     "peg": null,
     "gross_margin": 34.6,
-    "chg_pct": -0.62,
+    "chg_pct": -0.55,
     "trend": [
       16.12,
       15.47,
@@ -3243,7 +3247,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -0.82,
+    "chg_pct": -0.93,
     "trend": [
       58.4,
       57.19,
@@ -3277,7 +3281,7 @@
     "ps": 185.95,
     "peg": null,
     "gross_margin": 23.8,
-    "chg_pct": -2.24,
+    "chg_pct": -2.15,
     "trend": [
       11.24,
       10.86,
@@ -3312,7 +3316,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -0.84,
+    "chg_pct": -1.45,
     "trend": [
       25.64,
       23.9,
@@ -3348,7 +3352,7 @@
     "ps": 5.28,
     "peg": 1.67,
     "gross_margin": 22.7,
-    "chg_pct": 2.85,
+    "chg_pct": 2.42,
     "trend": [
       210.0,
       209.89,
@@ -3384,7 +3388,7 @@
     "ps": 14.5,
     "peg": 0.36,
     "gross_margin": -18.2,
-    "chg_pct": 20.84,
+    "chg_pct": 17.91,
     "trend": [
       24.39,
       21.82,
@@ -3417,7 +3421,7 @@
     "ps": 3.39,
     "peg": 2.15,
     "gross_margin": 72.9,
-    "chg_pct": 3.83,
+    "chg_pct": 4.87,
     "trend": [
       33.54,
       32.96,
@@ -3435,10 +3439,8 @@
   "UVXY": {
     "symbol": "UVXY",
     "company": "ProShares Ultra VIX Short-Term Futures ETF",
-    "cat": "ETF",
-    "theme": [
-      "ETF"
-    ],
+    "cat": "\u2014",
+    "theme": [],
     "live_price": 24.89,
     "fair_value": null,
     "mkt_cap": null,
@@ -3450,7 +3452,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -3.19,
+    "chg_pct": -3.53,
     "trend": [
       25.86,
       28.0,
@@ -3462,7 +3464,7 @@
     ],
     "last_updated": "2026-07-01T06:44:04.451856",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "MITK": {
@@ -3483,7 +3485,7 @@
     "ps": 4.79,
     "peg": 1.38,
     "gross_margin": 83.5,
-    "chg_pct": 2.76,
+    "chg_pct": 4.14,
     "trend": [
       17.31,
       17.32,
@@ -3501,10 +3503,8 @@
   "EWY": {
     "symbol": "EWY",
     "company": "iShares MSCI South Korea ETF",
-    "cat": "ETF",
-    "theme": [
-      "ETF"
-    ],
+    "cat": "\u2014",
+    "theme": [],
     "live_price": 201.9,
     "fair_value": null,
     "mkt_cap": null,
@@ -3516,7 +3516,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.23,
+    "chg_pct": 2.32,
     "trend": [
       219.02,
       192.2,
@@ -3528,16 +3528,14 @@
     ],
     "last_updated": "2026-07-01T06:44:07.182140",
     "notes": "",
-    "group": "General",
+    "group": "ETF",
     "alarm": null
   },
   "IEMG": {
     "symbol": "IEMG",
     "company": "iShares Core MSCI Emerging Markets ETF",
-    "cat": "ETF",
-    "theme": [
-      "ETF"
-    ],
+    "cat": "\u2014",
+    "theme": [],
     "live_price": 82.84,
     "fair_value": null,
     "mkt_cap": null,
@@ -3549,7 +3547,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 1.37,
+    "chg_pct": 1.94,
     "trend": [
       86.0,
       81.32,
@@ -3582,7 +3580,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 3.97,
+    "chg_pct": 3.86,
     "trend": [
       115.11,
       106.11,
@@ -3615,7 +3613,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 5.24,
+    "chg_pct": 5.41,
     "trend": [
       648.22,
       603.65,
@@ -3633,10 +3631,8 @@
   "VGT": {
     "symbol": "VGT",
     "company": "Vanguard Information Technology Index Fund ETF Shares",
-    "cat": "\u2014",
-    "theme": [
-      "ETF"
-    ],
+    "cat": "ETF",
+    "theme": [],
     "live_price": 119.52,
     "fair_value": null,
     "mkt_cap": null,
@@ -3648,7 +3644,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 2.59,
+    "chg_pct": 2.74,
     "trend": [
       120.3667,
       115.932,
@@ -3684,7 +3680,7 @@
     "ps": 1.03,
     "peg": 1.02,
     "gross_margin": 76.5,
-    "chg_pct": 0.27,
+    "chg_pct": 3.02,
     "trend": [
       20.01,
       21.16,
@@ -3718,7 +3714,7 @@
     "ps": 5.95,
     "peg": 0.98,
     "gross_margin": 64.5,
-    "chg_pct": 2.35,
+    "chg_pct": 1.59,
     "trend": [
       68.78,
       68.75,
@@ -3786,7 +3782,7 @@
     "ps": 1.54,
     "peg": 0.85,
     "gross_margin": 33.8,
-    "chg_pct": 1.58,
+    "chg_pct": 1.46,
     "trend": [
       48.4,
       48.92,
@@ -3820,7 +3816,7 @@
     "ps": 0.28,
     "peg": 0.43,
     "gross_margin": -2.9,
-    "chg_pct": 0.11,
+    "chg_pct": -0.03,
     "trend": [
       11.89,
       11.16,
@@ -3857,7 +3853,7 @@
     "ps": 20.0,
     "peg": 1.73,
     "gross_margin": 58.7,
-    "chg_pct": 4.45,
+    "chg_pct": 4.93,
     "trend": [
       457.0,
       420.12,
@@ -3892,7 +3888,7 @@
     "ps": 7.63,
     "peg": null,
     "gross_margin": 63.4,
-    "chg_pct": -0.65,
+    "chg_pct": -0.22,
     "trend": [
       47.85,
       48.61,
@@ -3923,7 +3919,7 @@
     "ps": 13.51,
     "peg": 1.2,
     "gross_margin": 91.4,
-    "chg_pct": -0.46,
+    "chg_pct": -0.38,
     "trend": [
       170.44,
       165.63,
@@ -3956,7 +3952,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": -2.6,
+    "chg_pct": -2.4,
     "trend": [
       36.5,
       35.31,
@@ -4023,7 +4019,7 @@
     "ps": 19.58,
     "peg": 2.67,
     "gross_margin": 92.2,
-    "chg_pct": -1.52,
+    "chg_pct": -1.91,
     "trend": [
       105.71,
       103.25,
@@ -4054,7 +4050,7 @@
     "ps": 5.71,
     "peg": null,
     "gross_margin": 76.3,
-    "chg_pct": -3.41,
+    "chg_pct": -2.83,
     "trend": [
       6.86,
       6.64,
@@ -4088,7 +4084,7 @@
     "ps": 28.69,
     "peg": null,
     "gross_margin": 37.2,
-    "chg_pct": 2.32,
+    "chg_pct": 1.85,
     "trend": [
       60.29,
       58.9,
@@ -4124,7 +4120,7 @@
     "ps": 13.8,
     "peg": null,
     "gross_margin": 25.8,
-    "chg_pct": 1.94,
+    "chg_pct": 1.1,
     "trend": [
       3.83,
       3.77,
@@ -4158,7 +4154,7 @@
     "ps": 6.65,
     "peg": 0.8,
     "gross_margin": 81.9,
-    "chg_pct": 0.12,
+    "chg_pct": -0.03,
     "trend": [
       563.85,
       562.2,
@@ -4193,7 +4189,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -0.1,
+    "chg_pct": -0.93,
     "trend": [
       10.7,
       11.57,
@@ -4228,7 +4224,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 6.64,
+    "chg_pct": -0.73,
     "trend": [
       12.18,
       10.55,
@@ -4259,7 +4255,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -3.45,
+    "chg_pct": -4.43,
     "trend": [
       38.5,
       36.93,
@@ -4327,7 +4323,7 @@
     "ps": 10.65,
     "peg": 0.7,
     "gross_margin": 48.1,
-    "chg_pct": 0.42,
+    "chg_pct": -0.65,
     "trend": [
       336.9,
       319.0,
@@ -4362,7 +4358,7 @@
     "ps": 77.79,
     "peg": null,
     "gross_margin": 37.7,
-    "chg_pct": -0.67,
+    "chg_pct": 0.27,
     "trend": [
       23.345,
       21.84,
@@ -4397,7 +4393,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 20.43,
+    "chg_pct": 19.4,
     "trend": [
       4.88,
       5.03,
@@ -4432,7 +4428,7 @@
     "ps": 21.75,
     "peg": null,
     "gross_margin": 18.1,
-    "chg_pct": 2.51,
+    "chg_pct": 1.18,
     "trend": [
       15.65,
       14.12,
@@ -4467,7 +4463,7 @@
     "ps": 9.96,
     "peg": null,
     "gross_margin": 51.5,
-    "chg_pct": 7.32,
+    "chg_pct": 8.27,
     "trend": [
       25.53,
       22.55,
@@ -4500,7 +4496,7 @@
     "ps": 9.99,
     "peg": 5.41,
     "gross_margin": 62.7,
-    "chg_pct": 3.45,
+    "chg_pct": 2.51,
     "trend": [
       189.91,
       178.57,
@@ -4533,7 +4529,7 @@
     "ps": 4.45,
     "peg": null,
     "gross_margin": 55.3,
-    "chg_pct": -0.3,
+    "chg_pct": -1.62,
     "trend": [
       27.91,
       25.36,
@@ -4564,7 +4560,7 @@
     "ps": 6.24,
     "peg": 2.17,
     "gross_margin": 46.8,
-    "chg_pct": -1.0,
+    "chg_pct": -1.06,
     "trend": [
       46.2,
       46.16,
@@ -4598,7 +4594,7 @@
     "ps": 10.49,
     "peg": 0.32,
     "gross_margin": 57.7,
-    "chg_pct": 2.4,
+    "chg_pct": 1.57,
     "trend": [
       102.71,
       93.26,
@@ -4632,7 +4628,7 @@
     "ps": 17.35,
     "peg": null,
     "gross_margin": -178.9,
-    "chg_pct": 3.03,
+    "chg_pct": 1.51,
     "trend": [
       1.43,
       1.41,
@@ -4665,7 +4661,7 @@
     "ps": 1.38,
     "peg": 0.55,
     "gross_margin": 72.3,
-    "chg_pct": -1.18,
+    "chg_pct": -1.27,
     "trend": [
       34.2,
       34.22,
@@ -4700,7 +4696,7 @@
     "ps": 1.28,
     "peg": 0.9,
     "gross_margin": 15.3,
-    "chg_pct": -0.41,
+    "chg_pct": -1.13,
     "trend": [
       35.17,
       35.11,
@@ -4734,7 +4730,7 @@
     "ps": 1.54,
     "peg": 1.49,
     "gross_margin": 14.3,
-    "chg_pct": 0.27,
+    "chg_pct": 0.55,
     "trend": [
       36.42,
       37.13,
@@ -4768,7 +4764,7 @@
     "ps": 8.23,
     "peg": 3.39,
     "gross_margin": 79.8,
-    "chg_pct": -5.19,
+    "chg_pct": -5.1,
     "trend": [
       19.08,
       18.99,
@@ -4801,7 +4797,7 @@
     "ps": 3.54,
     "peg": 1.47,
     "gross_margin": 69.1,
-    "chg_pct": -2.67,
+    "chg_pct": -2.58,
     "trend": [
       4.8,
       4.81,
@@ -4837,7 +4833,7 @@
     "ps": 719.21,
     "peg": null,
     "gross_margin": 4.1,
-    "chg_pct": 2.57,
+    "chg_pct": 2.51,
     "trend": [
       24.12,
       22.89,
@@ -4871,7 +4867,7 @@
     "ps": 453.63,
     "peg": null,
     "gross_margin": 66.6,
-    "chg_pct": -3.55,
+    "chg_pct": -3.13,
     "trend": [
       15.86,
       15.13,
@@ -4904,7 +4900,7 @@
     "ps": 2.87,
     "peg": 0.28,
     "gross_margin": 89.1,
-    "chg_pct": -1.64,
+    "chg_pct": -2.18,
     "trend": [
       70.36,
       70.01,
@@ -4939,7 +4935,7 @@
     "ps": 3.1,
     "peg": 1.09,
     "gross_margin": 66.5,
-    "chg_pct": 3.43,
+    "chg_pct": 2.2,
     "trend": [
       19.21,
       19.26,
@@ -5012,7 +5008,7 @@
     "ps": 10.59,
     "peg": null,
     "gross_margin": 69.3,
-    "chg_pct": -1.52,
+    "chg_pct": -4.42,
     "trend": [
       28.54,
       26.9,
@@ -5047,7 +5043,7 @@
     "ps": 64.83,
     "peg": null,
     "gross_margin": -145.9,
-    "chg_pct": -2.09,
+    "chg_pct": -2.76,
     "trend": [
       3.1,
       2.94,
@@ -5080,7 +5076,7 @@
     "ps": 6.51,
     "peg": null,
     "gross_margin": 49.8,
-    "chg_pct": 3.39,
+    "chg_pct": 4.28,
     "trend": [
       5.54,
       5.54,
@@ -5116,7 +5112,7 @@
     "ps": 11.86,
     "peg": 1.52,
     "gross_margin": 37.2,
-    "chg_pct": 9.07,
+    "chg_pct": 8.95,
     "trend": [
       357.96,
       318.32,
@@ -5150,7 +5146,7 @@
     "ps": 21.48,
     "peg": null,
     "gross_margin": 47.7,
-    "chg_pct": 15.63,
+    "chg_pct": 16.97,
     "trend": [
       47.68,
       45.16,
@@ -5185,7 +5181,7 @@
     "ps": 81.56,
     "peg": null,
     "gross_margin": 40.3,
-    "chg_pct": 2.24,
+    "chg_pct": 2.81,
     "trend": [
       224.43,
       226.72,
@@ -5216,7 +5212,7 @@
     "ps": 7.35,
     "peg": 8.18,
     "gross_margin": 24.1,
-    "chg_pct": 0.07,
+    "chg_pct": -0.13,
     "trend": [
       47.27,
       47.11,
@@ -5249,7 +5245,7 @@
     "ps": 37.98,
     "peg": null,
     "gross_margin": 68.0,
-    "chg_pct": 10.69,
+    "chg_pct": 10.99,
     "trend": [
       302.52,
       272.005,
@@ -5283,7 +5279,7 @@
     "ps": 3.88,
     "peg": 5.36,
     "gross_margin": 12.3,
-    "chg_pct": 6.94,
+    "chg_pct": 3.36,
     "trend": [
       2.77,
       2.69,
@@ -5352,7 +5348,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -6.93,
+    "chg_pct": -6.92,
     "trend": [
       4.355,
       4.645,
@@ -5418,7 +5414,7 @@
     "ps": 9.49,
     "peg": null,
     "gross_margin": -0.8,
-    "chg_pct": -4.51,
+    "chg_pct": -3.79,
     "trend": [
       3.99,
       3.86,
@@ -5452,7 +5448,7 @@
     "ps": 19.13,
     "peg": 7.2,
     "gross_margin": 24.8,
-    "chg_pct": 1.98,
+    "chg_pct": 2.24,
     "trend": [
       316.85,
       282.65,
@@ -5485,7 +5481,7 @@
     "ps": 11.98,
     "peg": 2.1,
     "gross_margin": 48.0,
-    "chg_pct": -0.03,
+    "chg_pct": 0.07,
     "trend": [
       107.98,
       107.68,
@@ -5519,7 +5515,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -2.12,
+    "chg_pct": -2.19,
     "trend": [
       15.8,
       14.59,
@@ -5552,7 +5548,7 @@
     "ps": 1899.13,
     "peg": null,
     "gross_margin": 15.8,
-    "chg_pct": 1.07,
+    "chg_pct": 0.64,
     "trend": [
       5.43,
       5.25,
@@ -5585,7 +5581,7 @@
     "ps": 6.64,
     "peg": 2.48,
     "gross_margin": 71.6,
-    "chg_pct": 0.48,
+    "chg_pct": 0.43,
     "trend": [
       43.3,
       44.16,
@@ -5618,7 +5614,7 @@
     "ps": 93.46,
     "peg": null,
     "gross_margin": 36.6,
-    "chg_pct": 3.78,
+    "chg_pct": 0.46,
     "trend": [
       100.29,
       95.12,
@@ -5651,7 +5647,7 @@
     "ps": 406.06,
     "peg": null,
     "gross_margin": 44.8,
-    "chg_pct": 2.41,
+    "chg_pct": 1.85,
     "trend": [
       73.19,
       72.87,
@@ -5684,7 +5680,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": null,
-    "chg_pct": 3.01,
+    "chg_pct": 2.36,
     "trend": [
       48.6588,
       48.0696,
@@ -5715,7 +5711,7 @@
     "ps": 0.21,
     "peg": 0.89,
     "gross_margin": 27.0,
-    "chg_pct": -4.76,
+    "chg_pct": -8.77,
     "trend": [
       11.41,
       11.58,
@@ -5749,7 +5745,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": -4.47,
+    "chg_pct": -6.29,
     "trend": [
       8.53,
       9.07,
@@ -5816,7 +5812,7 @@
     "ps": 0.23,
     "peg": null,
     "gross_margin": 35.3,
-    "chg_pct": -49.92,
+    "chg_pct": -39.0,
     "trend": [
       2.85,
       3.04,
@@ -5852,7 +5848,7 @@
     "ps": 0.56,
     "peg": 0.91,
     "gross_margin": 8.4,
-    "chg_pct": 4.19,
+    "chg_pct": 2.73,
     "trend": [
       35.46,
       33.32,
@@ -5888,7 +5884,7 @@
     "ps": 29.7,
     "peg": null,
     "gross_margin": 7.5,
-    "chg_pct": 3.2,
+    "chg_pct": 0.19,
     "trend": [
       10.63,
       10.18,
@@ -5923,7 +5919,7 @@
     "ps": 1257.02,
     "peg": null,
     "gross_margin": 100.0,
-    "chg_pct": 4.37,
+    "chg_pct": 2.9,
     "trend": [
       12.09,
       10.73,
@@ -5958,7 +5954,7 @@
     "ps": null,
     "peg": null,
     "gross_margin": 0.0,
-    "chg_pct": 4.73,
+    "chg_pct": 4.32,
     "trend": [
       4.95,
       4.82,
@@ -5991,7 +5987,7 @@
     "ps": 1.21,
     "peg": null,
     "gross_margin": 50.5,
-    "chg_pct": -1.9,
+    "chg_pct": -1.64,
     "trend": [
       4.34,
       4.24,
@@ -6022,7 +6018,7 @@
     "ps": 1.31,
     "peg": 1.45,
     "gross_margin": 40.9,
-    "chg_pct": -1.04,
+    "chg_pct": -1.23,
     "trend": [
       43.19,
       42.38,
@@ -6053,7 +6049,7 @@
     "ps": 2.62,
     "peg": 2.59,
     "gross_margin": 51.7,
-    "chg_pct": -0.41,
+    "chg_pct": -0.65,
     "trend": [
       141.51,
       143.38,
@@ -6088,7 +6084,7 @@
     "ps": 1.43,
     "peg": 1.13,
     "gross_margin": 85.3,
-    "chg_pct": -0.77,
+    "chg_pct": -1.93,
     "trend": [
       27.66,
       28.84,
@@ -6119,7 +6115,7 @@
     "ps": 0.72,
     "peg": 1.35,
     "gross_margin": 34.1,
-    "chg_pct": 0.42,
+    "chg_pct": 0.98,
     "trend": [
       6.17,
       6.26,
@@ -6150,7 +6146,7 @@
     "ps": 2.65,
     "peg": 0.31,
     "gross_margin": 34.4,
-    "chg_pct": 0.23,
+    "chg_pct": 0.68,
     "trend": [
       21.14,
       21.08,
@@ -6181,7 +6177,7 @@
     "ps": 0.34,
     "peg": 12.22,
     "gross_margin": 16.0,
-    "chg_pct": -6.4,
+    "chg_pct": -6.86,
     "trend": [
       2.76,
       2.08,
@@ -6215,7 +6211,7 @@
     "ps": 5.05,
     "peg": null,
     "gross_margin": 50.7,
-    "chg_pct": -5.34,
+    "chg_pct": -5.76,
     "trend": [
       17.45,
       17.19,
@@ -6249,7 +6245,7 @@
     "ps": 9.41,
     "peg": 2.29,
     "gross_margin": 47.9,
-    "chg_pct": 2.7,
+    "chg_pct": 2.88,
     "trend": [
       297.01,
       294.3,
@@ -6283,7 +6279,7 @@
     "ps": 3.45,
     "peg": 1.83,
     "gross_margin": 50.6,
-    "chg_pct": -0.75,
+    "chg_pct": -0.84,
     "trend": [
       232.79,
       234.11,
