@@ -834,25 +834,29 @@ async function _fetchOnePrice(sym) {
 }
 async function fetchLivePrices() {
   if (!watchlist.length) return;
-  const results = await Promise.allSettled(
-    watchlist.map(r => _fetchOnePrice(r.symbol).then(d => ({ sym: r.symbol, d })))
-  );
-  let updated = 0;
-  results.forEach(res => {
-    if (res.status !== 'fulfilled' || !res.value.d) return;
-    const { sym, d } = res.value;
-    const r = watchlist.find(x => x.symbol === sym);
-    if (r) { r.live_price = d.price; r.chg_pct = d.chg; updated++; }
-  });
-  if (updated) {
-    renderTable(); checkAlarms();
-    const yfCount = watchlist.length - updated;
-    const srcEl = document.getElementById('stat-source');
-    if (srcEl) {
-      const parts = [`Proxy(${updated})`];
-      if (yfCount > 0) parts.push(`yFinance(${yfCount})`);
-      srcEl.textContent = parts.join(' + ');
-    }
+  const syms = watchlist.map(r => r.symbol);
+  const BATCH = 20, DELAY = 600;
+  let proxyOk = 0, proxyFail = 0;
+  for (let i = 0; i < syms.length; i += BATCH) {
+    const chunk = syms.slice(i, i + BATCH);
+    const results = await Promise.allSettled(
+      chunk.map(sym => _fetchOnePrice(sym).then(d => ({ sym, d })))
+    );
+    results.forEach(res => {
+      if (res.status !== 'fulfilled' || !res.value.d) { proxyFail++; return; }
+      const { sym, d } = res.value;
+      const r = watchlist.find(x => x.symbol === sym);
+      if (r) { r.live_price = d.price; r.chg_pct = d.chg; }
+      proxyOk++;
+    });
+    if (i + BATCH < syms.length) await new Promise(res => setTimeout(res, DELAY));
+  }
+  renderTable(); checkAlarms();
+  const srcEl = document.getElementById('stat-source');
+  if (srcEl) {
+    const parts = [`Proxy(${proxyOk})`];
+    if (proxyFail > 0) parts.push(`yFinance(${proxyFail})`);
+    srcEl.textContent = parts.join(' + ');
   }
 }
 
