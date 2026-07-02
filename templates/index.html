@@ -806,10 +806,53 @@ let activeGroup  = '';   // '' = All
 let lookupData   = null;
 let refreshTimer = null;
 
+// ── Browser-side live price fetch (corsproxy → allorigins → direct YF) ────────
+let _priceTimer = null;
+async function _fetchOnePrice(sym) {
+  const enc   = encodeURIComponent(sym);
+  const yfUrl = `https://query2.finance.yahoo.com/v8/finance/chart/${enc}?interval=1d&range=2d`;
+  const urls  = [
+    `https://corsproxy.io/?url=${encodeURIComponent(yfUrl)}`,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(yfUrl)}`,
+    yfUrl,
+  ];
+  for (const url of urls) {
+    try {
+      const r = await fetch(url, { cache: 'no-store' });
+      if (!r.ok) continue;
+      const j    = await r.json();
+      const meta = j?.chart?.result?.[0]?.meta;
+      if (!meta) continue;
+      const price = meta.regularMarketPrice ?? meta.previousClose;
+      if (!price) continue;
+      const prev  = meta.chartPreviousClose ?? meta.previousClose ?? price;
+      const chg   = prev ? ((price - prev) / prev) * 100 : 0;
+      return { price, chg };
+    } catch { /* try next */ }
+  }
+  return null;
+}
+async function fetchLivePrices() {
+  if (!watchlist.length) return;
+  const results = await Promise.allSettled(
+    watchlist.map(r => _fetchOnePrice(r.symbol).then(d => ({ sym: r.symbol, d })))
+  );
+  let updated = 0;
+  results.forEach(res => {
+    if (res.status !== 'fulfilled' || !res.value.d) return;
+    const { sym, d } = res.value;
+    const r = watchlist.find(x => x.symbol === sym);
+    if (r) { r.live_price = d.price; r.chg_pct = d.chg; updated++; }
+  });
+  if (updated) { renderTable(); checkAlarms(); }
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   loadWatchlist();
   refreshTimer = setInterval(loadWatchlist, 65000);
+  // Live price poll: runs after first watchlist load, then every 30s
+  setTimeout(() => { fetchLivePrices(); _priceTimer = setInterval(fetchLivePrices, 30000); }, 5000);
   if (_alarmSoundB64) {
     const btn = document.getElementById('btn-alarm-sound');
     if (btn) { btn.textContent = '🎵 Custom'; btn.style.borderColor = '#86efac'; btn.style.color = '#86efac'; }
