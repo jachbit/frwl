@@ -844,7 +844,16 @@ async function fetchLivePrices() {
     const r = watchlist.find(x => x.symbol === sym);
     if (r) { r.live_price = d.price; r.chg_pct = d.chg; updated++; }
   });
-  if (updated) { renderTable(); checkAlarms(); }
+  if (updated) {
+    renderTable(); checkAlarms();
+    const yfCount = watchlist.length - updated;
+    const srcEl = document.getElementById('stat-source');
+    if (srcEl) {
+      const parts = [`Proxy(${updated})`];
+      if (yfCount > 0) parts.push(`yFinance(${yfCount})`);
+      srcEl.textContent = parts.join(' + ');
+    }
+  }
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
